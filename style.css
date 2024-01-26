@@ -1,0 +1,197 @@
+body {
+	margin: 0;
+	font-family: "Gotham SSm A", "Gotham SSm B", Helvetica, Arial, sans-serif;
+}
+
+header {
+	border-bottom: solid 1px #e0e0e0;
+}
+
+.secondary-header {
+	background-color: #800000;
+}
+
+.secondary-header a {
+	color: white;
+	text-transform: uppercase;
+}
+
+.d-flex {
+	display: flex;
+}
+
+a {
+	text-decoration: none;
+	background-color: transparent;
+}
+
+.brand-bar .col-md-12 a {
+	font-size: 12px;
+	align-items: center;
+}
+
+.brand-bar .col-md-12 a:hover {
+	text-decoration: underline;
+}
+
+.brand-bar .col-md-12 a:before {
+	background-image: url("https://d3qi0qp55mx5f5.cloudfront.net/shared-resources/i/template/phoenix-v2.svg");
+	content: "";
+	width: 30px;
+	height: 25px;
+	margin-right: 8px;
+	display: inline-flex;
+}
+
+.brand-bar .col-md-12 {
+	padding: 10px 0;
+}
+
+.row {
+	display: flex;
+	padding: 2.5rem;
+	flex-wrap: wrap;
+	margin: auto -1rem;
+}
+
+.logo-title .row {
+	flex: 1;
+	align-items: center;
+}
+
+.logo-title .col-md-6 {
+	max-width: 49%;
+}
+
+.wordmark {
+	justify-content: flex-end;
+	padding: 0 1rem;
+}
+
+.wordmark img {
+	height: 70px;
+}
+
+img {
+	vertical-align: middle;
+}
+
+.logo-breaker {
+	height: 70px;
+	border-left: 2px solid #e0e0e0;
+}
+
+.site-title {
+	flex: 1;
+}
+
+.site-title h1 {
+	letter-spacing: -1px;
+	margin: 0 1rem 0;
+	font-size: 1.888888em;
+	margin-top: 0;
+	font-weight: 300;
+}
+
+.container-fluid,
+.col-md-6,
+.col-sm-12 {
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+.main-content {
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
+}
+
+.container {
+	width: 100%;
+	padding-right: 1rem;
+	padding-left: 1rem;
+	margin: auto;
+}
+
+.row.page-title {
+	padding: 0 1rem;
+	margin-bottom: -1rem;
+}
+
+.page-title h2 {
+	color: #800000;
+	font-weight: 300;
+	font-size: 1.44444444em;
+}
+
+.search-course {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+
+.flex-column {
+	flex-direction: column;
+}
+
+/* .flex-row {
+	flex-direction: row;
+} */
+
+.nav {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.nav-tabs {
+	border-bottom: 1px solid #dee2e6;
+}
+
+#nav-instructor-tab {
+	margin-left: 0;
+}
+
+.nav-tabs .nav-link {
+	padding: 0.75rem 2rem;
+	background-color: #d9d9d9;
+	border-color: #e0e0e0;
+	border: 1px solid transparent;
+	border-top-right-radius: 0.25rem;
+	border-top-left-radius: 0.25rem;
+	margin: -1px 3px;
+	font-size: 18px;
+	color: black;
+}
+
+.nav-tabs .nav-link.active {
+	padding: 0.75rem 3.5rem;
+	border-color: #e0e0e0 #e0e0e0 white;
+	background-color: white;
+	font-size: 18px;
+	color: #800000;
+}
+
+link.active {
+	background-color: white;
+}
+
+.tab-content {
+	padding: 15px;
+	border-left: 1px solid #e0e0e0;
+	border-right: 1px solid #e0e0e0;
+	border-bottom: 1px solid #e0e0e0;
+}
+@media (min-width: 768px) {
+	.container,
+	.container-md,
+	.container-sm {
+		max-width: 720px;
+	}
+}
+
+@media (min-width: 768px) {
+	.col-md-12 {
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+}
