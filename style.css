@@ -1,6 +1,47 @@
 body {
 	margin: 0;
 	font-family: "Gotham SSm A", "Gotham SSm B", Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+}
+
+.col,
+.col-1,
+.col-10,
+.col-11,
+.col-12,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-auto,
+.col-lg,
+.col-lg-1,
+.col-lg-10,
+.col-lg-11,
+.col-lg-12,
+.col-lg-2,
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-7,
+.col-lg-8,
+.col-lg-9,
+.col-lg-auto,
+.col-md,
+.col-md-1,
+.col-md-10,
+.col-md-11,
+.col-md-12,
+.col-md-2,
+.col-md-3 {
+	position: relative;
+	width: 100%;
+	padding: 0 1rem;
 }
 
 header {
@@ -49,8 +90,7 @@ a {
 
 .row {
 	display: flex;
-	padding: 2.5rem;
-	flex-wrap: wrap;
+	padding: 2.5rem 0;
 	margin: auto -1rem;
 }
 
@@ -60,12 +100,11 @@ a {
 }
 
 .logo-title .col-md-6 {
-	max-width: 49%;
+	max-width: 43%;
 }
 
 .wordmark {
 	justify-content: flex-end;
-	padding: 0 1rem;
 }
 
 .wordmark img {
@@ -87,9 +126,7 @@ img {
 
 .site-title h1 {
 	letter-spacing: -1px;
-	margin: 0 1rem 0;
 	font-size: 1.888888em;
-	margin-top: 0;
 	font-weight: 300;
 }
 
@@ -237,6 +274,14 @@ label {
 	transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
+.form-control:focus {
+	color: #495057;
+	background-color: white;
+	border-color: #80bdff;
+	box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+	outline: 0;
+}
+
 .custom-select {
 	background-color: #fff
 		url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org…3343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e")
@@ -303,6 +348,99 @@ form .buttons .clear:hover {
 	color: #4d0000;
 	font-weight: 600;
 	border-bottom: 1px solid;
+}
+
+footer {
+	font-weight: 300;
+	font-style: normal;
+	letter-spacing: normal;
+	background: #404040;
+}
+
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl {
+	width: 100%;
+	padding: 0 1rem;
+}
+
+footer .container-fluid {
+	max-width: 1430px;
+}
+
+.col-md-3.col-sm-4.col-xs-6.footer-logo {
+	width: 80%;
+}
+
+footer a {
+	border-bottom: 1px dotted;
+	color: white;
+}
+
+footer a.uchicago-wordmark {
+	background: transparent
+		url("https://d3qi0qp55mx5f5.cloudfront.net/shared-resources/i/template/uchicago_wordmark.svg")
+		0 0 no-repeat;
+	background-size: contain;
+	display: block;
+	height: 0;
+	width: 100%;
+	padding-bottom: 18%;
+	opacity: 0.75;
+	text-indent: -9999em;
+	border: none;
+	transition: opacity 0.3s ease-in-out;
+}
+
+footer .uchicago-wordmark:hover {
+	text-decoration: none;
+	border-bottom: none;
+}
+
+footer a:hover {
+	text-decoration: none;
+	border-bottom: 1px solid;
+	color: white;
+}
+
+footer p,
+footer address,
+footer a {
+	color: #fafafa;
+	font-style: normal;
+	font-size: 12px;
+	margin: 0;
+}
+
+footer .site_links {
+	list-style: none;
+	padding-left: 0;
+}
+
+dl,
+ol,
+ul {
+	margin-top: 0;
+	margin-bottom: 1rem;
+}
+
+footer .copyright {
+	border-top: 1px solid #333;
+}
+
+.justify-content-center {
+	justify-content: center;
+}
+
+footer .copyright p {
+	border-top: 1px solid #4d4d4d;
+	width: 100%;
+	padding: 1rem 0;
+	text-align: center;
+	line-height: 1em;
+	font-weight: 300;
 }
 
 @media (min-width: 768px) {
