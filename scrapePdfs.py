@@ -2,8 +2,11 @@ from bs4 import BeautifulSoup
 import requests
 import json
 
-
 # bring the web page
+import requests
+
+session = requests.Session()
+
 import requests
 
 cookies = {
@@ -11,11 +14,12 @@ cookies = {
     'ASP.NET_SessionId': '2uulbtd0vbs5sbg2n5sv2xrw',
     'regl': 'en-US',
     'lang': 'eng',
-    'retPath': 'https://uchicago.bluera.com/uchicago/Login/Login.aspx?ReturnUrl=%2fuchicago%2frpvf-eng.aspx%3flang%3deng%26redi%3d1%26SelectedIDforPrint%3d7fe4390316924f7ff1e57b7ba46266597c83cd6a1c8e936ccf5ff4931d072fc9842946f32b0fc1b072e5c1da2560937a%26ReportType%3d2%26regl%3den-US',
-    'lnid': '50102701-8770-4bd8-9491-cc34fd35a8ce',
-    '_shibsession_756368696361676f475768747470733a2f2f756368696361676f2e626c756572612e636f6d2f756368696361676f2f73686962626f6c6574682f64656661756c74': '_553bdd13ad4b4901a11c293a34f1ebee',
-    'CookieName': 'FC5072EF765611607035988940F8F8D80F1CED6CFE04B91BDB4FD07C02AA5E32D6154F7AAD3D32555DB86D9BDF6230F4190BFE8C10F1DF13FFC94DFF8C60E12FD713467998E9F4486B74A01B92FAC5C11CC3AA00147F22AACFF6A71247C72A33EC652E8AAEB48E906BEEE1B3771D26239DB197425E2F332DB2161375FA3D3AC730276381785D1F7FEA805778B2EA5369',
-    'session_token': '64051e9fed1c4d69817ab2bb88af8dd3',
+    'retPath': 'https://uchicago.bluera.com/uchicago/Login/Login.aspx?ReturnUrl=%2fuchicago%2frpvf-eng.aspx%3flang%3deng%26redi%3d1%26SelectedIDforPrint%3d13039fa46e6b8e4a3745a8aa52a1752881640e457b194c0f7eea537b8de29f05f1474bfc5e8b63ec00a16f13577c40f1%26ReportType%3d2%26regl%3den-US',
+    'lnid': 'c64bccfd-56f2-46b7-b5fb-09b3e0958172',
+    'f': 'GOClD9wyRQwscMr0HIHQkCR2xiTL8aEdpY72_--AOkFfjpPHmWiQkN_ui3_LvlOTJQeE9yBuMTnq7XwPKVvytZattNGlbfPwSvaFYHSMz_M1',
+    '_shibsession_756368696361676f475768747470733a2f2f756368696361676f2e626c756572612e636f6d2f756368696361676f2f73686962626f6c6574682f64656661756c74': '_10991e75f3531ab4c794630b3cbfeca8',
+    'CookieName': '156F192258E75601E7710654EB601D48370A64BCCB4660450A7D081B4008FC5C9AE6081F39DF9B6C40208C370FDE898C1E848302B74BEBF4859FEAF5FCABF1C3898A0829FE76E354411853CA96FDFC3FBE9C94B513DD78EC72893A591DFA426FB15C1E5BC9E684E17D1C395CF4DF20D3A38982E23325A7E04130E458A01457628763874FAFD0CE1A1C02AD21736AB12E',
+    'session_token': '4602563f7e8046b7854270fc83bbb09a',
 }
 
 headers = {
@@ -23,7 +27,7 @@ headers = {
     'Accept-Language': 'en-US,en;q=0.9,ko;q=0.8',
     'Cache-Control': 'max-age=0',
     'Connection': 'keep-alive',
-    # 'Cookie': 'cookiesession1=678B28920D6B6E1A11CBED63AF11D0D5; ASP.NET_SessionId=2uulbtd0vbs5sbg2n5sv2xrw; regl=en-US; lang=eng; retPath=https://uchicago.bluera.com/uchicago/Login/Login.aspx?ReturnUrl=%2fuchicago%2frpvf-eng.aspx%3flang%3deng%26redi%3d1%26SelectedIDforPrint%3d7fe4390316924f7ff1e57b7ba46266597c83cd6a1c8e936ccf5ff4931d072fc9842946f32b0fc1b072e5c1da2560937a%26ReportType%3d2%26regl%3den-US; lnid=50102701-8770-4bd8-9491-cc34fd35a8ce; _shibsession_756368696361676f475768747470733a2f2f756368696361676f2e626c756572612e636f6d2f756368696361676f2f73686962626f6c6574682f64656661756c74=_553bdd13ad4b4901a11c293a34f1ebee; CookieName=FC5072EF765611607035988940F8F8D80F1CED6CFE04B91BDB4FD07C02AA5E32D6154F7AAD3D32555DB86D9BDF6230F4190BFE8C10F1DF13FFC94DFF8C60E12FD713467998E9F4486B74A01B92FAC5C11CC3AA00147F22AACFF6A71247C72A33EC652E8AAEB48E906BEEE1B3771D26239DB197425E2F332DB2161375FA3D3AC730276381785D1F7FEA805778B2EA5369; session_token=64051e9fed1c4d69817ab2bb88af8dd3',
+    # 'Cookie': 'cookiesession1=678B28920D6B6E1A11CBED63AF11D0D5; ASP.NET_SessionId=2uulbtd0vbs5sbg2n5sv2xrw; regl=en-US; lang=eng; retPath=https://uchicago.bluera.com/uchicago/Login/Login.aspx?ReturnUrl=%2fuchicago%2frpvf-eng.aspx%3flang%3deng%26redi%3d1%26SelectedIDforPrint%3d13039fa46e6b8e4a3745a8aa52a1752881640e457b194c0f7eea537b8de29f05f1474bfc5e8b63ec00a16f13577c40f1%26ReportType%3d2%26regl%3den-US; lnid=c64bccfd-56f2-46b7-b5fb-09b3e0958172; f=GOClD9wyRQwscMr0HIHQkCR2xiTL8aEdpY72_--AOkFfjpPHmWiQkN_ui3_LvlOTJQeE9yBuMTnq7XwPKVvytZattNGlbfPwSvaFYHSMz_M1; _shibsession_756368696361676f475768747470733a2f2f756368696361676f2e626c756572612e636f6d2f756368696361676f2f73686962626f6c6574682f64656661756c74=_10991e75f3531ab4c794630b3cbfeca8; CookieName=156F192258E75601E7710654EB601D48370A64BCCB4660450A7D081B4008FC5C9AE6081F39DF9B6C40208C370FDE898C1E848302B74BEBF4859FEAF5FCABF1C3898A0829FE76E354411853CA96FDFC3FBE9C94B513DD78EC72893A591DFA426FB15C1E5BC9E684E17D1C395CF4DF20D3A38982E23325A7E04130E458A01457628763874FAFD0CE1A1C02AD21736AB12E; session_token=4602563f7e8046b7854270fc83bbb09a',
     'Sec-Fetch-Dest': 'document',
     'Sec-Fetch-Mode': 'navigate',
     'Sec-Fetch-Site': 'none',
@@ -43,7 +47,7 @@ params = {
     'regl': 'en-US',
 }
 
-response = requests.get('https://uchicago.bluera.com/uchicago/rpvf-eng.aspx', params=params, cookies=cookies, headers=headers)
+response = session.get('https://uchicago.bluera.com/uchicago/rpvf-eng.aspx', params=params, cookies=cookies, headers=headers)
 
 reviews = {}
 
@@ -51,22 +55,27 @@ if response.status_code == 200:
     html = response.text
     soup = BeautifulSoup(html, "html.parser")
 
-    # the course review is structured
+    # find the comments section - they are under report-block class
     comments = soup.select(".report-block")
 
-    for comment in comments[:2]:
+    for comment in comments[:8]:
+        # find the title for each section
         title = comment.select_one(".ReportBlockTitle > span").get_text()
+
+        #extract the comments under the section
         all_reviews = comment.select(".CommentBlockRow.TableContainer > .block-table.CondensedTabular > tbody")
         review = [r.text for r in all_reviews]
-        rr = review[0].split('\n\n')
-        cleaned_review = [r.strip() for r in rr if r.strip()]
-        review_lst = []
 
-        reviews[title] = cleaned_review
+        #remove all new lines
+        if len(review) != 0:
+            rr = review[0].split('\n\n')
+            cleaned_review = [r.strip() for r in rr if r.strip()]
 
-    json_data = json.dumps(reviews)
-    print("json:", json_data)
-    # print("dic:", reviews)
+            reviews[title] = cleaned_review
+
+    #json_data = json.dumps(reviews)
+    with open('data.json', 'w', encoding='utf-8') as f:
+        json.dump(reviews, f, ensure_ascii=False, indent=4)
 
 else:
     print(response.status_code)
