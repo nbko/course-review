@@ -1,0 +1,21 @@
+body,
+* {
+	margin: 0;
+	padding: 0;
+}
+
+h2 {
+	text-align: center;
+}
+
+.search-container {
+	align-items: center;
+	justify-content: center;
+
+	.search {
+		margin: 1rem;
+		display: flex;
+		justify-content: center;
+		text-transform: capitalize;
+	}
+}
