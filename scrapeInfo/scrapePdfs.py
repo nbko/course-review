@@ -3,8 +3,6 @@ import requests
 import json
 
 # bring the web page
-import requests
-
 session = requests.Session()
 
 import requests

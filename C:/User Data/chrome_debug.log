@@ -1,0 +1,9 @@
+[51515:259:0518/232611.891044:WARNING:chrome_main_delegate.cc(750)] This is Chrome version 124.0.6367.208 (not a warning)
+[51515:259:0518/232612.160652:INFO:chrome_browser_cloud_management_controller.cc(168)] Starting CBCM Controller Initialization
+[51515:259:0518/232612.160739:INFO:chrome_browser_cloud_management_controller.cc(196)] No machine level policy manager exists.
+[51515:259:0518/232612.193330:WARNING:browser_management_service.cc(128)] EnterpriseLogoUrl fetch failed with error code -1 and MIME type 
+[51515:45571:0518/232612.227704:ERROR:trust_store_mac.cc(750)] Error parsing certificate:
+ERROR: GeneralNames is a sequence of 0 elements
+ERROR: Failed parsing subjectAltName
+
+[51515:259:0518/232613.573691:WARNING:pref_notifier_impl.cc(41)] Pref observer for media_router.cast_allow_all_ips found at shutdown.

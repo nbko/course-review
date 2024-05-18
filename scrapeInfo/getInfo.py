@@ -14,3 +14,19 @@ for major in majors:
 
 with open('majors.json', 'w', encoding='utf-8') as f:
     json.dump(major_lst, f, ensure_ascii=False, indent=4)
+
+
+
+
+# curl 'https://ka-p.fontawesome.com/releases/v5.15.4/css/pro.min.css?token=d9c9463cf1' \
+#   -H 'accept: */*' \
+#   -H 'accept-language: en-US,en;q=0.9,ko;q=0.8' \
+#   -H 'origin: https://coursefeedback.uchicago.edu' \
+#   -H 'priority: u=1, i' \
+#   -H 'sec-ch-ua: "Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"' \
+#   -H 'sec-ch-ua-mobile: ?0' \
+#   -H 'sec-ch-ua-platform: "macOS"' \
+#   -H 'sec-fetch-dest: empty' \
+#   -H 'sec-fetch-mode: cors' \
+#   -H 'sec-fetch-site: cross-site' \
+#   -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36'
