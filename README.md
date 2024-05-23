@@ -12,42 +12,39 @@ Overview of my approach
 ## Entity-Relationship Diagram
 
 ```
-+----------------+         +-------------------+         +----------------+
-|                |         |                   |         |                |
-|    Courses     |         |    CourseReview   |         |   Professors   |
-|----------------|         |-------------------|         |----------------|
++----------------+         +-------------------+         +------------------+
+|                |         |                   |         |                  |
+|    Courses     |         |    CourseReview   |         |   Professors     |
+|----------------|         |-------------------|         |----------------  |
 | course_id (PK) |         | course_id (FK)    |         | professor_id (PK)|
-| course_name    |---------| review_id (FK)    |---------| professor_name |
-| course_number  |         |                   |         |                |
-+----------------+         +-------------------+         +----------------+
-                               *1                            |
-                               |                             |
-                               |                             |
-                               |                             |
-                               |       +-------------------+ |
-                               |       |                   | |
-                               |       | ProfessorReview   | |
-                               |       |-------------------| |
-                               |       | professor_id (FK) | |
-                               |       | review_id (FK)    | |
-                               |       +-------------------+ |
-                               |                             |
-                               |                             |
-                               |                             |
-+----------------+             |          +-------------------+
-|                |             |          |                   |
-|    Quarters    |-------------*          |      Reviews      |
-|----------------|                        |-------------------|
-| quarter_id (PK)|                        | review_id (PK)    |
-| quarter_name   |                        | quarter_id (FK)   |
-+----------------+                        | review_text       |
-                                          | question1_summary |
-                                          | question2_summary |
-                                          | question3_summary |
-                                          | question4_summary |
-                                          | question5_summary |
-                                          | question6_summary |
-                                          +-------------------+
+| course_name    |---------| review_id (FK)    |---------| professor_name   |
+| course_number  |         |                   |         |                  |
++----------------+         +-------------------+         +------------------+
+                               |                               |
+                               |                               |
+                               |       +-------------------+   |
+                               |       |                   |   |
+                               |       | ProfessorReview   |   |
+                               |       |-------------------|   |
+                               |       | professor_id (FK) |   |
+                               |       | review_id (FK)    |   |
+                               |       +-------------------+   |
+                               |                               |
+                               |                               |
++----------------+             |             +-------------------+
+|                |             |             |                   |
+|    Quarters    |-------------*             |      Reviews      |
+|----------------|                           |-------------------|
+| quarter_id (PK)|                           | review_id (PK)    |
+| quarter_name   |                           | quarter_id (FK)   |
++----------------+                           | review_text       |
+                                             | question1_summary |
+                                             | question2_summary |
+                                             | question3_summary |
+                                             | question4_summary |
+                                             | question5_summary |
+                                             | question6_summary |
+                                             +-------------------+
 ```
 
 ## Relationships

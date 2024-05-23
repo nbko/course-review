@@ -9,6 +9,7 @@ function App() {
 				<SearchInput inputType="major" />
 				<SearchInput inputType="instructor name" />
 				<QuarterTags />
+				<SearchInput inputType="course section" />
 			</div>
 		</div>
 	);
