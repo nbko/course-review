@@ -32,7 +32,7 @@ driver.execute_script("arguments[0].click();", checkbox)
 
 wait.until(EC.element_to_be_clickable((By.CLASS_NAME, "button-primary"))).click()
 
-wait.until(EC.element_to_be_clickable((By.ID, "input59"))).send_keys("eo3dlsxjsgkqrur!")
+wait.until(EC.element_to_be_clickable((By.ID, "input59"))).send_keys("")
 wait.until(EC.element_to_be_clickable((By.CLASS_NAME, "button-primary"))).click()
 
 # click on the instructor tab
@@ -65,7 +65,7 @@ wait.until(
 comments_dic = {}
 all_comments = driver.find_elements(By.CLASS_NAME, "report-block")
 
-for comment in all_comments[:8]:
+for comment in all_comments:
     title = comment.find_element(By.CLASS_NAME, "ReportBlockTitle").text
     
     review_elems = comment.find_elements(By.CSS_SELECTOR, ".CommentBlockRow.TableContainer > .block-table.CondensedTabular > tbody")
