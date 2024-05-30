@@ -1,6 +1,7 @@
 import json
 import pickle
 import requests
+import time
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
@@ -23,16 +24,26 @@ def setup_driver():
 def navigate_to_site(driver):
     driver.get('https://coursefeedback.uchicago.edu/')
     wait = WebDriverWait(driver, 30)
-    checkbox = wait.until(EC.presence_of_element_locatedfetch((By.ID, "input36")))
+
+    # id
+    checkbox = wait.until(EC.presence_of_element_located((By.ID, "input36")))
     driver.execute_script("arguments[0].click();", checkbox)
     wait.until(EC.element_to_be_clickable((By.CLASS_NAME, "button-primary"))).click()
+
+    # password
     wait.until(EC.element_to_be_clickable((By.ID, "input59"))).send_keys("")
     wait.until(EC.element_to_be_clickable((By.CLASS_NAME, "button-primary"))).click()
 
+    #verify button
+    try:
+        WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.CLASS_NAME, "button-primary"))).click()
+    except Exception:
+        pass
+
 def fetch_pdf(driver, full_name):
+    wait = WebDriverWait(driver, 30)
     first_name, last_name = full_name.split(" ")
     name_key = f"{last_name},{first_name}"
-    wait = WebDriverWait(driver, 30)
 
     # click instructor name tab
     wait.until(EC.element_to_be_clickable((By.ID, "nav-instructor-tab"))).click()
@@ -43,42 +54,46 @@ def fetch_pdf(driver, full_name):
     wait.until(EC.element_to_be_clickable((By.XPATH, xpath))).click()
 
     # Send in Instructor Name
-    wait.until(EC.element_to_be_clickable((By.ID, "tags"))).send_keys(name_key)
-    wait
-    # xpath = f"//ul[@class='ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all']/li[19]/a[@class='ui-corner-all']"
-    # wait.until(EC.element_to_be_clickable((By.XPATH, xpath))).click()
+    search_bar = wait.until(EC.element_to_be_clickable((By.ID, "tags")))
+    search_bar.clear()
+    search_bar.send_keys(name_key)
+    time.sleep(1)
 
     # Click Search
     buttons = wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, "div.form-row.buttons button.btn.btn-primary.submit")))
     second_button = buttons[1]  # Select the second button (index 1)
     second_button.click()
 
-    # Fetch PDFs
-    table = wait.until(EC.presence_of_element_located((By.ID, "evalSearchResults")))
-    rows = list(table.find_elements(By.CSS_SELECTOR, "tr.odd, tr.even"))
-    print(rows)
-    
-    for row in rows:
-        WebDriverWait(driver, 30)
-        print(row.text)
-        course_section = row.find_element(By.CSS_SELECTOR, "td.course > a").text
-        link_elem = row.find_element(By.CSS_SELECTOR, "td.title > a")
-        link_href = link_elem.get_attribute("href")
-        instructors = row.find_element(By.CSS_SELECTOR, "td.instructor").text
-        quarter = row.find_element(By.CSS_SELECTOR, "td.quarter").text
+    try:
+        # Fetch PDFs
+        table = wait.until(EC.presence_of_element_located((By.ID, "evalSearchResults")))
+        rows = list(table.find_elements(By.CSS_SELECTOR, "tr.odd, tr.even"))
+        
+        for row in rows:
+            WebDriverWait(driver, 30)
+            print(row.text)
+            course_section = row.find_element(By.CSS_SELECTOR, "td.course > a").text
+            link_elem = row.find_element(By.CSS_SELECTOR, "td.title > a")
+            link_href = link_elem.get_attribute("href")
+            instructors = row.find_element(By.CSS_SELECTOR, "td.instructor").text
+            quarter = row.find_element(By.CSS_SELECTOR, "td.quarter").text
 
-        driver.get(link_href)
+            driver.get(link_href)
 
-
-        # Extract info for the current pdf
-        comments_dic = {
-            "course-section": course_section,
-            "instructors": instructors,
-            "quarter": quarter
-        }
-        comments_dic["comments"] = extract_comments(driver)
-        save_comments(comments_dic)
-        driver.back()
+            # Extract info for the current pdf
+            comments_dic = {
+                "course-section": course_section,
+                "instructors": instructors,
+                "quarter": quarter
+            }
+            comments_dic["comments"] = extract_comments(driver)
+            save_comments(comments_dic, full_name)
+            driver.back()
+    except Exception:
+        error_msg = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, ".messages.error span")))
+        error_text = error_msg.text
+        comments_dic = {"error": error_text}
+        save_comments(comments_dic, full_name)
 
 
 def extract_comments(driver):
@@ -109,20 +124,36 @@ def save_comments(comments_dic, instructor_name):
             existing_data = json.load(f)
     except FileNotFoundError:
         existing_data = {}
-        curr_review = {}
 
-    curr_id = len(existing_data[instructor_name])
-    curr_review[curr_id] = comments_dic
-    existing_data[instructor_name] = curr_review
+    # Ensure the instructor exists in the data
+    if instructor_name not in existing_data:
+        existing_data[instructor_name] = {}
+    
+    # Access the dictionary for the given instructor
+    curr_instructor_courses = existing_data[instructor_name]
+    curr_id = len(curr_instructor_courses)
+
+    curr_instructor_courses[curr_id] = comments_dic
 
     with open('new_data.json', 'w', encoding='utf-8') as f:
         json.dump(existing_data, f, ensure_ascii=False, indent=4)
 
 def main():
-    driver = setup_driver()
-    navigate_to_site(driver)
-    fetch_pdf(driver)
-    
+    try:
+        json_file_path = "instructors_list.json"
+        driver = setup_driver()
+        navigate_to_site(driver)
+
+        with open(json_file_path, "r", encoding="utf-8") as file:
+            instructors = json.load(file)
+            print(instructors)
+
+            for instructor in instructors:
+                fetch_pdf(driver, instructor)
+
+    except FileNotFoundError as e:
+        print(f"File not found: {e}")
+        driver.close()
 
 if __name__ == "__main__":
     main()
