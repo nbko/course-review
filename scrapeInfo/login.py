@@ -23,30 +23,41 @@ def setup_driver():
 def navigate_to_site(driver):
     driver.get('https://coursefeedback.uchicago.edu/')
     wait = WebDriverWait(driver, 30)
-    checkbox = wait.until(EC.presence_of_element_located((By.ID, "input36")))
+    checkbox = wait.until(EC.presence_of_element_locatedfetch((By.ID, "input36")))
     driver.execute_script("arguments[0].click();", checkbox)
     wait.until(EC.element_to_be_clickable((By.CLASS_NAME, "button-primary"))).click()
     wait.until(EC.element_to_be_clickable((By.ID, "input59"))).send_keys("")
     wait.until(EC.element_to_be_clickable((By.CLASS_NAME, "button-primary"))).click()
 
-def fetch_pdf(driver):
+def fetch_pdf(driver, full_name):
+    first_name, last_name = full_name.split(" ")
+    name_key = f"{last_name},{first_name}"
     wait = WebDriverWait(driver, 30)
+
+    # click instructor name tab
     wait.until(EC.element_to_be_clickable((By.ID, "nav-instructor-tab"))).click()
+
+    #choose the subject: CMSC - Computer Science
     wait.until(EC.element_to_be_clickable((By.ID, "instructorSubject_chosen"))).click()
     xpath = f"//ul[@class='chosen-results']/li[@data-option-array-index='{50}']"
     wait.until(EC.element_to_be_clickable((By.XPATH, xpath))).click()
-    wait.until(EC.element_to_be_clickable((By.ID, "tags"))).send_keys("timothy")
-    xpath = f"//ul[@class='ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all']/li[19]/a[@class='ui-corner-all']"
-    wait.until(EC.element_to_be_clickable((By.XPATH, xpath))).click()
+
+    # Send in Instructor Name
+    wait.until(EC.element_to_be_clickable((By.ID, "tags"))).send_keys(name_key)
+    wait
+    # xpath = f"//ul[@class='ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all']/li[19]/a[@class='ui-corner-all']"
+    # wait.until(EC.element_to_be_clickable((By.XPATH, xpath))).click()
+
+    # Click Search
     buttons = wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, "div.form-row.buttons button.btn.btn-primary.submit")))
     second_button = buttons[1]  # Select the second button (index 1)
     second_button.click()
 
+    # Fetch PDFs
     table = wait.until(EC.presence_of_element_located((By.ID, "evalSearchResults")))
     rows = list(table.find_elements(By.CSS_SELECTOR, "tr.odd, tr.even"))
     print(rows)
     
-
     for row in rows:
         WebDriverWait(driver, 30)
         print(row.text)
@@ -92,15 +103,17 @@ def extract_comments(driver):
             continue
     return comments_dic
 
-def save_comments(comments_dic):
+def save_comments(comments_dic, instructor_name):
     try:
         with open('new_data.json', 'r', encoding='utf-8') as f:
             existing_data = json.load(f)
     except FileNotFoundError:
         existing_data = {}
+        curr_review = {}
 
-    cur_id = len(existing_data)
-    existing_data[cur_id] = comments_dic
+    curr_id = len(existing_data[instructor_name])
+    curr_review[curr_id] = comments_dic
+    existing_data[instructor_name] = curr_review
 
     with open('new_data.json', 'w', encoding='utf-8') as f:
         json.dump(existing_data, f, ensure_ascii=False, indent=4)
