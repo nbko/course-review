@@ -39,4 +39,15 @@ h2 {
 	.MuiBox-root.css-k008qs {
 		justify-content: center;
 	}
+
+	.MuiStack-root.css-m69qwo-MuiStack-root {
+		align-items: center;
+		justify-content: space-between;
+		max-width: 400px;
+		width: 100%;
+	}
+
+	.MuiChip-root.MuiChip-filled.MuiChip-sizeMedium {
+		background-color: #f8f4e1;
+	}
 }

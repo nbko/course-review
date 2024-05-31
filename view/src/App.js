@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Button from "@mui/material/Button";
 import { SearchInput, QuarterTags } from "./SearchInput";
+import DisabledAccordion from "./courseReviews";
 import Progress from "./Progress";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import Alert from "@mui/material/Alert";
@@ -25,12 +26,19 @@ function App() {
 	const [reviewList, setReviewList] = useState([]);
 	const [major, setMajor] = useState(null);
 	const [instructor, setInstructor] = useState(null);
+	const [alertMsg, setAlertMsg] = useState("");
 
 	const handleSearch = () => {
-		setIsClicked(!isClicked);
-		if (major && instructor) {
-			setSearch(true);
-			setProgress(true);
+		setIsClicked(true);
+		if (!major) {
+			setAlertMsg("Please select a subject.");
+		} else if (!instructor) {
+			setAlertMsg("Please enter an instructor name.");
+		} else {
+			if (major && instructor) {
+				setSearch(true);
+				setProgress(true);
+			}
 		}
 	};
 
@@ -57,13 +65,10 @@ function App() {
 						Selected Instructor: {instructor ? instructor.label : "None"}
 					</div>
 					{isClicked && (!major || !instructor) && (
-						<Alert severity="warning">
-							{!major
-								? "Please select a subject."
-								: "Please enter an instructor name."}
-						</Alert>
+						<Alert severity="warning">{alertMsg}</Alert>
 					)}
 					{progress && <Progress />}
+					<DisabledAccordion />
 					{/* <QuarterTags />
 				<SearchInput inputType="course section" /> */}
 				</div>
