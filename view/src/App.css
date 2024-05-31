@@ -5,7 +5,7 @@ body,
 }
 
 body {
-	background-color: aliceblue;
+	background-color: #f8f4e1;
 }
 
 h2 {
@@ -13,20 +13,30 @@ h2 {
 }
 
 .search-container {
-	border: 0.1rem solid #153448;
-	border-radius: 0.5rem;
-	width: 50%;
+	width: 100%;
+	max-width: 800px;
 	padding: 3rem;
-	margin: 20% auto;
+	margin: auto;
 
-	.search-box {
-		margin-top: 2rem;
+	.search-content {
+		width: 100%;
+		max-width: 500px;
+		margin: auto;
+		padding: 1rem;
+	}
+
+	.search,
+	button {
+		margin: 1rem;
 	}
 
 	.search {
-		margin: 1rem;
 		display: flex;
 		justify-content: center;
 		text-transform: capitalize;
+	}
+
+	.MuiBox-root.css-k008qs {
+		justify-content: center;
 	}
 }
