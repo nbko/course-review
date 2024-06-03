@@ -10,6 +10,7 @@ Overview of my approach
    screen where users can search for a professor or course
 
 ## Entity-Relationship Diagram
+<img width="842" alt="db_schema" src="https://github.com/nbko/course-review/assets/122229136/726d619d-9940-4cff-bfd5-a675ef397a2f">
 
 ## Relationships
 
