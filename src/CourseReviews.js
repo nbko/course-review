@@ -9,7 +9,7 @@ import Stack from "@mui/material/Stack";
 
 export default function DisabledAccordion() {
 	return (
-		<div>
+		<>
 			<Accordion>
 				<AccordionSummary
 					expandIcon={<ExpandMoreIcon />}
@@ -22,6 +22,7 @@ export default function DisabledAccordion() {
 					</Stack>
 				</AccordionSummary>
 				<AccordionDetails>
+					<div>Comments on the course</div>
 					<Typography>
 						The course was challenging but fair, with a significant emphasis on
 						'code quality' which was difficult for beginners to grasp. The
@@ -31,6 +32,7 @@ export default function DisabledAccordion() {
 					</Typography>
 				</AccordionDetails>
 				<AccordionDetails>
+					<div>Course Content</div>
 					<Typography>
 						Students learned fundamental concepts of programming in Python,
 						including data types, conditionals, loops, classes, recursion, and
@@ -41,6 +43,7 @@ export default function DisabledAccordion() {
 					</Typography>
 				</AccordionDetails>
 				<AccordionDetails>
+					<div>Comments on the professor</div>
 					<Typography>
 						Professor Elmore was praised for his engaging and informative
 						lectures, his ability to answer questions effectively, and his
@@ -50,6 +53,7 @@ export default function DisabledAccordion() {
 					</Typography>
 				</AccordionDetails>
 				<AccordionDetails>
+					<div>Advice</div>
 					<Typography>
 						Students recommended more examples and exposure to 'code quality'
 						concepts, better instructions on homework, and improvements to the
@@ -269,6 +273,6 @@ export default function DisabledAccordion() {
 					<Typography>Disabled Accordion</Typography>
 				</AccordionSummary>
 			</Accordion>
-		</div>
+		</>
 	);
 }

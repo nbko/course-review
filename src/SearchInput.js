@@ -12,7 +12,7 @@ export function SearchInput({ inputType, options, setSelectedMajor }) {
 				disablePortal
 				id={`search-${inputType}`}
 				options={options}
-				sx={{ width: 500 }}
+				sx={{ width: 1 }}
 				renderInput={(params) => <TextField {...params} label={inputType} />}
 				onChange={(event, newValue) => {
 					setSelectedMajor(newValue);

@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Button from "@mui/material/Button";
+import Container from "@mui/material/Container";
 import { SearchInput, QuarterTags } from "./SearchInput";
 import DisabledAccordion from "./CourseReviews";
 import Progress from "./Progress";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import Alert from "@mui/material/Alert";
+import Paper from "@mui/material/Paper";
+
 import { majors, instructors } from "./data";
 import "./App.css";
 
@@ -44,8 +47,12 @@ function App() {
 
 	return (
 		<ThemeProvider theme={themeOptions}>
-			<div className="search-container">
-				<h2>Search Course Feedback for 2024-2025</h2>
+			<Container maxWidth="md">
+				<Button variant="outlined">Course Feedback</Button>
+				<div className="about">
+					<h2>UChicago Course Reviews</h2>
+					<div>University of Chicago</div>
+				</div>
 				<div className="search-content">
 					<SearchInput
 						inputType="major"
@@ -68,11 +75,63 @@ function App() {
 						<Alert severity="warning">{alertMsg}</Alert>
 					)}
 					{progress && <Progress />}
-					<DisabledAccordion />
+					<Paper>
+						<a href="/course/cmsc14100">
+							<div className="course cmsc14100">
+								<p class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-gutterBottom">
+									CMSC 14100
+								</p>
+								<p class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorPrimary MuiTypography-gutterBottom">
+									Analytic Geometry and Calculus 3
+								</p>
+							</div>
+						</a>
+						<a href="/course/cmsc14200">
+							<div className="course coursecmsc14200">
+								<p class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-gutterBottom">
+									CMSC 14100
+								</p>
+								<p class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorPrimary MuiTypography-gutterBottom">
+									Analytic Geometry and Calculus 3
+								</p>
+							</div>
+						</a>
+						<a href="/course/cmsc14400">
+							<div className="course cmsc14400">
+								<p class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-gutterBottom">
+									CMSC 14200
+								</p>
+								<p class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorPrimary MuiTypography-gutterBottom">
+									Analytic Geometry and Calculus 3
+								</p>
+							</div>
+						</a>
+						<a href="/course/cmsc14400">
+							<div className="course cmsc14400">
+								<p class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-gutterBottom">
+									CMSC 14200
+								</p>
+								<p class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorPrimary MuiTypography-gutterBottom">
+									Analytic Geometry and Calculus 3
+								</p>
+							</div>
+						</a>
+						<a href="/course/cmsc14500">
+							<div className="course cmsc14500">
+								<p class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-gutterBottom">
+									CMSC 14300
+								</p>
+								<p class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorPrimary MuiTypography-gutterBottom">
+									Analytic Geometry and Calculus 3
+								</p>
+							</div>
+						</a>
+					</Paper>
+					{/* <DisabledAccordion /> */}
 					{/* <QuarterTags />
 				<SearchInput inputType="course section" /> */}
 				</div>
-			</div>
+			</Container>
 		</ThemeProvider>
 	);
 }
