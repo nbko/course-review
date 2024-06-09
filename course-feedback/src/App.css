@@ -1,0 +1,82 @@
+body,
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* body {
+	background-color: #f8f4e1;
+} */
+
+#root {
+	width: 100%;
+	margin: auto;
+	padding: 1rem;
+}
+
+.about {
+	text-align: center;
+
+	div {
+		margin: 1rem;
+	}
+}
+
+.MuiContainer-root {
+	button {
+		margin: 1rem;
+	}
+
+	.search {
+		margin: 1rem 0;
+		display: flex;
+		justify-content: center;
+		text-transform: capitalize;
+	}
+
+	.MuiBox-root.css-k008qs {
+		justify-content: center;
+	}
+
+	.MuiStack-root.css-m69qwo-MuiStack-root {
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		padding: 0 10px;
+	}
+
+	.MuiChip-root.MuiChip-filled.MuiChip-sizeMedium {
+		background-color: #f8f4e1;
+	}
+
+	#panel1-content > div > div {
+		font-weight: 800;
+		margin-bottom: 0.5rem;
+	}
+
+	a {
+		text-decoration: none;
+		color: #543310;
+		font-weight: 500;
+
+		.MuiTypography-colorPrimary {
+			color: #002145;
+		}
+
+		.course {
+			margin: 1rem;
+			padding: 1rem;
+			border-bottom: 0.25px solid black;
+
+			p {
+				margin-bottom: 0.5rem;
+			}
+		}
+	}
+
+	a:nth-child(5) {
+		.course {
+			border: none;
+		}
+	}
+}
