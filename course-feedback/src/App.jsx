@@ -12,23 +12,12 @@ import { useState, useEffect } from "react";
 import "./App.css";
 
 import { createClient } from "@supabase/supabase-js";
-
-// import { GetReviews } from "./apis/course-reviews";
+import { getReviews, getReviewsById } from "./Reviews";
 
 function App() {
-	const supabase = createClient(
-		import.meta.env.VITE_SUPABASE_URL,
-		import.meta.env.VITE_SUPABASE_ANON_KEY
-	);
-
 	useEffect(() => {
-		getReviews();
+		getReviewsById(1);
 	}, []);
-
-	async function getReviews() {
-		const result = await supabase.from("course_reviews").select("*");
-		console.log(result.data);
-	}
 
 	const themeOptions = createTheme({
 		palette: {
