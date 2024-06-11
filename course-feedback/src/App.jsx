@@ -12,11 +12,17 @@ import { useState, useEffect } from "react";
 import "./App.css";
 
 import { createClient } from "@supabase/supabase-js";
-import { getReviews, getReviewsById } from "./Reviews";
+import {
+	getReviews,
+	getReviewsById,
+	createReviews,
+	hardDeleteReviews,
+} from "./Reviews";
 
 function App() {
 	useEffect(() => {
-		getReviewsById(1);
+		// deleteReviews(10);
+		// hardDeleteReviews(8);
 	}, []);
 
 	const themeOptions = createTheme({
