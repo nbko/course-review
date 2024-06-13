@@ -1,4 +1,4 @@
-[
+export const instructorsList = [
 	"Aaron Elmore",
 	"Aaron Potechin",
 	"Adam Shaw",
@@ -61,5 +61,5 @@
 	"Yanjing Li",
 	"Yury Makarychev",
 	"Yuxin Chen",
-	"Zhiyuan Li"
-]
+	"Zhiyuan Li",
+];

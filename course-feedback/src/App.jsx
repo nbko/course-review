@@ -11,18 +11,35 @@ import { majors, instructors } from "./data";
 import { useState, useEffect } from "react";
 import "./App.css";
 
-import { createClient } from "@supabase/supabase-js";
 import {
 	getReviews,
 	getReviewsById,
 	createReviews,
 	hardDeleteReviews,
+	createInstructors,
 } from "./Reviews";
+
+import { instructorsList } from "../data/instructors_list";
 
 function App() {
 	useEffect(() => {
 		// deleteReviews(10);
 		// hardDeleteReviews(8);
+		// instructorsList.map((instructor) => {
+		// 	createInstructors(instructor);
+		// });
+		// createReviews(
+		// 	"CMSC 14100 3",
+		// 	"Aaron Elmore, Jesus Almaraz-Argueta",
+		// 	"CMSC",
+		// 	"Autumn 2022",
+		// 	{
+		// 		"What are the most important things that you learned in this course? Please reflect on the knowledge and skills you gained.":
+		// 			[
+		// 				"The concepts behind programming in general as well as a moderate understanding of python.",
+		// 			],
+		// 	}
+		// );
 	}, []);
 
 	const themeOptions = createTheme({

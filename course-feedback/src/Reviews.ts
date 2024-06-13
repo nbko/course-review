@@ -1,4 +1,5 @@
 import { createSupabaseBrowserClient } from "./lib/helper/supabaseClient";
+import { Json } from "./types/supabase";
 
 export async function getReviews() {
 	const supabase = createSupabaseBrowserClient();
@@ -44,8 +45,78 @@ export const getReviewsBySearch = async (terms: string) => {
 	}
 };
 
-// create Reviews
-export const createReviews = async (
+export const createInstructors = async (name: string) => {
+	const supabase = createSupabaseBrowserClient();
+	// using upsert to ignore duplicates
+	const { data, error } = await supabase.from("instructors").upsert(
+		{
+			name,
+		},
+		{ onConflict: "name" }
+	);
+	if (error) throw error;
+	else {
+		return data;
+	}
+};
+
+// create course_instructors
+const course_instructors = async (course_id: number, instructor_id: number) => {
+	const supabase = createSupabaseBrowserClient();
+	const { data, error } = await supabase.from("course_instructors").insert({
+		course_id,
+		instructor_id,
+	});
+	if (error) throw error;
+	else {
+		return data;
+	}
+};
+
+// create summarized course review
+const createCourseReviews = async (
+	course_id: number,
+	quarter: string,
+	comments_course: string,
+	course_content: string,
+	comments_professor: string,
+	advice: string
+) => {
+	const supabase = createSupabaseBrowserClient();
+	const { data, error } = await supabase.from("course_reviews").insert({
+		course_id,
+		quarter,
+		comments_course,
+		course_content,
+		comments_professor,
+		advice,
+	});
+	if (error) throw error;
+	else return data;
+};
+
+const createRawCourseReview = async (
+	course_id: number,
+	raw_data: Json,
+	no_reviews: boolean
+) => {
+	const supabase = createSupabaseBrowserClient();
+	const { data, error } = await supabase
+		.from("raw_course_reviews")
+		.insert({
+			course_id,
+			raw_data,
+			no_reviews,
+		})
+		.select();
+	if (error) throw error;
+	else {
+		return data;
+	}
+};
+
+// create course info
+export const createCourseInfo = async (
 	course_section: string,
 	instructors: string,
 	major: string,
@@ -61,10 +132,42 @@ export const createReviews = async (
 			quarter,
 		})
 		.select();
+
 	if (error) throw error;
 	else {
-		return data;
+		return data[0].id;
 	}
+};
+
+// create course reviews
+export const createReviews = async (
+	course_section: string,
+	instructors: string,
+	major: string,
+	quarter: string,
+	raw_data: Json
+	// comments_course: string,
+	// course_content: string,
+	// comments_professor: string,
+	// advice: string
+) => {
+	const instructorList = instructors.split(",");
+	const courseId = await createCourseInfo(
+		course_section,
+		instructors,
+		major,
+		quarter
+	);
+	let noReviews = false;
+	if (
+		typeof raw_data === "object" &&
+		raw_data !== null &&
+		"error" in raw_data
+	) {
+		noReviews = true;
+	}
+	const rawData = await createRawCourseReview(courseId, raw_data, noReviews);
+	console.log(rawData);
 };
 
 // update Reviews
