@@ -60,17 +60,54 @@ export const createInstructors = async (name: string) => {
 	}
 };
 
-// create course_instructors
-const course_instructors = async (course_id: number, instructor_id: number) => {
+// get or Insert Instructors
+const getOrInsertInstructor = async (name: string) => {
 	const supabase = createSupabaseBrowserClient();
-	const { data, error } = await supabase.from("course_instructors").insert({
-		course_id,
-		instructor_id,
-	});
-	if (error) throw error;
-	else {
-		return data;
+	// check if the instructor is already linked to the course
+	let { data: instructorData, error: instructorError } = await supabase
+		.from("instructors")
+		.select("id")
+		.eq("name", name);
+
+	if (instructorError) throw instructorError;
+	if (instructorData?.length === 0) {
+		const { data: newInstructorData, error: newInstructorError } =
+			await supabase.from("instructors").insert({ name }).select();
+
+		if (newInstructorError) throw newInstructorError;
+		instructorData = newInstructorData;
 	}
+
+	return instructorData[0].id;
+};
+
+// create course_instructors
+const linkInstructorToReview = async (
+	course_id: number,
+	instructor_id: number
+) => {
+	if (course_id === null || instructor_id === null) return null;
+
+	const supabase = createSupabaseBrowserClient();
+
+	// check if the instructor is already linked to the course
+	let { data: linkData, error: linkError } = await supabase
+		.from("instructor_reviews")
+		.select("course_id, instructor_id")
+		.eq("course_id", course_id)
+		.eq("instructor_id", instructor_id);
+
+	if (linkError) throw linkError;
+	if (linkData?.length === 0) {
+		const { data: linkNewData, error: linkNewError } = await supabase
+			.from("instructor_reviews")
+			.insert({ course_id, instructor_id })
+			.select();
+
+		if (linkNewError) throw linkNewError;
+		linkData = linkNewData;
+	}
+	return linkData[0].course_id;
 };
 
 // create summarized course review
@@ -95,69 +132,92 @@ const createCourseReviews = async (
 	else return data;
 };
 
-const createRawCourseReview = async (
-	course_id: number,
-	raw_data: Json,
-	no_reviews: boolean
-) => {
+// get or insert course reviews
+const getOrInsertReview = async (course_id: number, raw_data: Json) => {
+	// console.log("course_id:", course_id, "raw_data:", raw_data);
 	const supabase = createSupabaseBrowserClient();
-	const { data, error } = await supabase
+
+	// typescript is strict about type matching
+	//  json type needs to be non-nullable to be used in the eq. method
+	if (raw_data === null) return null;
+
+	// check if there exists a review for the given course
+	let { data: reviewData, error: reviewError } = await supabase
 		.from("raw_course_reviews")
-		.insert({
-			course_id,
-			raw_data,
-			no_reviews,
-		})
-		.select();
-	if (error) throw error;
-	else {
-		return data;
+		.select("id")
+		.eq("course_id", course_id);
+
+	// console.log("reviewData", reviewData);
+	if (reviewError) throw reviewError;
+
+	// else insert the data into the table
+	if (reviewData?.length === 0) {
+		const { data: newReview, error: newReviewError } = await supabase
+			.from("raw_course_reviews")
+			.insert({
+				course_id,
+				raw_data,
+			})
+			.select();
+
+		if (newReviewError) throw newReviewError;
+		reviewData = newReview;
 	}
+	// return the id of the review data
+	console.log("course review:", reviewData[0].raw_data);
+	return reviewData[0].id;
 };
 
-// create course info
-export const createCourseInfo = async (
-	course_section: string,
-	instructors: string,
-	major: string,
-	quarter: string
-) => {
-	const supabase = createSupabaseBrowserClient();
-	const { data, error } = await supabase
-		.from("courses")
-		.insert({
-			course_section,
-			instructors,
-			major,
-			quarter,
-		})
-		.select();
-
-	if (error) throw error;
-	else {
-		return data[0].id;
-	}
-};
-
-// create course reviews
-export const createReviews = async (
+// get or insert course info
+export const getOrInsertCourse = async (
 	course_section: string,
 	instructors: string,
 	major: string,
 	quarter: string,
-	raw_data: Json
-	// comments_course: string,
-	// course_content: string,
-	// comments_professor: string,
-	// advice: string
+	link: string
 ) => {
-	const instructorList = instructors.split(",");
-	const courseId = await createCourseInfo(
-		course_section,
-		instructors,
-		major,
-		quarter
-	);
+	const supabase = createSupabaseBrowserClient();
+
+	// check if the course with the given info already exists
+	let { data: courseData, error: courseError } = await supabase
+		.from("courses")
+		.select("id")
+		.eq("course_section", course_section)
+		.eq("quarter", quarter);
+	if (courseError) throw courseError;
+
+	// if there arent any, create a course with the given data
+	if (courseData?.length === 0) {
+		const { data: newCourse, error: newCourseError } = await supabase
+			.from("courses")
+			.insert({
+				course_section,
+				instructors,
+				major,
+				quarter,
+				link,
+			})
+			.select();
+
+		if (newCourseError) throw newCourseError;
+		courseData = newCourse;
+	}
+
+	// return the id of the course
+	return courseData[0].id;
+};
+
+// create course reviews, insert data to the raw data table
+export const insertReviews = async (
+	course_section: string,
+	instructors: string,
+	major: string,
+	quarter: string,
+	link: string,
+	raw_data: Json
+) => {
+	// console.log({ course_section, instructors, major, quarter, link, raw_data });
+	// check if there are any reviews.
 	let noReviews = false;
 	if (
 		typeof raw_data === "object" &&
@@ -166,8 +226,32 @@ export const createReviews = async (
 	) {
 		noReviews = true;
 	}
-	const rawData = await createRawCourseReview(courseId, raw_data, noReviews);
-	console.log(rawData);
+	// insert the data into the table only when there are any course reviews
+	if (!noReviews) {
+		const instructorList = instructors.split(",");
+
+		const courseId = await getOrInsertCourse(
+			course_section,
+			instructors,
+			major,
+			quarter,
+			link
+		);
+
+		const reviewId = await getOrInsertReview(courseId, raw_data);
+
+		for (const instructor of instructorList) {
+			// console.log("curr Insturctor", instructor);
+			const instructorId = await getOrInsertInstructor(instructor);
+			await linkInstructorToReview(courseId, instructorId);
+			// console.log("linking review to instruc", review1);
+		}
+
+		// check if the instructor has a course review
+		// for (const instructor in instructorList) {
+		// 	instructor.
+		// }
+	}
 };
 
 // update Reviews

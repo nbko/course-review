@@ -12,9 +12,8 @@ import { useState, useEffect } from "react";
 import "./App.css";
 
 import {
-	getReviews,
+	insertReviews,
 	getReviewsById,
-	createReviews,
 	hardDeleteReviews,
 	createInstructors,
 } from "./Reviews";
@@ -28,18 +27,45 @@ function App() {
 		// instructorsList.map((instructor) => {
 		// 	createInstructors(instructor);
 		// });
-		// createReviews(
-		// 	"CMSC 14100 3",
-		// 	"Aaron Elmore, Jesus Almaraz-Argueta",
-		// 	"CMSC",
-		// 	"Autumn 2022",
-		// 	{
-		// 		"What are the most important things that you learned in this course? Please reflect on the knowledge and skills you gained.":
-		// 			[
-		// 				"The concepts behind programming in general as well as a moderate understanding of python.",
-		// 			],
-		// 	}
-		// );
+		// fetch("../new_data.json")
+		// 	.then((response) => response.json())
+		// 	.then((json) => {
+		// 		const firstInstructor = Object.keys(json)[0];
+		// 		for (const review in json[firstInstructor]) {
+		// 			const courseSection = json[firstInstructor][review]["course-section"];
+		// 			let { instructors, quarter, link, comments } =
+		// 				json[firstInstructor][review];
+		// 			quarter = quarter.replace(/\([^)]*\)/g, "");
+		// 			insertReviews(
+		// 				courseSection,
+		// 				instructors,
+		// 				"CMSC",
+		// 				quarter,
+		// 				link,
+		// 				comments
+		// 			);
+		// 		}
+		// 		// for (const instructor in json) {
+		// 		// 	for (const review in json[instructor]) {
+		// 		// 		console.log(json[instructor][review]);
+		// 		// 	}
+		// 		// }
+		// 	});
+		// insertReviews("sec1", "aaron", "cmsc", "winter 2022", "https://", {
+		// 	"What could the instructor modify to help you learn more?": [
+		// 		"I was satisfied with how the course went.",
+		// 		"His approaches often weren't obvious at the start, also some of the more complicated proofs which deserved more time were given less and more trivial things took a lot of time.",
+		// 		"the content was very interesting but the instructor could be more lively",
+		// 		"Keep track of time better so we didn't have to rush through material past the end of class time.",
+		// 		"N/A",
+		// 	],
+		// 	"Please comment on the level of difficulty of the course relative to your background and experience.":
+		// 		[
+		// 			"I felt it was difficult",
+		// 			"Somewhat easy.",
+		// 			"i had previous algorithms experience and it was still interesting",
+		// 		],
+		// });
 	}, []);
 
 	const themeOptions = createTheme({
