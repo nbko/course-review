@@ -15,40 +15,40 @@ export type Database = {
           comments_course: string | null
           comments_professor: string | null
           course_content: string | null
-          course_id: number | null
           created_at: string
           deleted_at: string | null
           id: number
-          quarter: string | null
+          raw_course_review_id: number | null
+          semester: string | null
         }
         Insert: {
           advice?: string | null
           comments_course?: string | null
           comments_professor?: string | null
           course_content?: string | null
-          course_id?: number | null
           created_at?: string
           deleted_at?: string | null
           id?: number
-          quarter?: string | null
+          raw_course_review_id?: number | null
+          semester?: string | null
         }
         Update: {
           advice?: string | null
           comments_course?: string | null
           comments_professor?: string | null
           course_content?: string | null
-          course_id?: number | null
           created_at?: string
           deleted_at?: string | null
           id?: number
-          quarter?: string | null
+          raw_course_review_id?: number | null
+          semester?: string | null
         }
         Relationships: [
           {
-            foreignKeyName: "course_reviews_course_id_fkey"
-            columns: ["course_id"]
+            foreignKeyName: "course_reviews_raw_course_review_id_fkey"
+            columns: ["raw_course_review_id"]
             isOneToOne: false
-            referencedRelation: "courses"
+            referencedRelation: "raw_course_reviews"
             referencedColumns: ["id"]
           },
         ]
@@ -56,56 +56,65 @@ export type Database = {
       courses: {
         Row: {
           course_section: string | null
+          created_at: string | null
           deleted_at: string | null
           id: number
           instructors: string | null
           link: string | null
           major: string | null
-          quarter: string | null
+          semester: string | null
         }
         Insert: {
           course_section?: string | null
+          created_at?: string | null
           deleted_at?: string | null
           id?: number
           instructors?: string | null
           link?: string | null
           major?: string | null
-          quarter?: string | null
+          semester?: string | null
         }
         Update: {
           course_section?: string | null
+          created_at?: string | null
           deleted_at?: string | null
           id?: number
           instructors?: string | null
           link?: string | null
           major?: string | null
-          quarter?: string | null
+          semester?: string | null
         }
         Relationships: []
       }
       instructor_reviews: {
         Row: {
-          course_id: number | null
+          course_id: number
+          created_at: string
+          id: number
           instructor_id: number
         }
         Insert: {
-          course_id?: number | null
+          course_id: number
+          created_at?: string
+          id?: number
           instructor_id: number
         }
         Update: {
-          course_id?: number | null
+          course_id?: number
+          created_at?: string
+          id?: number
           instructor_id?: number
         }
         Relationships: [
           {
-            foreignKeyName: "course_instructors_course_id_fkey"
+            foreignKeyName: "instructor_reviews_course_id_fkey"
             columns: ["course_id"]
             isOneToOne: false
             referencedRelation: "courses"
             referencedColumns: ["id"]
           },
           {
-            foreignKeyName: "course_instructors_instructor_id_fkey"
+            foreignKeyName: "instructor_reviews_instructor_id_fkey"
             columns: ["instructor_id"]
             isOneToOne: false
             referencedRelation: "instructors"
@@ -115,16 +124,19 @@ export type Database = {
       }
       instructors: {
         Row: {
+          created_at: string
           deleted_at: string | null
           id: number
           name: string | null
         }
         Insert: {
+          created_at?: string
           deleted_at?: string | null
           id?: number
           name?: string | null
         }
         Update: {
+          created_at?: string
           deleted_at?: string | null
           id?: number
           name?: string | null
@@ -133,21 +145,24 @@ export type Database = {
       }
       raw_course_reviews: {
         Row: {
-          course_id: number | null
+          course_id: number
+          created_at: string
           deleted_at: string | null
           id: number
           is_summarized: boolean | null
           raw_data: Json | null
         }
         Insert: {
-          course_id?: number | null
+          course_id: number
+          created_at?: string
           deleted_at?: string | null
           id?: number
           is_summarized?: boolean | null
           raw_data?: Json | null
         }
         Update: {
-          course_id?: number | null
+          course_id?: number
+          created_at?: string
           deleted_at?: string | null
           id?: number
           is_summarized?: boolean | null
