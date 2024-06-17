@@ -15,7 +15,6 @@ import {
 	insertReviews,
 	getReviewsById,
 	hardDeleteReviews,
-	createInstructors,
 	getOrInsertInstructor,
 } from "./Reviews";
 
@@ -26,35 +25,29 @@ function App() {
 		fetch("../course_review.json")
 			.then((response) => response.json())
 			.then((json) => {
-				const firstInstructor = Object.keys(json)[0];
-				// for (const instructor in json) {
-				for (const review in json[firstInstructor]) {
-					// check if the instructor has any reviews
-					// dont insert any data for the instructor if they dont have any reviews
-					if ("error" in json[firstInstructor][review]) {
-						continue;
-					} else {
-						let { course_section, instructors, quarter, link, comments } =
-							json[firstInstructor][review];
-						quarter = quarter.replace(/\([^)]*\)/g, "");
-						console.log({
-							course_section,
-							instructors,
-							quarter,
-							link,
-							comments,
-						});
-						// insertReviews(
-						// 	"CMSC",
-						// 	course_section,
-						// 	instructors,
-						// 	quarter,
-						// 	link,
-						// 	comments
-						// );
-						let instructorList = instructors.split(",");
-						for (const instructor of instructorList) {
-							getOrInsertInstructor(instructor);
+				// const firstInstructor = Object.keys(json)[0];
+				for (const instructor in json) {
+					for (const review in json[instructor]) {
+						// check if the instructor has any reviews
+						// dont insert any data for the instructor if they dont have any reviews
+						if ("error" in json[instructor][review]) {
+							continue;
+						} else {
+							let { course_section, instructors, quarter, link, comments } =
+								json[instructor][review];
+							quarter = quarter.replace(/\([^)]*\)/g, "");
+							insertReviews(
+								"CMSC",
+								course_section,
+								instructors,
+								quarter,
+								link,
+								comments
+							);
+							// let instructorList = instructors.split(",");
+							// for (const instructor of instructorList) {
+							// 	getOrInsertInstructor(instructor);
+							// }
 						}
 					}
 				}

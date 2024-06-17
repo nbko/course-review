@@ -18,7 +18,7 @@ export type Database = {
           created_at: string
           deleted_at: string | null
           id: number
-          raw_course_review_id: number | null
+          raw_course_review_id: number
           semester: string | null
         }
         Insert: {
@@ -29,7 +29,7 @@ export type Database = {
           created_at?: string
           deleted_at?: string | null
           id?: number
-          raw_course_review_id?: number | null
+          raw_course_review_id: number
           semester?: string | null
         }
         Update: {
@@ -40,14 +40,14 @@ export type Database = {
           created_at?: string
           deleted_at?: string | null
           id?: number
-          raw_course_review_id?: number | null
+          raw_course_review_id?: number
           semester?: string | null
         }
         Relationships: [
           {
             foreignKeyName: "course_reviews_raw_course_review_id_fkey"
             columns: ["raw_course_review_id"]
-            isOneToOne: false
+            isOneToOne: true
             referencedRelation: "raw_course_reviews"
             referencedColumns: ["id"]
           },
@@ -127,19 +127,19 @@ export type Database = {
           created_at: string
           deleted_at: string | null
           id: number
-          name: string | null
+          name: string
         }
         Insert: {
           created_at?: string
           deleted_at?: string | null
           id?: number
-          name?: string | null
+          name: string
         }
         Update: {
           created_at?: string
           deleted_at?: string | null
           id?: number
-          name?: string | null
+          name?: string
         }
         Relationships: []
       }
@@ -172,7 +172,7 @@ export type Database = {
           {
             foreignKeyName: "raw_course_reviews_course_id_fkey"
             columns: ["course_id"]
-            isOneToOne: false
+            isOneToOne: true
             referencedRelation: "courses"
             referencedColumns: ["id"]
           },
