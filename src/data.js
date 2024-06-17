@@ -1,4 +1,3 @@
-import * as React from "react";
 export const majors = [
 	{ label: "All - Subjects", id: 1 },
 	{ label: "AANL - Ancient Anatolian Languages", id: 2 },

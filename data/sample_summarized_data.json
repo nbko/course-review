@@ -1,9 +1,6 @@
 {
-	"course-section": "CMSC 14100 3",
-	"instructors": ["Aaron Elmore", "Jesus Almaraz-Argueta"],
-	"quarter": "(2228) Autumn 2022",
-	"comments_course": "The course was challenging but fair, with a significant emphasis on 'code quality' which was difficult for beginners to grasp. The grading scheme was clear, but some found it harsh and the exams could be stressful. The course was generally found to be difficult, especially for those without prior experience in coding.",
-	"course_content": "Students learned fundamental concepts of programming in Python, including data types, conditionals, loops, classes, recursion, and exception handling. The course also covered data structures and algorithms, which were essential for future CS courses. Practical skills in Linux command line and Python coding etiquette were also taught.",
-	"comments_professor": "Professor Elmore was praised for his engaging and informative lectures, his ability to answer questions effectively, and his approachable demeanor. He was noted for making complex topics understandable and for being a great lecturer overall. His use of live coding examples in lectures was particularly appreciated.",
-	"advice": "Students recommended more examples and exposure to 'code quality' concepts, better instructions on homework, and improvements to the office hour system. They also suggested that lectures could slow down a bit and provide more notes or slides for better comprehension. Optional discussion sections could help accommodate different levels of comfort with the material."
+	"comments_course": "Students found the exams challenging but fair. Homework was time-consuming but helpful for understanding the material. Some students felt the feedback was vague and difficult to find, and the grading system on code quality was considered strict.",
+	"course_content": "The course covered programming fundamentals, including Python basics, recursion, object-oriented programming, and data structures. Students gained a solid foundation in computer science and coding skills.",
+	"comments_professor": "Professor Elmore's lectures were engaging and informative, with clear explanations and helpful examples. He was approachable and responsive to questions, although some students found the pace fast.",
+	"advice": "Attend lectures and discussion sections regularly for better understanding. Start homework early and practice coding regularly. Be prepared for challenging exams and focus on understanding code quality requirements."
 }

@@ -87,7 +87,8 @@ def fetch_instructor_reviews(driver, full_name):
         for row in rows:
             # Extract info for the current pdf
             course_section = row.select("td.course > a")[0].text
-            # print("course_section:", course_section)
+
+            #print("course_section:", course_section)
             link_href = row.select("td.title > a")[0]["href"]
             instructors = row.select("td.instructor")[0].text
             quarter = row.select("td.quarter")[0].get_text()
@@ -96,7 +97,7 @@ def fetch_instructor_reviews(driver, full_name):
             driver.get(link_href)
 
             comments_dic = {
-                "course-section": course_section,
+                "course_section": course_section,
                 "instructors": instructors,
                 "quarter": quarter,
                 "link": link_href
@@ -104,7 +105,8 @@ def fetch_instructor_reviews(driver, full_name):
 
             # Save the info for the current course
             comments_dic["comments"] = fetch_reviews(driver)
-            save_comments(comments_dic, full_name)
+            if len(comments_dic["comments"]) != 0:
+                save_comments(comments_dic, full_name)
 
             # Navigate back to the course list to parse through the next course review
             driver.back()
@@ -128,11 +130,13 @@ def fetch_reviews(driver):
     all_comments = soup.find_all("div", class_="report-block")
 
     for comment in all_comments:
-        title = comment.find("h3", class_="ReportBlockTitle")
+        #print("comment", comment)
+        title = comment.select(".ReportBlockTitle")
 
         # Store the comments only if the title of the comment block exists
-        if title is not None:
-            title = title.get_text()
+        if len(title) != 0:
+            title = title[0].get_text()
+
             # No need to fetch the info about the TA/CA or Intern
             if not ("TA" or "Intern") in title: 
                 review_elems = comment.select(".CommentBlockRow.TableContainer > .block-table.CondensedTabular > tbody")
@@ -141,20 +145,26 @@ def fetch_reviews(driver):
                 # parsing over answers for each questions
                 for elem in review_elems:
                     review_text = elem.text
+                    #print("review_text:", review_text)
                     if review_text:
                         review_parts = filter(None, review_text.split('\n\n'))
                         review_lst.extend(review_parts)
+                    # print("updated review list:", review_lst)
                 
                 # No need to save the review if the question has no reviews
                 if len(review_lst) != 0:
-                    comments_dic[title] = review_lst
+                    if title in comments_dic:
+                        comments_dic[title].extend(review_lst)
+                    else:
+                        comments_dic[title] = review_lst
+                    #print("updated", comments_dic[title])
             else:
                 continue
     return comments_dic
 
 def save_comments(comments_dic, instructor_name):
     try:
-        with open('new_data.json', 'r', encoding='utf-8') as f:
+        with open('course_review.json', 'r', encoding='utf-8') as f:
             existing_data = json.load(f)
     except FileNotFoundError:
         existing_data = {}
@@ -169,7 +179,7 @@ def save_comments(comments_dic, instructor_name):
 
     curr_instructor_courses[curr_id] = comments_dic
 
-    with open('new_data.json', 'w', encoding='utf-8') as f:
+    with open('course_review.json', 'w', encoding='utf-8') as f:
         json.dump(existing_data, f, ensure_ascii=False, indent=4)
 
 def main():
@@ -180,9 +190,10 @@ def main():
 
         with open(json_file_path, "r", encoding="utf-8") as file:
             instructors = json.load(file)
-            print("instructors:", instructors)
+            #print("instructors:", instructors)
 
             for instructor in instructors:
+                print(instructor)
                 fetch_instructor_reviews(driver, instructor)
 
     except FileNotFoundError as e:
