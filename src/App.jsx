@@ -11,21 +11,44 @@ import { majors, instructors } from "./data";
 import { useState, useEffect } from "react";
 import "./App.css";
 
-import {
-	insertReviews,
-	getReviewsById,
-	hardDeleteReviews,
-	getOrInsertInstructor,
-} from "./Reviews";
+import { insertReviews } from "./services/insertReviews";
 
+import { getReviewsByInstructor } from "./services/getReviews";
 import { instructorsList } from "../data/instructors_list";
+import { DataGrid } from "@mui/x-data-grid";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableHead from "@mui/material/TableHead";
+import TableRow from "@mui/material/TableRow";
 
 function App() {
+	const [courseInfo, setCourseInfo] = useState([]);
+	const [progress, setProgress] = useState(false);
+	const [search, setSearch] = useState(false);
+	const [isClicked, setIsClicked] = useState(false);
+	const [reviewList, setReviewList] = useState([]);
+	const [major, setMajor] = useState(null);
+	const [instructor, setInstructor] = useState(null);
+	const [alertMsg, setAlertMsg] = useState("");
+
+	const columns = [
+		{ field: "course_section", headerName: "Course Number", width: 180 },
+		{ field: "title", headerName: "Course Title", width: 400 },
+		{
+			field: "count",
+			headerName: "Reviews",
+			type: "number",
+			width: "180",
+		},
+	];
+
 	useEffect(() => {
-		// fetch("../course_review.json")
+		// fetch("../course_review_data.json")
 		// 	.then((response) => response.json())
 		// 	.then((json) => {
-		// 		// const firstInstructor = Object.keys(json)[0];
+		// 		//const firstInstructor = Object.keys(json)[0];
 		// 		for (const instructor in json) {
 		// 			for (const review in json[instructor]) {
 		// 				// check if the instructor has any reviews
@@ -33,25 +56,32 @@ function App() {
 		// 				if ("error" in json[instructor][review]) {
 		// 					continue;
 		// 				} else {
-		// 					let { course_section, instructors, quarter, link, comments } =
-		// 						json[instructor][review];
-		// 					quarter = quarter.replace(/\([^)]*\)/g, "");
+		// 					let {
+		// 						course_section,
+		// 						title,
+		// 						instructors,
+		// 						semester,
+		// 						link,
+		// 						comments,
+		// 					} = json[instructor][review];
+		// 					// quarter = quarter.replace(/\([^)]*\)/g, "");
+		// 					// instructors = instructors.split(",");
 		// 					insertReviews(
 		// 						"CMSC",
 		// 						course_section,
+		// 						title,
 		// 						instructors,
-		// 						quarter,
+		// 						semester,
 		// 						link,
 		// 						comments
 		// 					);
 		// 					// let instructorList = instructors.split(",");
 		// 					// for (const instructor of instructorList) {
 		// 					// 	getOrInsertInstructor(instructor);
-		// 					// }
 		// 				}
 		// 			}
 		// 		}
-		//	});
+		// 	});
 		// deleteReviews(10);
 		// hardDeleteReviews(8);
 		// instructorsList.map((instructor) => {
@@ -94,7 +124,47 @@ function App() {
 		// 			"i had previous algorithms experience and it was still interesting",
 		// 		],
 		// });
-	}, []);
+		async function fetchReviews() {
+			if (isClicked && major && instructor) {
+				const currMajor = major.label.split("-")[0].trim();
+				const currInstructor = instructor.label;
+				console.log({ isClicked, major, instructor });
+
+				const reviews = await getReviewsByInstructor(currMajor, currInstructor);
+
+				const courseCountMap = new Map();
+
+				reviews.forEach((course) => {
+					course["course_section"] = course["course_section"]
+						.split(" ")
+						.splice(0, 2)
+						.join(" ");
+					const courseKey = JSON.stringify(course);
+
+					if (courseCountMap.has(courseKey)) {
+						courseCountMap.set(courseKey, courseCountMap.get(courseKey) + 1);
+					} else {
+						courseCountMap.set(courseKey, 1);
+					}
+				});
+
+				let uniqueCoursesWithCount = Array.from(courseCountMap.entries()).map(
+					([key, count]) => {
+						const course = JSON.parse(key);
+						return { ...course, count };
+					}
+				);
+
+				uniqueCoursesWithCount.map((course, i) => (course["id"] = i));
+				console.log(uniqueCoursesWithCount);
+
+				setCourseInfo(uniqueCoursesWithCount);
+				setIsClicked(false);
+			}
+		}
+
+		fetchReviews();
+	}, [isClicked, major, instructor]);
 
 	const themeOptions = createTheme({
 		palette: {
@@ -106,14 +176,6 @@ function App() {
 			},
 		},
 	});
-
-	const [progress, setProgress] = useState(false);
-	const [search, setSearch] = useState(false);
-	const [isClicked, setIsClicked] = useState(false);
-	const [reviewList, setReviewList] = useState([]);
-	const [major, setMajor] = useState(null);
-	const [instructor, setInstructor] = useState(null);
-	const [alertMsg, setAlertMsg] = useState("");
 
 	const handleSearch = () => {
 		setIsClicked(true);
@@ -151,16 +213,97 @@ function App() {
 					<Button variant="contained" onClick={handleSearch}>
 						Search
 					</Button>
-					<div>Selected Major: {major ? major.label : "None"}</div>
+					{/* <div>
+						Selected Major: {major ? major.label.split("-")[0].trim() : "None"}
+					</div>
 					<div>
 						Selected Instructor: {instructor ? instructor.label : "None"}
-					</div>
+					</div> */}
 					{isClicked && (!major || !instructor) && (
 						<Alert severity="warning">{alertMsg}</Alert>
 					)}
-					{progress && <Progress />}
+					{/* {progress && <Progress />} */}
 					<Paper>
-						<a href="/course/cmsc14100">
+						{courseInfo && (
+							<div style={{ height: 400, width: "100%" }}>
+								<DataGrid
+									rows={courseInfo}
+									columns={columns}
+									initialState={{
+										pagination: {
+											paginationModel: { page: 0, pageSize: 5 },
+										},
+									}}
+									pageSizeOptions={[5, 10]}
+								/>
+							</div>
+						)}
+						{/* {courseInfo && (
+							<TableContainer component={Paper}>
+								<Table sx={{ minWidth: 400 }} aria-label="simple table">
+									<TableHead>
+										<TableRow>
+											<TableCell>Course Number</TableCell>
+											<TableCell>Course Title</TableCell>
+											<TableCell align="right">Reviews</TableCell>
+										</TableRow>
+									</TableHead>
+									<TableBody>
+										{courseInfo.map((courseInfo, i) => (
+											<TableRow
+												key={courseInfo.id}
+												sx={{
+													"&:last-child td, &:last-child th": { border: 0 },
+												}}
+											>
+												<TableCell component="th" scope="row">
+													{courseInfo.course_section}
+												</TableCell>
+												<TableCell>{courseInfo.title}</TableCell>
+												<TableCell align="right">{courseInfo.count}</TableCell>
+												<a
+													key={i}
+													href={`/course/${courseInfo.course_section}`}
+												>
+													<div
+														className={`course ${courseInfo.course_section}`}
+													>
+														<p className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-gutterBottom">
+															{courseInfo.course_section}
+														</p>
+														<p className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorPrimary MuiTypography-gutterBottom">
+															{courseInfo.title}
+														</p>
+													</div>
+												</a>
+											</TableRow>
+										))}
+									</TableBody>
+								</Table>
+							</TableContainer>
+						)} */}
+					</Paper>
+					{/* {courseInfo &&
+							courseInfo.map((course, i) => {
+								const course_section = course["course_section"]
+									.split(" ")
+									.slice(0, 2)
+									.join(" ");
+								const course_title = course["title"];
+								return (
+									<a key={i} href={`/course/${course_section}`}>
+										<div className={`course ${course_section}`}>
+											<p className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-gutterBottom">
+												{course_section}
+											</p>
+											<p className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorPrimary MuiTypography-gutterBottom">
+												{course_title}
+											</p>
+										</div>
+									</a>
+								);
+							})} */}
+					{/* <a href="/course/cmsc14100">
 							<div className="course cmsc14100">
 								<p className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-gutterBottom">
 									CMSC 14100
@@ -209,8 +352,7 @@ function App() {
 									Analytic Geometry and Calculus 3
 								</p>
 							</div>
-						</a>
-					</Paper>
+						</a> */}
 					{/* <DisabledAccordion /> */}
 					{/* <QuarterTags />
 				<SearchInput inputType="course section" /> */}

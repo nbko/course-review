@@ -1,0 +1,1328 @@
+{
+    "Alexander Razborov": {
+        "0": {
+            "course_section": "CMSC 27100 1",
+            "title": "Discrete Mathematics",
+            "instructors": [
+                "Alexander Razborov"
+            ],
+            "semester": "Winter 2016",
+            "link": "https://uchicago.bluera.com/uchicago/rpvf-eng.aspx?lang=eng&redi=1&SelectedIDforPrint=da1836ed6d2f11c4dd222e015cafe2f5ce647aa3aae38635a2410e83ff8b2742e2de92b2303c1f66a67ef6796958b078&ReportType=2&regl=en-US",
+            "comments": {
+                "What were the instructor's strong points?": [
+                    "lectures were very clear; gave justifications for everything he did to the best of his ability",
+                    "Razborov gave organized lectures, but jumped around a lot.",
+                    "Very accesible and nice. His accent is the best. Also he reminds you of a happy grandpa :). Puts smilely's in his emails.",
+                    "He really cares about students.",
+                    "Razborov knows the material very well.",
+                    "Professor Razborov had a lot of enthusiasm for the topics, and it helped me stay engaged.",
+                    "He was a nice dude.",
+                    "Razborov teaches theory at a very high level.  He's a nice guy.  I think he really cares about what he's doing, and his teaching, which is extremely refreshing.  Overall, I think he's fantastic.",
+                    "He seems very smart, he can be funny but it is subtle and dry.",
+                    "Razbarov was very engaged and cared a lot about making the subject clear and accessible to us students. One thing I really like about him is that before beginning every class, he would ask if anyone had any questions - he's very open to questions, which I found very refreshing from a hot shot researcher/professor.",
+                    "Pretty clear, very good motivating examples",
+                    "The class was very well-organized. Prof. Razborov genuinely cares about his students. The material is interesting and definitely helped me think better.",
+                    "He is knowledgeable and enthusiastic about the material that he teaches. He is quite friendly and approachable outside of class."
+                ],
+                "What were the instructor's weak points?": [
+                    "very rarely made some leaps in logic",
+                    "I just found him very difficult to follow.   Sometimes he would talk to the board for so long that raised hands would droop down in defeat.",
+                    "He moved really fast, so following was difficult at times.",
+                    "Can be difficult to understand because of accent but its usually ok if not funny.",
+                    "His lecture was hard to understand. He went over important steps of proofs by words instead of writing them down.",
+                    "Razborov was not a very clear or concise lecturer. I feel like he taught towards math majors (despite saying on the first day that he would try to not do so), so as a CS major who isn't particularly strong in math, I often couldn't follow when he glossed over \"basic\" concepts that I didn't know. I wished he would make more careful use of board space and be clearer with what he wrote. The boards make no sense if he doesn't tell you what he meant by each thing.",
+                    "His lectures and board usage could get a bit confusing at times. The class topics also seemed kind of all over the place and follow an illogical progression for the first few weeks of class. After that things started to make more sense though.",
+                    "Mostly incomprehensible lectures. I learnt more from the book. Though the exams were open computer with access to the Internet. So it was a toss up.",
+                    "He was a bit disorganized in lecture.  There was a complete mismatch between the textbook/exams and our lecture/homeworks.  It felt like I was simultaneously taking two completely different classes: one taught by Professor Razborov and one taught by Rosen.  But this is only a weak point because this course is a piece of shit that constrained Razborov's abilities to teach us.  Any time an instructor spends the last class apologizing to his students for the lack of challenge within the course, something has clearly gone seriously wrong.",
+                    "Sometimes lectures can be slow but the material isn't extremely advanced",
+                    "Sometimes the notes he writes on the board are hard to interpret - he sometimes writes very little or just draws a quick diagram while he says a lot more about it. Not necessarily a weakness, per se, it just made it a little hard to follow class at times.",
+                    "I'm a math major and paid close attention to most lectures, and found a lot of stuff popping up on psets that was discussed nowhere in the lecture and obscurely in the text. Maybe this is by design.",
+                    "His accent is very thick and he doesn't write that much on the board, so if you aren't following what he says, you lag behind. The list of topics covered every week was great and just such a nice touch overall. Would still recommend Prof. Razborov strongly.",
+                    "His lectures were disorganized and unclear. He would jump from topic to topic and would rush through examples without explaining them sufficiently."
+                ],
+                "What did homework assignments involve? (Problems, proofs, computation, explanations, etc.)": [
+                    "creativity-based proofs",
+                    "Almost all proofs, with some problems that involved computation.",
+                    "Proof/Computation. usually straightforward",
+                    "Mostly proofs, some computations.",
+                    "The homeworks were proofs or computations using theorems and concepts from class. They were actually very, very interesting and fun to solve especially if you had people who were good at math working with you.",
+                    "It was 4 to 5 problems/proofs. Some were fairly tricky.",
+                    "Difficult proofs that went beyond the scope of material in Rosen.",
+                    "Some proofs, some computations using an algorithm, some problems in which you have to figure out how to show a certain property",
+                    "A mix of proofs and computations",
+                    "Mainly proofs, sometimes counting problems (i.e. how many ways can you do xyz while satisfying condition abc and def)",
+                    "Mostly direct proofs, some computations",
+                    "Proofs and computations.",
+                    "Usually about 4-5 problems based around the topics that we had been covering."
+                ],
+                "How useful were the texts? (Please give author and title)": [
+                    "Rosen's book was extremely useful, especially on exams",
+                    "Rosen was decently useful, but the problem sets were much harder than the exercises in the book.",
+                    "Absolutely neccesary.",
+                    "Not very useful. Some materials in the lecture was not in Rosen. Kind of useful for preparing exams",
+                    "Rosen's Discrete Mathematics and Its Applications. Great text. Razborov also posts some papers for you to consult but I didn't really look at them, although it was nice to have them.",
+                    "Rosen was useful for review and gave a good overview over our topics. It was also useful for preparing for the tests.",
+                    "Rosen was useful for the exams.  It was, again, very disconnected from our lectures or homeworks.",
+                    "Rosen is good",
+                    "Rosen's Discrete Mathematics textbook was very helpful.",
+                    "Rosen is ok, I barely opened it. You can get by with Wikipedia and knowing what definitions/concepts to look up",
+                    "Discrete Mathematics by Rosen. Very solid overall.",
+                    "Somewhat. They listed the theorems and such that we covered, but the examples did not reach nearly the level of difficulty that we were expected to do on the homework."
+                ],
+                "How many exams were there?  What did they involve?": [
+                    "3: 2 midterms and a final. had less involved proofs than the homework, but still challenging",
+                    "3. 2 Midterms, 1 Final. Problems on the exams were generally easier than those on the psets, but they were tricky in their own right.",
+                    "3 exams. Non-cumulative except the final. All open book/internet/notes.",
+                    "2 midterms, 1 final. Open book, open notes, open computer, open internet. Easier problems than homework",
+                    "2 midterms, 1 final. Similar to the homeworks.",
+                    "3 exams. 2 midterms and 1 final. They were basic problems/proofs based on what we did in class.",
+                    "2 midterms and a final. A lot easier than the homeworks.",
+                    "Three open note examinations.  The first midterm was deliberately extremely easy, the second midterm was four easy problems and one very hard one, and the final was five easy problems and three very hard ones.",
+                    "2 midterms 1 final. Most reasonable exams at this school. Razborov gives open book tests because he doesn't want you to memorize theorems and definitions, just how to apply them. They are easier than homeworks usually and require being able to use theorems and definitions to calculate probabilities or show properties of a given mathematical object (like a graph)",
+                    "2 midterms, one final. A mix of proofs and computations",
+                    "2 midterms and a final. They mainly involved combinatorics questions and some graph theory toward the end.",
+                    "2 open notes/open Internet midterms. Final will probably be similar format. Like the psets but much easier.",
+                    "2 midterms worth 12.5% each and a final worth 25%. Open laptop, open internet, mostly involving proofs and computations. Reasonable exams that reward good prep.",
+                    "Three, 2 midterms and a final. Problems similar to the homework, though often somewhat easier. Notably, they were \"Open Everything\"; students could use their laptops on the test and access whatever resources they wanted to help them finish the test problems, the only things that weren't allowed were email, chats, or anything else that facilitated direct communication between people."
+                ]
+            }
+        },
+        "1": {
+            "course_section": "CMSC 27130 1",
+            "title": "Honors Discrete Mathematics",
+            "instructors": [
+                "Alexander Razborov"
+            ],
+            "semester": "Autumn 2020",
+            "link": "https://uchicago.bluera.com/uchicago/rpvf-eng.aspx?lang=eng&redi=1&SelectedIDforPrint=1ffd9fb47094c29c13590bd6eccd8a0efb6883456e3beb16f46b0d6c7a5b54e3abd27b73bbe599728708c077a63443f7&ReportType=2&regl=en-US",
+            "comments": {
+                "What are the most important things that you learned in this course? Please reflect on the knowledge and skills you gained.": [
+                    "interesting discrete math concepts",
+                    "Basic number theory/probability/graph theory/algebra.",
+                    "Graph Theory.",
+                    "Various topics in Discrete Math – counting techniques, probability, graphs/trees, induction, etc",
+                    "Discrete math",
+                    "My favorite theorems were Bezout's Theorem and Mantel's Theorem. I learned about many beautiful topics in discrete math, learned how to solve interesting problems with what we saw in lecture.",
+                    "How to approach some other areas of math."
+                ],
+                "Describe how aspects of this course (lectures, discussions, labs, assignments, etc.) contributed to your learning.": [
+                    "lectures and psets are helpful",
+                    "I didn't go to many lectures, but I did the problem sets and I guess I learned from those.",
+                    "Lectures gave deep insights and proofs of different aspects of Discrete Math. Homework generally involved challenging proofs.",
+                    "Lectures were interesting",
+                    "Prof Razborov was very passionate and good at answering questions in class. The homework assignments, 5 problems a week, were pretty tough but manageable and interesting",
+                    "The lectures were informative."
+                ],
+                "What aspect of the instructor's teaching contributed most to your learning?": [
+                    "Putting the topics covered in class on the course website was very helpful.",
+                    "His willingness to explain things and pause his lecture to answer any questions! And he is clearly very knowledgeable about the subject matter!",
+                    "Professor Razborov was very interested in the subject",
+                    "He's a god but he's so humble. Open environment for questions"
+                ],
+                "What could the instructor modify to help you learn more?": [
+                    "Idk he was good.",
+                    "Perhaps do fewer topics, but go into greater depth? The end of the course felt like a rushed review of random bits of Math!",
+                    "Some of the topics were quite complex and perhaps the professor could have made the more approachable through more tangible analogies",
+                    "Lectures were generally pretty dry and monotonous. Not sure how this could be helped. Probably very subjective."
+                ],
+                "Please elaborate on the above.": [
+                    "lectures, both recorded and live, and psets were very helpful",
+                    "I learned from the homework.",
+                    "All lectures were live/synchronous, and they were sufficient to teach most required material (we had to learn some stuff outside class/on Piazza).",
+                    "This class, like many, did not feel super well–adjusted to online. Lectures were hard to draw focus and I felt that most of my learning came from working on problem sets and reviewing the recordings of live lectures."
+                ],
+                "Did the instructor make adjustments to the course mid-quarter?  If so, please comment on the effectiveness of those adjustments.": [
+                    "No.",
+                    "No."
+                ],
+                "Please describe any element of this course, including specific actions by the instructor, that improved your remote learning experience.": [
+                    "The homework.",
+                    "Being very approachable and responsive on Piazza!"
+                ]
+            }
+        },
+        "2": {
+            "course_section": "CMSC 27130 1",
+            "title": "Honors Discrete Mathematics",
+            "instructors": [
+                "Alexander Razborov"
+            ],
+            "semester": "Autumn 2017",
+            "link": "https://uchicago.bluera.com/uchicago/rpvf-eng.aspx?lang=eng&redi=1&SelectedIDforPrint=ff5e0d25aa6aeea59b9187fe62aca9b955f28a1ef8f58bb20745f42eecab4ab75d19419b84972077df7ed8e249463540&ReportType=2&regl=en-US",
+            "comments": {
+                "What were the instructor's strong points?": [
+                    "He was really passionate about the material and covered interesting problems.",
+                    "Had great stories, very interesting and very helpful on Piazza and office hours.",
+                    "Razborov is a really great instructor! He is very fair in his exams and problem sets, and is extremely encouraging of student questions both in lecture and in office hours. He is very approachable and very passionate about CS.",
+                    "Very active on Piazza, assigned fun (if challenging) homework problems",
+                    "Razborov is a pretty good lecturer, and he's very accessible to students.",
+                    "He really cares about the students' learning and often pleads for people to ask questions. He is very good at answering those questions. He teaches pretty well generally.",
+                    "Alexander was very engaging and was a clear and organized lecturer. He generally made the concepts interesting and easy to understand, and his sense of humor made lectures entertaining.",
+                    "Dedicated to students, knowledgeable about topics not covered in textbook",
+                    "Honestly Razborov is just. The best. He's really funny and cares about his students; he opens every lecture by prompting questions, and he's just overall really pleasant to interact with. His enthusiasm for the subject is infectious, which made the lectures fun. He'd throw in a challenge problem in every problem set and I couldn't even get mad because I could just picture him having a chuckle about whatever neat trick you'd have to use to solve it. Sometimes he suffers from being literally too smart to understand where our questions are coming from, but he does his best to clarify.",
+                    "Clear lectures with the occasional joke. Razborov was really good at skipping unnecessary details when he introduced unusual applications of certain topics (e.g. induction in Helly's theorem).",
+                    "Very engaging, very funny, encourages us to ask questions",
+                    "Knowledgeable.",
+                    "Razborov is a wonderful lecturer once you get used to him. He can be a bit hard to understand at first, but he has a sort of style that you figure out after a week or so, after which he's one of the best lecturers you'll have.",
+                    "Gave interesting lectures. Challenge problems on the homework were awesome. Asked constantly if people didn't understand.",
+                    "He's very sweet and very friendly, and also freaking smart (he has his own Wikipedia page). He is also a merciful instructor, telling us at the beginning of the course that he wouldn't cover as many advanced topics in order to accommodate students who were stuck in honors because they couldn't get into regular discrete.",
+                    "Very motivated to teach - cares a great deal about students' learning.",
+                    "Razborov is a great instructor. His lectures were interesting and funny and he made sure to engage the class",
+                    "He actually takes in feedback and adjust the courses accordingly.",
+                    "He is nice and clever",
+                    "His lectures were fine.",
+                    "Extremely intelligent, great at conveying concepts",
+                    "Engaging, was good about stopping to ask for questions",
+                    "Razborov is a great lecturer who is very good at taking complicated concepts and breaking them down/presenting them in simple, easy-to-understand terms. He is very conscientious of the class's understanding and is constantly checking for comprehension. He answers all questions succinctly and accurately.",
+                    "Lectures were engaging and interesting. Good job of answering student questions.",
+                    "Deep working knowledge of all concepts",
+                    "Razborov is an absolutely incredible instructor. I've never seen someone more knowledgeable or more passionate about his field. He really wants you to share his passion for discrete math with you, and if you put in the effort, he will ensure that you learn a lot out of this class. He was super organized and pointed us to material relevant to what was covered in class on the course website. Super quick at answering Piazza questions. Made exams easy and computational, whereas the homework was challenging.",
+                    "He's super intelligent and gives good explanations for all the class topics."
+                ],
+                "What were the instructor's weak points?": [
+                    "Horrendous use of the chalk board. Was very scatter brained about detailing problems which made it very difficult to take notes.",
+                    "Razborov told students that the class was graded with a purely competitive scheme so it was ill advised to collaborate with other students. He told TAs that they couldn't help us with certain sections of the homework. In doing so he absolutely devalued discussing, investigating, and deeply learning the material and instead fostered a hostile class environment. Truly the worst pedagogical method in history.",
+                    "The class was a little disorganized, but I don't think this was professor Razborov's fault - just the way the class was organized",
+                    "At times, he went over proofs in class a bit fast (to the point where I wasn't even sure what to ask when he asked if anyone had any questions). However, many times he wrote enough steps on the board that I could eventually figure the proof out. Additionally, he was always very helpful in office hours, so if a proof didn't make sense in class it could be explained again then.",
+                    "Often lectured at a very high level and assumed background knowledge that wasn't there",
+                    "Though he's a good orator, he frequently hand-waves too much and becomes very hard to follow. I know I'm not alone - frequently when he would pause for questions, nobody would ask anything, but a lot of people would glance around with the \"I have no clue what I could ask about\" expression on their faces. I have a pretty strong math background but I still felt like he was quite difficult to follow.",
+                    "Sometimes the teaching was a bit unclear, and he wrote very little of what he said on the board.",
+                    "Alexander often misunderstood students' questions (or at least misinterpreted which ideas they did not understand), and thus typically did not give very helpful answers in class.",
+                    "Blackboard handwriting is hard to understand",
+                    "Sometimes hard to follow proofs because he didn't connect all the dots and made implicit assumptions. Not everything would be written on the blackboard, so you need to be paying close attention and take good notes.  [This isn't a weak point, but just an fyi, this class is 100% a math class and you won't be coding unless it's to TeX your homework.]",
+                    "Sometimes the topics seemed a bit disorganized/random, but that seems like the nature of discrete math. Also sometimes Razborov assumed more math knowledge than most of the class had.",
+                    "Hard to tell what's important and what's not - sometimes he'll go off on a random topic for a bit that we don't need to know",
+                    "Sometimes not very clear in explaining some ideas.",
+                    "Few to none",
+                    "Didn't have lecture notes posted online and didn't write enough on the board.",
+                    "I think the thing Razborov could maybe change - in his effort to be interesting, he sometimes explains things in confusing ways, and I found that some of the notes I'd taken about concepts I thought he was talking about were more like odd explanations or jokes that weren't actually separate concepts at all.   The thing he kind of can't change, and this isn't his fault, is that his heavy accent and way of speaking can be very difficult to understand, and students should be aware of that coming in. It is possible to do well in the course without going to lectures if you have a really hard time hearing what he's saying, but just be ware of that.",
+                    "Lectures slightly difficult to follow.",
+                    "None",
+                    "Sometimes his accent is hard to understand. But that's not so often.",
+                    "I genuinely believe Razborov hates his students. His pedagogy is not only adversarial to teamwork and classwork, but adversarial to learning. He describes this class as \"strictly competitive,\" i.e. your grade does not matter. All that matters is your grade relative to your classmates. I had a strict A in the class and I have no clue what grade I will get. At the beginning of the course he said to us that working with other students or providing help would be detrimental to our grade. He does not care if we learn the material. He only cares if we compete with our peers. Every homework had a \"challenge problem\" that was designed to \"keep A students from slipping through the cracks\" and each one was ridiculous. Not only did the challenge problems have absolutely nothing to do with the material we were learning, but they were also immensely difficult and seemingly unrelated to everything in computer science. However, because of Razborov's insane grading policy, I felt obligated to finish all of them. Honestly, this man should not be teaching unless he fixes his style of grading and assigning homework.",
+                    "Sometimes it was hard to follow some of the lecture material but that's probably because I'm not a math major",
+                    "Razborov tends to use the blackboard haphazardly, which often makes it difficult to follow the lecture progression. This issue is offset by the fact that he is generally clear in his speech but if you miss a definition it is somewhat difficult to follow the rest of the discussion since what is written down is not sufficient.",
+                    "Somewhat disorganized, imprecise or incomplete presentation of many proofs",
+                    "Can't really think of any.",
+                    "He doesn't have great board management and doesn't always write clear notes on the board."
+                ],
+                "What did homework assignments involve? (Problems, proofs, computation, explanations, etc.)": [
+                    "Proofs and computations.",
+                    "Proofs and computations",
+                    "Proofs, some computations (with proof of result)",
+                    "4-5 proofs -- a few were quite \"proofy\" but most were just computational with a little explanation",
+                    "Proofs and computations.",
+                    "Proofs and computations, usually 5 questions. There was one problem labeled as the \"challenge\" problem, but it wasn't always the hardest problem on the set.",
+                    "Homework assignments involved about five problems, which were about half proofs and half computations with \"proof\" of correctness.",
+                    "Proofs, computations, and one challenge problem that goes beyond course material for each assignment",
+                    "a mix of proof and computation with explanation. there are usually 5 problems, one of which is a challenge problem. the others are of varying difficulty from \"easy peasy\" to \"?????\".",
+                    "Computations and proofs. Also one of the problems would be much harder than the others. Unsurprisingly, it was usually the one marked as a challenge problem, but there was one pset where this was not the case.",
+                    "Proofs, some computations (combinatorial/counting problems)",
+                    "Problems related to the theorems and definitions taught in class.",
+                    "Weekly problem sets, typically 5 problems with 1 \"challenge\"",
+                    "Proofs, computation",
+                    "Proofs and computation.",
+                    "Proofs and computations.",
+                    "Homework was 4 shorter proofs or computations and 1 longer difficult proof that would take a few hours to figure out",
+                    "proofs mostly, sometimes computation (of possibilities / distributions etc.)",
+                    "Proofs",
+                    "Four relatively easy problems and one incredibly difficult challenge problem. This challenge problem was consistently UNSOLVABLE given the material we learned in class. Razborov expected us to look up facts on the internet and apply them to the problem. He would often give problems that appeared to be related to course material, but were often not at all; one time he asked us to prove a fact about the discrete Fourier transform, hiding the question as a combinatorics problem. Many times, he expected us to know complex concepts from algebra. I am a math major and I spent more time on this class than I did in algebra or analysis. Don't take it with Razborov. He hates you.",
+                    "Proofs, problems, computation",
+                    "Half proofs, half computation (which you had to justify)",
+                    "A mix of proofs and computations depending on the section at hand. 4-5 regular problems and 1 \"challenge\" problem intended to be more difficult to answer but awarded the same amount of credit.",
+                    "Problems and proofs related to material covered in class. Each HW included a challenge problem that was at times unreasonably difficult, yet not optional. It is not possible to get a good grade in this class without doing the challenge problem, so people who covered this material in other classes already had an upper hand.",
+                    "Difficult proofs and computations",
+                    "Mostly proofs and computations. Also a weekly challenge problem.",
+                    "Hard proofs and computations"
+                ],
+                "How useful were the texts? (Please give author and title)": [
+                    "Pretty useful for the information but Razborov's problems were harder than those found in the textbook in my opinion.",
+                    "Discrete Mathematics by Rosen, was pretty useful for getting the topics down",
+                    "Rosen was not really that helpful, except for maybe doing some exercises to prepare for the exams.",
+                    "Honestly a godsend, since I had to do most of my learning from this book (after the first midterm) -- Discrete Mathematics and its Applications by Kenneth H Rosen",
+                    "Rosen was decent enough, but I'm not a textbook person, so I didn't use it much.",
+                    "Rosen was good, though he sometimes didn't use it.",
+                    "I did not find the text (Discrete Mathematics and Its Applications by Kenneth Rosen) particularly useful, but I would imagine that it might be if a student did not understand a concept in lecture. It is a fairly decent text, although I rarely used it.",
+                    "Very useful for exams",
+                    "Rosen was fine, but Razborov's lectures deviated from it a lot. There are also some other books that Razborov draws examples from, but trying to get the material from those books instead of lectures is probably too much reading.",
+                    "Rosen provided endless practice problems",
+                    "Discrete Mathematics by Rosen was of limited use; I mostly used lecture notes and Wikipedia.",
+                    "Rosen. Excellent book",
+                    "VERY useful. Buy it, read it. It's not the best book but it's very helpful. Definitely get help outside of class, though.",
+                    "Rosen is at best a mediocre text to actually learn the material of the course well; the alternative texts are generally useful.",
+                    "Rosen was useful for tests, but not that helpful for problem sets",
+                    "Rosen is OK.",
+                    "Useful for exams",
+                    "Rosen discrete math. Useless.",
+                    "Rosen was pretty useful for the stuff that was taught from it, but a lot of the material was not from Rosen",
+                    "Rosen's Discrete Math was generally very good at complementing the lectures as it had many examples that were worked out. Razborov also keeps a running syllabus/reference list on his website that points to the relevant sections in the textbook as well as outside texts.",
+                    "Rosen's Discrete Math -- not at all useful, not worth the money",
+                    "Discrete Math and its Applications by Keneth Rosen. Helpful, but Razborov often went beyond the book into more advanced concepts.",
+                    "Rosen was somewhat useful to study for tests.  Too basic for the homeworks."
+                ],
+                "How many exams were there?  What did they involve?": [
+                    "2 midterms and 1 final. Covered everything covered in the class.",
+                    "2 midterms, 1 final, all mostly computation",
+                    "There were 2 midterms and a final. They were basically all computation (final result being an integer or rational number) with a proof of correctness.",
+                    "2 midterms and a final. Midterms were few questions that tended to be easier versions of homework or book problems, though still somewhat difficult to do in 50 minutes.",
+                    "Two midterms and a final. All computations. Open note/book/internet. Very difficult.",
+                    "2 midterms and a final. They were much easier than homeworks, usually just to make sure we learned the concepts from the textbook",
+                    "There were three exams: two midterms (each 4 - 5 problems) and a final (8 problems). They involved problems similar to the homeworks, but easier and with fewer abstract proofs; they were all computational problems requiring \"proof\" of correctness.",
+                    "Three. Cumulative.",
+                    "two midterms, one final. razborov said they'd be easy-ish, which i guess would be true if i wasn't dumb as heck, but the exams are all open book/calculator/computer (just closed mouth). they are mostly computational problems, but you've got to right enough to convince the graders you didn't pull a number out of your hat. in the spirit of rosen's exercises but perhaps a little bit spicier.",
+                    "2 midterms and a final. Fairly easy short answer computations.",
+                    "2 midterms, 1 final. They followed the class pretty well",
+                    "3. 2 midterms and 1 final. They involve problems related to the theorems and definitions taught in class.",
+                    "2 midterms and a final. A bit easier than the homeworks.",
+                    "2. Computations. Pretty easy so you need to make sure you don't make a stupid mistake because everyone does well and you're graded against your peers.",
+                    "Two midterms and a final, almost all computational questions. They were all open-book and open-internet and calculator permitted, just no communications. If you did the homework and practice problems in the textbook you'd probably be fine.",
+                    "2 midterms 1 final - all simple computations.",
+                    "2 midterms and a final, all were short problems that were similar to problems from Rosen. Open book and open internet",
+                    "2 midterms and 1 accumulative final. Problems that only require a rationale number to answer.",
+                    "2 midterms and 1 final. Computations.",
+                    "3 exams, all of which were actually pretty easy.",
+                    "3, problems of varying difficulty",
+                    "3, similar to homeworks, but easier",
+                    "2 midterms and 1 final, usually 4-5 computations (though 1 or 2 proofs sprinkled in) on the midterms and 8 of a similar breakdown for the final.",
+                    "Midterm and final, both open note/laptop/internet involving problems and proofs related to lecture and hws.",
+                    "3 exams - 2 midterms, 1 final.  Easier than the homeworks, involved computations and proofs",
+                    "2 midterms, 1 final. Almost exclusively computational.",
+                    "2 Midterms, 1 final.  Mostly very manageable computations."
+                ],
+                "How well were the labs coordinated with the rest of the course?": [
+                    "N/A",
+                    "N/A.",
+                    "N/A",
+                    "N/A"
+                ],
+                "Did the experiments help you understand the course material?  Did the experiments teach you useful lab techniques?": [
+                    "N/A",
+                    "N/A.",
+                    "N/A",
+                    "N/A"
+                ],
+                "How well did the lab manual present the theory behind the experiments?  How well did it explain experimental procedure?": [
+                    "N/A",
+                    "N/A.",
+                    "N/A",
+                    "N/A"
+                ],
+                "How effective and helpful were your discussion leader and/or lab assistant? (Please include their names)": [
+                    "Nathan helped a lot in office hours and was very good about explaining topics that I didn't understand.",
+                    "N/A",
+                    "N/A",
+                    "Na",
+                    "Just gotta say, the comments on the problem sets were awesome. In office hours they were very very vague when it came to helping out with problem sets until after the due date. This is because of the \"competitive\" grading scale, but it's still kind of irksome when I'm just dumb and I've spent like 3 hours already banging my head against a wall with a problem only to be told to stare at it some more. It's not their fault because of the class structure, but they were at least super helpful when it came to explaining previous problem sets' solutions.",
+                    "Very helpful",
+                    "N/A.",
+                    "N/A",
+                    "N/A",
+                    "N/A",
+                    "N/A"
+                ],
+                "What aspects of the course should be changed?": [
+                    "The regular discrete class conflicted with another required class of mine which meant that I had to take this harder iteration. But I am not a fan of having math majors taking a computer science since I think they are at an advantage in this situation.  So I would like it if there were more sections for the non honors class.",
+                    "Razborov's teaching methods - instigating student competition for grading purposes bars open discussion and does NOT lead to understanding.",
+                    "the course itself felt a little disorganized - the topics skipped around a bunch",
+                    "While it is nice knowing that the lowest homework relative to the curve will be dropped, I hated trying to guess when people would use their dropped homework and create a very low mean (e.g. would half the class take 0s on the homework due weds before thanksgiving, in which case doing it well would be far more valuable than usual).   The very theoretical \"rings\" stuff at the beginning was interesting but didn't seem very useful and wasn't covered in the textbook.",
+                    "Don't make it competitive! Math classes have __no__ business being competitive. The field is entirely based on collaboration and it's an absolute disservice to the students to make the class competitive.  Also, we never had a homework on graph theory. Graph theory should be a bigger fraction of the course.",
+                    "I think it's good overall, I don't know how to change it for the better. I'm not an academic instruction expert. Actually, giving homework solutions would be really nice.",
+                    "The course (both homework and exams) could have been slightly more difficult",
+                    "please ditch Rosen! kinda wish the pset solutions were put up after they were due or graded. other than that everything was pretty good.",
+                    "I'm surprised that the difficulty level of the course was lower than last year's, considering last year's grade distribution was apparently fairly top-heavy already. The challenge problems were a good step for spreading the distribution, but it'd be nice if some of them didn't depend on googling one fact that killed the problem. More graph theory problems on the psets would be great too.",
+                    "Few, if any. It was good :)",
+                    "Need better lecture notes.",
+                    "Make exams more theoretical in nature and more difficult so as to distinguish students more effectively.",
+                    "Maybe cover less material more in depth as we had to hurry through a lot of stuff",
+                    "THE ENTIRE GRADING POLICY AND HOMEWORK.",
+                    "Not sure",
+                    "I would like to see more graph theory and less probability (though this might be due to the fact that I took STAT 251 concurrently).",
+                    "The challenge problems should be optional and not contribute to our grade, especially given the harsh curve in this class.",
+                    "Nothing.",
+                    "None??"
+                ],
+                "What aspects of the course should be retained?": [
+                    "the Professor and the TAs. Nathan and Chris were great and graded stuff really quickly. They were helpful on Piazza too",
+                    "Keep Razborov, he's great!!!",
+                    "I enjoyed having \"challenge problems\".",
+                    "The subject matter as a whole was good, I wouldn't change the syllabus much (except to make graph theory a bigger portion).",
+                    "Everything",
+                    "Homework challenge problems",
+                    "everything else, especially syllabus updates!! VERY good bookkeeping with regards to finding text on all of the subjects we covered. also the relevant literature recommendations--- i didn't have the time to read a lot of them, but i really liked the bits i did read.",
+                    "Razborov for sure. The topics are all cool too.",
+                    "Excellent homework assignments.",
+                    "I really like the grading system.",
+                    "Problems on the homeworks.",
+                    "Razborov and the problem sets",
+                    "Mostly everything.",
+                    "The professor",
+                    "Nothing except the fundamental material.",
+                    "Most of it, the different topics were pretty interesting",
+                    "Definitely Razborov, as well as his attempts to make the honors section applicable to both CS and math majors.",
+                    "The problems sets were pretty fun and a reasonable level of difficulty (aside from challenge problem). Hard to google answers because the problems were usually pretty original, which is rare for these kinds of classes",
+                    "Challenge problems and the policy to use internet/books during exams and hence not requiring memorization.",
+                    "All??"
+                ],
+                "Would you recommend this course to others?  Why?": [
+                    "No, not while Razborov is running the course as a ridiculous student-on-student tournament in which conceptual understanding is an afterthought.",
+                    "yes, the material was interesting!",
+                    "I would recommend this to any CS major that also really likes math. This is a good course, but only if you like math.",
+                    "No, because it's competitive. Awful experience.",
+                    "Yes, it seems like it'll be pretty helpful in the future",
+                    "Yes, I learned quite a bit and found the problems/concepts/class interesting and engaging.",
+                    "oh yes. razborov is just awesome and he's gonna teach you some cool stuff!!! he honestly makes it feel like a joyride through topics in discrete.",
+                    "Yes! I wish this class was available for first years since discrete math is a much better introduction to why math is cool than the standard calculus path.",
+                    "Yes",
+                    "Yes! Razborov is a good lecturer, and in general this class is good for people interested in both math and CS.",
+                    "Yes. I would imagine I learned more than in regular discrete.",
+                    "Yes",
+                    "Yes, should one be a computer science major who cares more about the applicability of various things in mathematics to help with techniques in computer science. Should one be a mathematics major - better off taking each of the assortment of subject areas the class attempts to treat as separate courses.",
+                    "Yes, it's a fantastic course that teaches a lot of interesting math and is taught really well",
+                    "Again, the class is fine. It's Razborov's grading policy and homeworks that are ridiculously unacceptable.",
+                    "Yes - definitely my favorite course at UChicago so far. Razborov is brilliant and the material is interesting.",
+                    "Yea, it was interesting and the professor is great",
+                    "I would recommend this course to any CS major who has a preference for/background in math.",
+                    "YES! This is one of the best courses I have ever taken. You learn so much in the span of one quarter that you'll thank yourself for knowing that little bit of discrete math later. Especially if you don't mind rigorous proofs and a higher level of difficulty, I recommend taking this course.",
+                    "The curriculum covers interesting topics that you may not otherwise learn about without taking this class.  Additionally, honors is much more rigorous but not much more difficult."
+                ]
+            }
+        },
+        "3": {
+            "course_section": "CMSC 27130 1",
+            "title": "Honors Discrete Mathematics",
+            "instructors": [
+                "Alexander Razborov"
+            ],
+            "semester": "Autumn 2018",
+            "link": "https://uchicago.bluera.com/uchicago/rpvf-eng.aspx?lang=eng&redi=1&SelectedIDforPrint=94e86ba92f2331d55854a0fbd48d7c17298c0ab6cc148dd88df7e012791fb0e7c0fa1ccdaa8b3c0a9b53b29e78ed9020&ReportType=2&regl=en-US",
+            "comments": {
+                "What are the most important things that you learned in this course?  Please reflect on the knowledge and skills you gained.": [
+                    "A bunch of important concepts and methods pervasive in all of discrete mathematics (i.e. not analysis).",
+                    "Modular arithmetic, basic algebra, basic combinatorics, basic probability, basic graph theory. Covering a large number of topics in basic level of detail is the goal of the course by design, and it is both the course's biggest strength and weakness.",
+                    "graph theory, some knowledge about number theory, how to use latex",
+                    "Some very basic number theory, discrete probability, graphs, counting, etc",
+                    "I learned about many interesting/useful theorems ideas in many relevant fields of mathematics, including and not limited to algebra, number theory, discrete probability, and set theory. Furthermore, it taught me useful skills looking for background research to support my problem solving.",
+                    "Discrete math and its applications",
+                    "counting, probability, graphs",
+                    "To think about mathematical problems for a long (up to 10 hours) time",
+                    "Combinatorics, graph theory, number theory",
+                    "Basics of: induction, algorithms, number theory, combinatorics, discrete probability, graph theory.",
+                    "Discrete Math is a wonderful mix of topics from Number Theory to Graph Theory; I believe I received a great introduction to topics in discrete math, with some deeper forays into each topic.",
+                    "Method of combinatorial proof; useful counting methods; discrete probability; basic graph theory",
+                    "Combinatorics, distributions/probability, graph theory",
+                    "Everything...  All the topics are very new to me but all so interesting and elegant. Regarding skills, this course challenges me to think and tackle problems creatively and to make connections between different topics and fields.",
+                    "I learned about commutative algebra, set theory, a little bit about number theory, a bit about discrete probability, a little about graph theory.",
+                    "The mathematical way of thinking in dealing with different kinds of proofs.",
+                    "In terms of usefulness to CS, probably combinatorics, probability, and graph theory (which I had a decent background in already). However, I liked almost all the topics we covered and thought they were really interesting. A lot of material that I hadn't seen before was covered in the beginning of the class, including an introduction to commutative rings, partial and total ordering of sets, ordinal arithmetic, and cool miscellanous theorems like Helly's theorem.",
+                    "Prof. Razborov touched on five units in discrete mathematics (induction, number theory, counting, probability, and graph theory), giving us an introduction to each unit and exposure to some of the major results in each area.  Proof-based math and problem solving was emphasized throughout.",
+                    "Total orderings"
+                ],
+                "Describe how aspects of this course (lectures, discussions, labs, assignments, etc.) contributed to your learning.": [
+                    "Lectures were good.",
+                    "Lectures are standard, nothing surprising. Most valuable part is homework assignments. Razborov assigns five problems per week, each intended to be moderately challenging. I think this is the most valuable part. Math courses typically assign droves of routine exercises. By solving problems which are more challenging, you typically learn something new, and you tend to remember it.",
+                    "lectures are really interesting. Some of the problems in the psets are hard but fun. Overall nice experience.",
+                    "The homework assignments were challenging and also open ended, which stimulated me a lot to think creatively. I sincerely had a lot of fun doing the psets every week!",
+                    "Dr. Razborov is a wonderful lecturer, and I learned a lot from that. Furthermore, the problem sets were wonderfully interesting and exciting, and helped solidify the ideas presented in lecture.",
+                    "lectures are really clear and interesting",
+                    "assignments are very good: it is a little bit challenging but you can manage to solve it after some careful thought",
+                    "psets were difficult, but in the end they were really fun and taught the material well. Lectures were great, prof obviously loved the subject and enjoyed teaching. Going to miss this class.",
+                    "The lectures discussed more advanced material than the textbook and left me confused and feeling as if the knowledge was useless (as it was not tested and difficult to understand).",
+                    "Lectures are great; Professor Razborov is extremely kind and takes time to make sure everyone is on the same page in a lecture.",
+                    "Lecture is the only course component. The majority of learning occurs through completion of the difficult problem sets.",
+                    "Homework assignments were fun and really helped in understanding the material presented in the lectures.",
+                    "The lectures are super helpful and many of the topics are not covered in the textbook. The assignments are not easy but super interesting and thought-provoking.",
+                    "Lectures were our only real source of information",
+                    "Weekly assignments are especially interesting and requires some creative thinking. They opened up my horizon, and I enjoyed solving them.",
+                    "I thought Razborov was a good lecturuer. He explained things clearly and I did not feel bored by him, even though I knew most of the material already.",
+                    "Lectures were pretty interesting (albeit early), although sometimes Prof. Razborov would go off on a tangent or would cover more advanced material that we then never used later in the class.  Assignments were generally proof-based, related to the content covered in class, and ranged in difficulty from simple computations to proofs that required insight or a math trick to solve.",
+                    "Homeworks and class covered a wide not of topics"
+                ],
+                "Additional Comments about this course:": [
+                    "Honestly the best class I've taken at UChicago so far!",
+                    "It is a wonderful and fun course; although the strict curve is indeed a source of stress, overall it is a fantastic class.",
+                    "The grading scheme makes it very difficult to succeed in letter, even though a lot of learning takes place throughout the course.",
+                    "It is a great course.",
+                    "It was a great course. I (as well as significant portion of the course, probably 25-50%) just had a lot of prior background in discrete math so I did not learn too much new material. Oftentimes, in past years I believe people with discrete math background would try to take graduate discrete, but this year all the undergrads had to take the undergrad version.",
+                    "I disagree with Prof. Razborov's grading system - the class is graded on a strictly competitive basis, so small mistakes can be costly in terms of final performance if the rest of the class does well.  (The HW average was often close to 90%, which I believe has been better than in previous years, but still leaves relatively small room for error.)  In addition, collaboration on problem sets is strongly discouraged (but not explicitly banned), which I feel discourages the genuine learning that Prof. Razborov is trying to cultivate with this strict grading policy in favor of competition based on absolute correctness/attention to detail.  Some of the problems would not have been tractable without collaboration or through extensive Googling, since concepts we did not learn in class would occasionally appear.",
+                    "We never sat with topics long enough to get a good understanding of how they work, which really hampered my ability to understand the junket matter. Furthermore, this forced mostly easier problems which detracted from my ability to stay engaged."
+                ],
+                "Thinking about your time in class, what aspect of the instructor's teaching contributed most to your learning?": [
+                    "Very knowledgeable; well-organized lectures.",
+                    "I really appreciated that Razborov assigned a small number (5/week) of more challenging problems, or out of the box problems which forced me to understand something that wasn't obvious to me in the first place. Once you solve a challenging problem and understand the result, you typically don't forget it. This was much more useful than completing dozens of routine exercises.",
+                    "Razborov is incredibly sweet and very passionate about math. His philosophy of being open ended in regards to solving problems really resonated with me!",
+                    "Very clear lecturer that made sure to utilize many illuminating examples.",
+                    "His lectures are really good",
+                    "He is very brilliant, and really knows what he is teaching, though sometimes his thoughts can go a bit faster than it is easy to understand",
+                    "I loved that he would periodically ask (and pause) for questions.",
+                    "His enthusiasm in lecture was infectious!",
+                    "Razborov is fantastic.",
+                    "Engaging lecturer, clearly very intelligent, presented interesting material",
+                    "Professor Razborov is a great lecturer; he explains concepts clearly and puts an appropriate amount of time into each topic. He balances breadth and depth very well.",
+                    "Rather good lecturer; good at presenting ideas intuitively, a key component for true understanding.",
+                    "All of his teachings are very helpful but I find his remarks about some connections or implications extra interesting. He is very nice and available as well, and great at taking questions. I also appreciate very much that he is very enthusiastic about what he is teaching and expresses his appreciation for the beauty of the topics to us.",
+                    "He was an amazing lecturer; gave really good examples for every concept.",
+                    "His lectures were pretty much our only source of information that could be valuable at all to help complete the homework. Other than that, the homework assignments were particularly challenging and helped solidify many concepts.",
+                    "He's very organized, and very knowledgeable.",
+                    "Razborov was good at both explaining the theoretical concepts and explaining applications of them and giving examples of them. He was also good at drawing diagrams to explain concepts involving probability and sets, which I thought was very useful. Also, he answered people's questions very well.",
+                    "Prof. Razborov made class time interesting - I appreciated his presentation of the core material and he was always open to answering clarifying questions if we got confused during class."
+                ],
+                "What could she/he modify to help you learn more?": [
+                    "He grades this class in an exclusively competitive manner, which is TERRIBLE for a learning environment. I completely ignored this aspect and collaborated with peers because I know this is how I (and most other people) learn better. He also apparently curves incredibly harshly, which only contributed even more to an uncooperative classroom.",
+                    "Better align the exams and homework with the lectures, and encourage cooperations between individuals",
+                    "the last section about graph is a little bit disorganized",
+                    "Better board work. If I missed something he said, I'd be completely lost because he wouldn't write it on the board.",
+                    "He could work a bit on clarifying his board-work identifying theorems, definitions, etc. before launching into them.",
+                    "The tests could be a bit more difficult -- the midterm was so easy it felt unfair because one mistake on a 5 problem test would put you far behind the average.",
+                    "Write more on the blackboard. Almost always Razborov would quickly say essential parts of the proof and only use the blackboard for equations and  illustrations, so it's difficult to take notes that fully capture the proofs and understand their argument.",
+                    "Occasionally, Professor Razborov goes on tangents for a lecture on a deeper topic. While interesting, sometimes the advanced topics were more difficult to follow.",
+                    "Tends to simply write phrases on the board instead of complete sentences. If you get lost in thought for a few moments or are trying to understand something on one board, when you do finally turn your attention to the board he is currently on you will be lost sometimes b/c there are only keywords, not full definitions.",
+                    "Sometimes his writings on the blackboard are hard to understand as he leaves out many things. To make sense of them I need to follow him all the way through proofs, which may not always happen. But if I write down the notes and look at them afterwards, sometimes it's very confusing. But he is great at explaining and answering questions so it's not a problem.",
+                    "Do not grade the class competitively!!! I was unable to make friends in the class, so I was unable to create a study group which would've, on several occasions, helped me clarify major course topics and material. When I went in for office hours, because of the competitive nature of the class, TAs were not really able to give any help on the core concepts relating to homework problems, and this really made me feel like I had no way to get help when I was stuck or didn't understand class materials well enough to complete the homework problems. Not conducive to good learning, and I've never felt more alone in my life.",
+                    "Sometimes he would go for a little bit of digression, but it is not a big deal. He could have used the time to present a little bit of proof for some of the theorems he mentioned but didn't prove.",
+                    "The grading scheme of the class makes no sense. It's competitive grading (Razborov told us in an email that \"numerical scores only define a linear ordering of the class up to an isomorphism\"), like most other math/cs courses, but the problem is that a significant portion of the class (25%+) has extensive background in discrete math and thus consistently ace everything because the assignments are not too challenging. The homeworks are pretty easy and the exams are even easier (and open note), which means that the class averages on homework and midterms are 90%+. This means that losing just a few points on an exam or a homework could significantly affect your grade. I have a fairly high numerical grade in the class, but I have no clue what I'm going to end up getting in the class because everything's clustered so high. A lot of people are coming into this class with significant prior background (I believe there's ~5 former USAMO qualifiers or something) so they should not be forced to all compete against each other arbitrarily.  Despite this poor grading scheme, I still believe that people help each other and that the environment is still collaborative, which is good. I just feel that there should be either 1 of 2 changes:  1. Keep competitive grading, but make the course more difficult (especially the exams) so that getting a good grade is not determined by how carefully you did the problems and more about whether or not you understood the material.   2. If the expectations of the course are to learn everything in lecture and be able to apply those concepts to solve the problem sets and problems on tests, then anyone who is able to do that and consistently ace homeworks and tests should be an A in the class and it shouldn't matter that a large proportion of the class like 50% can do this.   Other than the grading policy, I really liked the course and thought it was extremely interesting.",
+                    "He sometimes handwaved proofs or went off on tangents that were relatively interesting but not used again in the course, which could be frustrating.  In addition, his board notes were often less than 50% of the actual lecture content (some proofs were explained without any writing), so it was difficult to follow lecture if you showed up late or got distracted in the middle.",
+                    "Using the board more efficiently. Often times I felt lost in proofs and reviewing the board did not help to catch me up.",
+                    "Nope, they are really nice. it will help if they are more familiar with the definitions discussed in class",
+                    "more extensive comments on homework.",
+                    "Help convince Razborov to change the structure of the class",
+                    "He could give more feedback on our graded assignments."
+                ],
+                "Please comment on the level of difficulty of the course relative to your background and experience.": [
+                    "Not an extremely hard class, but make sure to stay on top of the work, because it moves quickly.",
+                    "This course was not extremely difficult to me given a fair amount of background experience, although it definitely still did present a fair amount of challenge.",
+                    "I'm a third year math major. The course material wasn't extraordinarily hard but the psets in particular were intellectually engaging.",
+                    "The homework was extremely difficult and worth 50% of the grade and often unrealstically difficult without substantial exposure to the subtopics covered, heavy use of stackexchange, or collaboration with someone with one of the previous two.   The exams were only on textbook content and open note (and open laptop), and were very fair.",
+                    "The class was a little easy in the beginning of the quarter; the difficulty varied greatly with the topics we learned, with some being very simple (such as induction), while others were more difficult to grasp (such as ordinal numbers).",
+                    "The course is very challenging, primarily because of the homework, which is 50% of the grade. To succeed in the class you must succeed on the homework, and the problems are very difficult at times. That said, at approximately 10 hours a week the motivated student should have no problem doing fairly well on the homework. Not a class you can do the problem sets the night before they are due very successfully.",
+                    "Familiarity with basic proof techniques is helpful for this course.",
+                    "It was extremely easy because I had studied a lot of discrete math before.",
+                    "Having taken proof-based math classes previously, I found myself relatively well-prepared for the class.  Statistics also helped for the probability section.  A lot of the homework problems become a bit easier if you are familiar with common problem-solving techniques, since they require innovative applications of the material learned in class."
+                ]
+            }
+        },
+        "4": {
+            "course_section": "CMSC 27130 1",
+            "title": "Honors Discrete Mathematics",
+            "instructors": [
+                "Alexander Razborov"
+            ],
+            "semester": "Autumn 2016",
+            "link": "https://uchicago.bluera.com/uchicago/rpvf-eng.aspx?lang=eng&redi=1&SelectedIDforPrint=7977df074e7fa49ed33fa3c48c5bf1d0839d6afc172cdca17ee0a0b784a559d6b31c1dae111e96593d9ec90a46e25afa&ReportType=2&regl=en-US",
+            "comments": {
+                "What were the instructor's strong points?": [
+                    "Very good at leading the discussion; Very knowledgeable and able to convey this in interesting and relevant ways.",
+                    "He has a fun sense of humor and is very willing to engage students during lectures",
+                    "The instructor would introduce the fundamental topics of the course but then demonstrate their applications by proving interesting but often unrelated theorems. On average, this was cool.",
+                    "Very well-versed in the material and EXTREMELY willing to help after class, extra office hours, on piazza, everything.",
+                    "The instructor was very enthusiastic about the subjects he covered. The material was presented in a very understandable fashion, without being bogged down by unnecessary amounts of rigor. He was very happy to stop and answer questions, and would often comment approvingly on what he considered was a \"very good question\". We often went off into interesting tangents to further discuss topics that the instructor thought were interesting.",
+                    "Professor Razborov was very organized in the topics he covered in class.  Also, he was good at responding to/clearing up any confusions students had in class.  He separated out the more advanced topics he talked about in class from the topics we could actually expect on the homework, which was nice, and in my opinion, it turned out to be a good thing, because we could learn interesting material without having to worry about a grade on it.",
+                    "Professor Razborov was very clear about explaining the intuition behind the proofs/problems.",
+                    "Very positive attitude towards students. Great person overall and clearly very accomplished yet humble.",
+                    "Good at explaining things",
+                    "Razborov can be an amazing professor a times. He really cares about the class and the material but can get tangled up in his own rants at times.",
+                    "Super friendly and reasonable.",
+                    "Professor Razborov was excellent at giving entertaining lectures and keeping the class engaged. He clearly cared a lot about helping students learn the material.",
+                    "Professor Razborov was a very good lecturer and he made class interesting every time. He is a really smart guy and clearly knows this subject well. He was also very accomodating for any and all questions and concerns.",
+                    "Has a lot of enthusiasm for the topic and a good sense of humor.",
+                    "Very accessible and wants students to enjoy the course",
+                    "Prof. Razborov was mostly very clear about what we were learning, and I think I have a good basis for DM now.",
+                    "The Raz is a god among men",
+                    "Clear and understandable",
+                    "Razborov was pretty clear, and his enthusiasm about the topics at hand definitely propagated through the class.",
+                    "He is a good lecturer",
+                    "Very helpful, knowledgeable, and committed to the students' success. Gave students a clear idea of what to expect on assignments and exams, and was quick to respond to any questions or areas of confusion. An excellent instructor overall; would highly recommend.",
+                    "Covered basics very well and in spare time he covered interesting topics related to the class material - this made the course very interesting to me."
+                ],
+                "What were the instructor's weak points?": [
+                    "I felt that the class went rather slowly. In the end I preferred learning things online or from the book.",
+                    "Sometimes he would explain quite a bit without writing much on the board, though I think it's mostly fair for instructors to do so.",
+                    "The lecture style was sometimes a bit disorganized, in particular w.r.t. the difference between the spoken lecture and what was put on the board (there were a lot of \"floating expressions\" on the board). I found the lectures to be a bit slow, but this class caters to an audience with varying degrees of math experience, so the pacing might have been unavoidable.",
+                    "This class was a competitive class-Professor Razborov made it very clear to us that he would linearly order us according to our overall number of points in the class and then decide grade cutoffs.  I do wonder whether/how he'll follow through with that, given the fact that everyone got close to 100% on almost everything-homeworks, midterms, and final.  The point is-if the grading is going to be competitive, then I would think the midterms and final should be more difficult.  Otherwise, there should be some other differentiating factor of some kind...but I think this is his only \"weakness\" (and I put weakness in quotes because this could be a moot point-I don't know yet how he'll decide the grading cutoffs, he could give everyone a respectable grade).",
+                    "None. Great professor!",
+                    "Sometimes went over material quickly but I guess that is to be expected in an Honors course :)",
+                    "None really",
+                    "Somewhat disorganized lectures.",
+                    "He made the class a bit too easy. Sometimes the class wasn't enough for homework problems.",
+                    "The class might have been a little too easy for honors level. The average on every homework and many of the tests was close to 100 which made little mistakes very costly in terms of the final grade (since the class is graded competitively)",
+                    "In a number of lectures, Prof. Reinitz spent (in my opinion) far too much time going through pretty basic math/computation, making the lectures more dry and losing the attention of, I'm sure, a decent portion of the class. He did do a good job of explaining concepts, but it is not necessary to go through every step of a mathematical computation; e.g., instead of saying something like \"to differentiate this we have to use the product rule, the derivative of this first thing is this, the derivative of this second thing using power rule is this, so the derivative is this result\" it would be much more concise and would maintain the attention of more students to just say \"the derivative of this thing is this\" and I think this would be a step towards making lecture less of a drag sometimes.",
+                    "Razborov didn't write everything on the board rigorously and I very often lost the thread of what he was saying, even if we were learning a concept I was familiar with.",
+                    "Sometimes it was difficult to understand what he was saying. Pacing wasn't always great - breezing past more complex topics and examples that needed more time to sink in, and lingering on well-known or simple principles.",
+                    "-",
+                    "I think he assumes a bit more math background than the class prerequisites demand. As a result, some topics had a little less introduction than would have been ideal.",
+                    "He is sometimes hard to understand",
+                    "Lectures can occasionally get a bit hand-wavy, especially on advanced material (which, to be fair, is reasonable). The pacing is moderately quick and not everything is explained in really high detail, so it's important to ask questions whenever something isn't clear (and Razborov is really good about answering questions and slowing down when asked to).",
+                    "nothing that I can think of"
+                ],
+                "What did homework assignments involve? (Problems, proofs, computation, explanations, etc.)": [
+                    "reading 20 or so pages of studies and writing 300-word weekly responses",
+                    "They were mostly proofs; some involved solving problems and proving your solutions.",
+                    "Usually one tough-ish problem and about four fairly easy computations. Considering how much of the grade in this class was homework based, I don't really understand the purpose of designing homework this way.",
+                    "a mix of computations and proofs",
+                    "Homework assignments were short (4-5 problems) and were a mix of proofs and computation (though solid justification was always required). The homework averages were very high (usually within a few points of a perfect score), which was a curse in disguise, because one small mistake could cost a huge amount, especially since the homework was weighted as 60% of the final grade. Some problems were fairly routine, though there were a few gems (I found the \"gorgeous\" and \"co-gorgeous\" functions, and \"median number\" problems to be particularly memorable, for instance).",
+                    "Some computation, and some proofs.",
+                    "A combination of proofs and computational (counting/probability) problems.",
+                    "Mixture of proofs and computations. They were challenging but not so challenging to be discouraging. Often required some nice creativity and intuition.",
+                    "Doing problems/proofs",
+                    "Proofs and some problems",
+                    "Some proofs, mainly calculation problems.",
+                    "Problems and proofs, though the problems usually involved proving your answer",
+                    "Proofs and computations",
+                    "Mostly problems/computations, rarely proofs",
+                    "Proofs and computations",
+                    "Initially proofs, but moved more towards problems. Usually a pretty even mix of proofs and problem/computations.",
+                    "proofs, some computations",
+                    "proofs mostly, also some easy combinatorics problems",
+                    "Mostly proofs relating to topics covered in class or in Rosen. There was an occasional computational problem.",
+                    "Usually 5 problems, mainly proofs. They were usually interesting problems",
+                    "Proofs",
+                    "Computations and proofs covering the topics discussed in class over the previous week.",
+                    "Assignments had problems that involved both proofs and explanations and they were challending enough to reinforce the class material if done properly",
+                    "proofs, computation"
+                ],
+                "How useful were the texts? (Please give author and title)": [
+                    "They were good. We read a variety of social sciences and psychology papers.",
+                    "Rosen was the main text and was exceptionally useful given that the exams were open-book",
+                    "Rosen (Discrete Mathematics and Its Applications) was very useful, as it covered everything we would be tested on (and Razborov made explicit references to it, so finding where the material was located was simple)",
+                    "The text was _Discrete Math. and its Applications_ by Rosen. This was a good resource for test preparation--the material was presented in a slightly slow and babying manner, but the problems were good practice.",
+                    "Discrete Math, by Rosen.  Pretty useful for preparing for the midterms and the final (and understanding a decent portion of the lectures), but not that useful in helping with homework.",
+                    "Rosen was quite helpful, although a bit verbose.",
+                    "Rosen is quite good for the basics.",
+                    "Rosen was good",
+                    "Rosen is a very useful book",
+                    "Lectures from textbook I think but didn't use it much.",
+                    "Rosen was very useful for practice problems.",
+                    "Rosen was only useful when studying for the tests",
+                    "Reinitz's lecture notes, while handwritten (and thus searching has to be done manually) generally are good enough to find anything I need.",
+                    "Rosen was pretty useful, very readable",
+                    "Very useful, and it's important to read through Rosen to use some clever theorems to make your life easier.",
+                    "Rosen was pretty good, though we covered a lot of material outside of it.",
+                    "they were ok",
+                    "Rosen was very useful in understanding a lot of material in the course.",
+                    "Rosen was useful",
+                    "It was very helpful",
+                    "Rosen's Discrete Mathematics and its Applications was a good resource. It doesn't cover advanced material from the class (for which there are other resources posted), but it does explain the core concepts clearly in a lot of detail, with a lot of examples, making it a great reference for anything that might've been murky the first time around.",
+                    "N/A"
+                ],
+                "How many exams were there?  What did they involve?": [
+                    "No exams, the final paper was five pages and involved reading a paper and connecting it to other papers.",
+                    "Two midterms and a final; they were very similar to the homeworks",
+                    "2 midterms and a final. Mostly computational. If you study from the book or have a few tricks up your sleeve they are easy.",
+                    "2 midterms, 1 final (mostly computations, a couple of proofs by induction)",
+                    "There were two midterms and a final, all open computer (but no communication) / open notes. This format meant that all problems had to be of a computational nature (the answers were all numbers) to avoid having the answers already online. This was good in the sense that all questions were hand-written, and tailored to the level of the class. This was bad in the sense that it raised test averages, so a small mistake could cost much more. It was clear that the instructor was not testing ability to memorize material, but rather pure problem-solving capability. It was explicitly and implicitly clear that exams were not the main focus of the class.",
+                    "3: 2 midterms and a final.  All three involved pretty basic problems-some standard induction proofs, easy number theory and counting questions, easy probability and graph theory, etc. The only thing that made some of the question \"difficult\" was that there was usually a trick that you needed to know, if anything at all.  But compared to the lectures and the homeworks, there really wasn't anything conceptual required for the exams.",
+                    "2 midterms, 1 final. Mostly involved easier proofs/computational problems, similar to the homework. Evaluations focused solely on material in Rosen (we covered more advance topics in class/in some homework problems, but these weren't tested).",
+                    "2 Midterms and a Final. Both were basic computation/proof problems (much more computation than proof)",
+                    "3 problems",
+                    "2 midterms 1 final. Mostly computations, which is confusing since the HW were mostly about proofs.",
+                    "2 midterms, one final. Midterm problems were generally slightly easier homework problems.",
+                    "3 exams, computations/proofs",
+                    "2 midterms, 1 final. Mainly computations with a few proofs",
+                    "2 (midterm + final)",
+                    "2 midterms and a final. Computations, open-book.",
+                    "3 exams - 2 midterms, 1 final. Mostly problems and computations on the exams",
+                    "2 midterms, 1 final; proofs and computations; applying theorems",
+                    "2 midterms and a final. Open laptop, open internet, open notes.",
+                    "2 midterms and a final. Problems were very similar to those found in Rosen.",
+                    "Two midterms with about 5 problems and a final with 8 problems. They were very easy",
+                    "Two midterms and an Exam. All open-book. Interesting proof questions",
+                    "Two midterms and a final, open notes. Relatively straightforward computational problems over the core material, akin to those found in the textbook.",
+                    "We had two open-book midterms and a final that involved problems similar to the homework but appropriate to the time restrictions of an exam.",
+                    "2 midterms, 1 final"
+                ],
+                "How well were the labs coordinated with the rest of the course?": [
+                    "N/A",
+                    "N/A.",
+                    "-"
+                ],
+                "Did the experiments help you understand the course material?  Did the experiments teach you useful lab techniques?": [
+                    "N/A",
+                    "N/A.",
+                    "-"
+                ],
+                "How well did the lab manual present the theory behind the experiments?  How well did it explain experimental procedure?": [
+                    "N/A",
+                    "N/A.",
+                    "-"
+                ],
+                "How effective and helpful were your discussion leader and/or lab assistant? (Please include their names)": [
+                    "David Gallo was very good at leading the discussion. He was very knowledgeable and able to convey this in interesting and relevant ways.",
+                    "N/A",
+                    "Chris Jones, Leo Corigliano, and Zihan Tan.  I think they were terrific.  They gave really helpful hints, were encouraging, and were really willing to teach us about a lot of things outside the class, too.  For instance, Zihan taught us about generating functions as an alternative method to solve one of our homework problems, and Razborov had mentioned in class that generating functions were useful, but we would not have time to cover them, so we basically got a free lesson on a really useful topic.",
+                    "N/A",
+                    "N/A",
+                    "N/A",
+                    "N/A",
+                    "-",
+                    "N/A",
+                    "N/A"
+                ],
+                "What aspects of the course should be changed?": [
+                    "I really didn't like the grading scheme. It was 60% homework, 10% each midterm, 20% final. Considering this was a very self-selective honors class, the homework median was usually like 47/50. The curving at the end was done on a strictly competitive basis, which I think is an awful idea when one homework question could potentially make the difference of a letter grade. This strikes me as awful and backwards since homework is generally supposed to be a LEARNING i.e. PRACTICE experience with effects actually evaluated on EXAMS.  I also wish the course covered more material.",
+                    "I think the homeworks and the exams this year around weren't difficult enough. Our averages must have been some of the highest I've ever experienced as a CAM major here.",
+                    "The main topics of this course seemed to be a bit all over the place. Perhaps this is an artifact of discrete math essentially being \"topics in math for CS majors\", but there could have been a stronger narrative over the entire quarter. The moments where the instructor went off on tangents related to topics that he found interesting were the most worthwhile--this class would benefit from being even more \"curated\" by the instructor.",
+                    "Not really anything...",
+                    "Maybe more of a focus on algebra/number theory/graph theory, and less on induction/probability/counting problems? The counting section felt like a repeat of STAT 251, which is also part of the CAM major.",
+                    "Maybe be a bit more organized with structure and spend a bit more times on the more challenging concepts/proofs as opposed to spending more times on digressions. Also, the midterms were not very related to stuff we did in class.",
+                    "Nothing",
+                    "Maybe make the HW harder if they are the core of the examination (which is supposed to be w.r.t. the rest of the class but in the end we had all HW with medinas just a couple of points below max scores",
+                    "Make it a little harder and deeper instead of so broad, perhaps",
+                    "The tests should be made harder in my opinion to allow for more range of scores. If all the averages are close to 100, then only a small mistake can be very costly",
+                    "Lectures should be more precise with definitions and stuff; I started feeling like Google was more helpful than going to class.",
+                    "The grading system seems weird. Prof. Razborov stated at the beginning of the course he didn't want exams to influence our grades too much. However, people did so well on the problem sets that the exams were the real differentiator in grading.  I propose a novel system for grading this class. Because it is an honors class, students should \"compete\" with mastery of the material, not with each other. There are a few main topic areas in the class: Induction, Number Theory, Recursion, Combinatorics, Probability, Graph Theory. The instructor should, for each segment of the course, release 3 \"challenge problems\" (rather than a pset each week) that are genuinely creative and difficult. Students must hand in 1  challenge problem solution (out of 3 challenge problems) for (n-1) topic areas. They should be encouraged to collaborate on method, but not writeup. The exams should remain computational. The grade should be split 50-50: computation ability (where errors are penalized) from exams and mathematical creativity (where minor errors are NOT penalized at all) from problem sets.",
+                    "It could be a lot more rigorous and more difficult. It really is not at the difficulty of any honor's class.",
+                    "I feel like we could have spent a bit more time on graph theory.",
+                    "Maybe a bit more challenging? More proofs and less exercises would also make it more interesting. Mainly, what bothered me was spending a long time on topics that everyone knew (induction, equivalence relations, functions etc).",
+                    "I would say add a discussion session dedicated to \"digressions\""
+                ],
+                "What aspects of the course should be retained?": [
+                    "I'm really glad that the honors section exists now; I find this material really interesting and it was nice to be able to go more in-depth with it.",
+                    "The course was fine besides the pace and grading scheme, so I guess the rest should be retained. Razborov's lectures are pretty interesting overall.",
+                    "Razborov is an amazing instructor and the book is pretty good as well.",
+                    "The induction segment at the beginning should be dropped--the course should begin with the partial / total ordering segment. The segment on ideals and rings was interesting, but it wasn't tied to the other topics very well--the connection could be made more explicit.  The counting->probability->graph theory segments were arguably the strongest.",
+                    "Pretty much everything.",
+                    "Everything, especially the professor.",
+                    "Professor Razborov is fantastic. The homework style was great.",
+                    "Good material and a good place",
+                    "Razborov",
+                    "Razborov",
+                    "Fun assortment of topics, Razborov's sense of humor",
+                    "Exciting topics, engaging lectures.",
+                    "Razborov",
+                    "Open note/laptop/internet exams",
+                    "Pretty much everything, especially Razborov.",
+                    "The sections on Graph theory, combinatorics and discrete probability were interesting.",
+                    "I really enjoyed the emphasis on homeworks over exams. Having exams be largely straightforward made test-taking a much more stress-free experience while reinforcing knowledge of the core concepts, while having homeworks require more thought and creativity allowed me to discover some neat tricks and engage with the material at a deeper level, with access to generous amounts of time and assistance when needed.",
+                    "Its breadth as an introduction to theoretical computer science"
+                ],
+                "Would you recommend this course to others?  Why?": [
+                    "Yes, but only do honors if you are actually interested in discrete mathematics, don't do it just to prove you can.",
+                    "If you're the kind of person who doesn't mind an EXTREMELY homework-skewed grading scheme, then I guess this class is good for you",
+                    "I certainly would! I think a lot of STEM majors usually do continuous math for almost all of their time here and discrete was (in my opinion) the diamond in the rough in comparison! It's made me want to take as many other discrete-math-related math courses as I can before I graduate.",
+                    "It depends on the individual's background. Coming from a strong math background, I found the lectures to be fairly slow, and most of the homework problems to be fairly standard, though I can see how this might not have been the case for everyone. There were definitely some very interesting and worthwhile moments in this course, but it felt like it was catering to a level below the class average, more often then not.   It's worth noting that \"honors\" discrete math is fairly new, and that it will probably be better calibrated in the future--most of the complaints I had stemmed from the (slow) pacing, which could easily be cranked up in future iterations.",
+                    "Yes, I would recommend this course to others.  People are usually interested in a subject, but too scared to take the class for it because they fear for their grade (which I think is perfectly understandable).  I think this class is great because it gives you a window into some of the more advanced and interesting topics in discrete math without increasing your workload/decreasing your chances of getting a good grade.",
+                    "Yes, great introduction to a diverse range of subject manner. Instructor was also very helpful in linking the results we learned in class to more advanced results/topics, which I appreciated.",
+                    "Yes. Challenging and a good way to learn discrete math.",
+                    "Yes. He did a great job!",
+                    "Not sure - at present it's a little bit too easy for an honors class, but Razborov is a great lecturer.",
+                    "Yes, it covered extremely intersting material",
+                    "Yes.",
+                    "yes but to first years because the class is like a survey course in probability, combinatorics, and graph theory so it'll be a good introduction for the most junior of math/cs students.",
+                    "Absolutely. It's a rigorous introduction to a lot of important math in CS, and you'll definitely walk away with a good understanding of how everything works.",
+                    "yes. It is an interesting subject",
+                    "Definitely. Honors Discrete covers a lot of really interesting and beautiful topics, presented in a great way by a great instructor. The workload is balanced well, and I feel that I've come away from the course with an actual understanding of the material.",
+                    "Absolutely - topics are interesting and essential to anyone interested in the theoretical side of computer science"
+                ]
+            }
+        },
+        "5": {
+            "course_section": "CMSC 27130 1",
+            "title": "Honors Discrete Mathematics",
+            "instructors": [
+                "Alexander Razborov"
+            ],
+            "semester": "Autumn 2019",
+            "link": "https://uchicago.bluera.com/uchicago/rpvf-eng.aspx?lang=eng&redi=1&SelectedIDforPrint=f56b0fee11a49e8f649093c52f5b8a364aa7ee441cc5dec7e754ab2a7a01c1b417b2f8d4a9918abc0ad16be714c53224&ReportType=2&regl=en-US",
+            "comments": {
+                "What are the most important things that you learned in this course? Please reflect on the knowledge and skills you gained.": [
+                    "Graph theory, probability theory, combinatorics, ordinals",
+                    "I learned how to think critically when it came to solving counting problems.",
+                    "induction, basic number theory, counting, probability, basic graph theory.",
+                    "Learned to deal with many types of problem, including baildic discrete probability, combinatorics, and graph theory."
+                ],
+                "Describe how aspects of this course (lectures, discussions, labs, assignments, etc.) contributed to your learning.": [
+                    "The homeworks were pretty interesting and fun. Lectures were helpful, but sometimes Razborov's proofs and organization are kind of unclear",
+                    "The assignments and the Rosen textbook were very helpful in contributing to my learning.",
+                    "the psets are well–designed and very interesting.",
+                    "Lectures were clear and informative. Homework gave a good sense of difficult and varied problems in the fields."
+                ],
+                "Additional comments about the course:": [
+                    "The grading scheme was kind of odd. Basically, at the end of the quarter, he just orders everyone relative to each other, throws away the actual number grade, and sticks the ordering on a curve. This really discourages collaboration and makes the course unnecessarily competitive, in my opinion."
+                ],
+                "Thinking about your time in the class, what aspect of the instructor's teaching contributed most to your learning?": [
+                    "The professor's office hours were very helpful. He also presented the concepts in class in a clear manner.",
+                    "He is really nice to everyone, and answers questions patiently.",
+                    "He gave pretty clear proofs and examples in class, and made sure to give questions a through response.",
+                    "Clear lectures and accessible outside of class. Hint policy was nice as well."
+                ],
+                "What could the instructor modify to help you learn more?": [
+                    "He could have given us a mixture of relatively easy and difficult problems on our problem sets.",
+                    "His grading scheme is a bit scary...",
+                    "Nothing"
+                ],
+                "Please comment on the level of difficulty of the course relative to your background and experience.": [
+                    "If you've taken some 200's level math courses here, it shouldn't be too bad. I'd taken both quarters of basic algebra, and the course was about on par with that",
+                    "It was medium difficulty. It was manageable for a mathematics major, but the course is not easy.",
+                    "As a math and CS double major, the material is not hard.",
+                    "It was pretty easy but I had a lot of background in the area",
+                    "Some background gave me an edge in some areas but was generally still quite difficult. Some homework problems I never solved"
+                ]
+            }
+        },
+        "6": {
+            "course_section": "CMSC 27130 1",
+            "title": "Honors Discrete Mathematics",
+            "instructors": [
+                "Alexander Razborov"
+            ],
+            "semester": "Autumn 2021",
+            "link": "https://uchicago.bluera.com/uchicago/rpvf-eng.aspx?lang=eng&redi=1&SelectedIDforPrint=fcdc17d57ecb07519562422ce77862c1cfad742287f81381c02b724e1504fc7f975ce02dd97523dc604a425106bb32fd&ReportType=2&regl=en-US",
+            "comments": {
+                "What are the most important things that you learned in this course? Please reflect on the knowledge and skills you gained.": [
+                    "Briefly covered a wide range of topics including induction, number theory, combinatorics, discrete probability, and graph theory.",
+                    "A lot of really beautiful theorems. I think my favorite was the graph theory section.",
+                    "probability theory, graph theory, counting principles, induction, number theory",
+                    "We covered a lot of different topics and it exposed me to a large variety of math",
+                    "Discrete math",
+                    "Induction, some basic number theory, counting principles, discrete probability, introductory graph theory",
+                    "How to solve discrete probability and counting problems, as well as an understanding of graphs",
+                    "Number theory, combinatorics, discrete probability, basic graph theory.",
+                    "SO MUCHHow to bash, how to solve problems, how to bash solve problems",
+                    "Mostly it was the expanse of discrete mathematics. We did not delve too deeply into each topic per se, but got a good survey of the field.",
+                    "Counting and combinatorics, Chinese Remainder Theorem, Discrete probability, probabilistic methods, graph theory (dual graphs, Six–color theorem, trees and many more)",
+                    "Range of topics from discrete",
+                    "How to think critically about discrete valued questions, different problem solving methods.",
+                    "Basic number theory, basic counting, and basic graph theory"
+                ],
+                "Describe how aspects of this course (lectures, discussions, labs, assignments, etc.) contributed to your learning.": [
+                    "The assignments are challenging but interesting for me to consolidate knowledge learned in the courses.",
+                    "Lectures are amazing, office hours were extremely helpful.",
+                    "Lectures were very good",
+                    "The lecture was very open to questions which was extremely helpful",
+                    "Assignments were probably the best part of this course. They were quite difficult but very unique and required creative thinking. Some of them especially made me more comfortable with how to apply the concepts from class in an abstract setting (but I would usually have to practice textbook problems to get familiar with routine applications). Lectures were also good. I liked how we covered more advanced material not always in the textbook.",
+                    "Razborov is a great lecturer and is always chomping at the bit to answer questions. He loves questions.",
+                    "Lectures were somewhat useful in defining concepts. Homework, on the other hand, was extremely stressful.",
+                    "Lectures were fun and interesting, I especially enjoyed the digressions towards interesting math that was somewhat beyond the curriculum for the class.",
+                    "Psets (90%)! Lectures",
+                    "TA hours",
+                    "Lectures were really helpful and interesting, and exposed us to a variety of topic and how they connect to each other. The homework assignment were fun to do and help apply knowledge learned in class. The final exam was a bit difficult for the time frame given, but test the knowledge we learned well.",
+                    "Lecture notes were helpful so I didn't always have to go to lecture.Lectures themselves were hard to follow and I didn't feel like they provided much intuition beyond what one could find by just looking a term up on Wikipedia",
+                    "Lectures informative",
+                    "Lectures are pretty informative and fun; they introduced me to concepts well. Homeworks are challenging and thought–provoking, mostly non–trivial applications of concepts. They encouraged me to think about concepts more deeply."
+                ],
+                "Additional comments about the course:": [
+                    "This was a great course overall. I would definitely recommend taking it over regular discrete, even despite the competitive grading scheme.",
+                    "I loved office hours with Razborov. Talking about combinatorics with him definitely inspired me to pursue it more independently.",
+                    "This was my favorite class this term!",
+                    "Highly recommend taking this class for anyone with an interest in math. Professor Razborov said this class would be graded competitively (i.e. grade boundaries determined based on average performance) but he pointed out that there was no upper limit on how many As granted if we all do especially well.",
+                    "There is something about Razborov that makes the class just worth taking. Would recommend 100%",
+                    "While I understand that this is a rigorous course, the linear grading (curve) was not healthy. Some students actively did not want to help others, and even I sometimes questioned whether it was in my interest in others. I prefer a more collaborative environment,",
+                    "Exams cover applications of the concepts taught in class, which means that they're pretty separate from what's taught in lecture and practiced in psets, which is all proofs. Which made the exams feel somewhat disconnected from the rest of the course.",
+                    "N/A",
+                    "Hard but rewarding",
+                    "Modular arithmetic was introduced (to a class that mostly hadn't seen it before) as a special case in commutative ring theory. This was hilarious to me."
+                ],
+                "Thinking about your time in the class, what aspect of the instructor's teaching contributed most to your learning?": [
+                    "Razborov was a really engaging instructor and his lectures stimulated my interest in the topics we covered.",
+                    "Lectures! Professor Razborov is definitely the best professor I've had at the university thus far.",
+                    "Excellent lecturer",
+                    "Being open to questions",
+                    "Lectures were engaging and interesting, though sometimes I found the explanations of proofs clearer in the textbook.",
+                    "Always being willing to answer questions and never seeming rushed made the explanations very clear.",
+                    "Lectures, hint system on Ed for the psets was great.",
+                    "I think his personality and the fact that the class is enjoyable",
+                    "Very willing to explain topics, sometimes even if that means basically repeating a section of the class.",
+                    "Professor Razborov is very willing to answer questions, no matter how simple it is and it was very motivating for me to try and participate without feeling intimidating. Going to office hour helped, especially because you can talk about homework and get an idea to where you might be going wrong. He also give good examples and answer questions to the best of his abilities when relevant. He also provide a lot of course notes from previous years which were immensely helpful if one needs to check notes. He also replies to Ed threads very promptly, and has a good and fair hint system for everyone.",
+                    "Lectures",
+                    "Going through lecture well, answered questions thoroughly.",
+                    "The connections between different concepts that Prof. Razborov made were often enlightening."
+                ],
+                "What could the instructor modify to help you learn more?": [
+                    "Maybe make the tests a bit more difficult",
+                    "It would be better to provide topics we are going to learn prior to the class so that we can preview those materials.",
+                    "More challenging problems would be really helpful. While the psets were cool, if the instructor could've included some difficult bonus problems, I would have loved that.",
+                    "The material on the midterm was about one week more advanced than I felt it should have been, considering we had not done a counting problem set yet and there was a question about it on the midterm.",
+                    "Use better examples in class, and provide more structured lessons.",
+                    "No comment",
+                    "The lectures near the end were a bit disorganized but overall the lectures were good",
+                    "I liked the class. Maybe rings could have been covered more extensively. As someone who has not taken abstract algebra, rings and their subsequent application felt a bit mysterious.",
+                    "Nothing much, maybe write out / organize some of the proofs in graph theory a bit more clearly (like the six–color theorem) because they can get a bit difficult to follow. But this is minor, overall he is excellent.",
+                    "The lectures were fast at times",
+                    "N/A",
+                    "Sometimes explanations could be better, especially on specific quesitons that are very complicated and hard to digest.",
+                    "Make the exam questions more similar to what we learned in class/homework––I felt like I didn't know how to prepare for the exams very well.",
+                    "Stating theorems and conjectures whose proofs are beyond the scope of the course feels to me like a frustrating waste of time, especially now that quarters are shorter."
+                ],
+                "Please comment on the level of difficulty of the course relative to your background and experience.": [
+                    "Not too difficult if you have experience with writing proofs.",
+                    "It hasn't been particularly hard so far, but I've also done competition math in the past.",
+                    "Having some familiarity with math proofs will be very useful. Also, I feel like I would have greatly benefited from having some background in probability and number theory.",
+                    "I had taken Honors Analysis. After a while you start wondering why the material is so difficult when you were learning about induction just a few weeks ago. Don't underestimate its difficulty.",
+                    "As someone with very little higher math experience, this course was extremely painful.",
+                    "Slightly easier than other math classes I have taken, but I understand that it is targeted also to CS majors who have taken less math than I have",
+                    "As a third year CAAM major, was quite doable, yet still difficult. I believe this class is targeted for 2–3 years",
+                    "Very difficult",
+                    "It was fine, maybe a bit difficult since I was not good with proof–writing and the class goes a bit fast at time, but very doable with time invested.",
+                    "understanding the lectures and doing psets was the hardest part, exam difficulty was perfect",
+                    "It was difficult, but coming from a mathematical background with lots of proof experience definitely helped a lot.",
+                    "Not too bad, curve not fun though",
+                    "I have an ok mathematical background and the assignments/exams were quite challenging.",
+                    "I had significant discrete math experience from a summer program I attended in high school. Anyone who is a math major in addition to being a CS major will probably find this course somewhat easy –– don't be afraid to take it concurrently with a systems course, for example."
+                ]
+            }
+        },
+        "7": {
+            "course_section": "CMSC 27130 1",
+            "title": "Honors Discrete Mathematics",
+            "instructors": [
+                "Alexander Razborov"
+            ],
+            "semester": "Autumn 2022",
+            "link": "https://uchicago.bluera.com/uchicago/rpvf-eng.aspx?lang=eng&redi=1&SelectedIDforPrint=d07becfaaaaf65c24915dd711bc112875bea7bb0ec7b6f6118fdc652090d89cdb95c7048ee628ee364ba208de73fd863&ReportType=2&regl=en-US",
+            "comments": {
+                "What are the most important things that you learned in this course? Please reflect on the knowledge and skills you gained.": [
+                    "We discussed topics regarding induction, orderings, counting, probability and graph theory",
+                    "Problem–solving skills",
+                    "A bunch of basic topics: proof by induction, linear and partial orderings, elementary number theory, elementary combinatorics, discrete probability (i.e., no measure theory), and graph theory. All fun stuff",
+                    "Tips and tricks on how to do cool math things. This course was kind of a grab bag of useful things like probability, number theory, combinatorics, and graph theory",
+                    "ProbabilityCountingLinear orderingsNumber theoryGraph theory",
+                    "partially ordered sets, induction, combinatorics, discrete probability, graph theory",
+                    "Orderings, number theory, counting, discrete probability, and graph theory",
+                    "Discussions of Proof Techniques (Pigeonhole Principle, Induction), Counting & Combinatorics",
+                    "Intro number theory, some counting/probability, some intro graph theory.",
+                    "Discrete Math and probability theroy",
+                    "The course catalog entry for the course actually gives a really good overview of the subjects covered (unlike some other courses I have taken). I have to say however, if you don't put in the time, you will learn less than what your peers learn in regular discrete mathematics. Speaking from experience.",
+                    "Graph Theory, Discrete probability, induction, number theory, etc.",
+                    "Number theory such as modular arithmetic and working with greatest common divisors, strong vs. weak induction, combinatorics, basic discrete probability theory, and graph theory.",
+                    "Induction, ordering, number theory, combinatorics, probability, expected value, and graph theory",
+                    "Learned about nubmer theory, counting, discrete probability, and graph theory.",
+                    "We discussed orderings on sets, number theory, counting (e.g., how many ways can you order your classes in prereg such that at least one section of math is above at least one section of sosc), discrete probability, and graph theory.",
+                    "math stuff",
+                    "Ordering, number theory, counting, discrete probability, graph theory",
+                    "Discrete mathematics, which includes inductive proof methods, orderings, some number theory, commutative rings, binary relations, counting and combinatorics, probability and expectation, and introduction graph theory.",
+                    "Healthy doses of number theory, combinatorics, discrete probability, graph theory, and some other topics",
+                    "Combinatorics, graph theory, basic probability, orderings",
+                    "Knowledge from a wide range of mathematical areas, including set theory, combinatorics, probability, graph theory, number theory"
+                ],
+                "Describe how aspects of this course (lectures, discussions, labs, assignments, etc.) contributed to your learning.": [
+                    "This class was lecture and assignment oriented. There was always a big disconnect between what was covered in the lectures and textbook and what was on the assignments.",
+                    "The lectures were helpful and understandable. Assignments were short but could get quite tough at certain points. Difficulty level seemed to spike later in the quarter. Office hours with Razborov were pleasant and helpful.",
+                    "Lectures are very good",
+                    "lectures taught information, psets reinforced it",
+                    "Lectures were engaging",
+                    "doing the problem sets is how I learned. they were hard but super fun",
+                    "Assignments mainly, lectures were hard to follow",
+                    "The lectures often provided deep dives into topics that were barely relevant to the content of the course, or looked into higher–level results without any real attempt to build a sufficient groundwork first. While interesting to a student with experience in these areas, they provide a very poor first experience. The assignments were nearly random in their difficulty, not just from week to week, but from problem to problem. One week, a single problem created nearly the entire difficulty of an otherwise normal assignment, and that problem required knowledge from outside the course and its prerequisites, while being barely related to what was ostensibly the topic we were studying at the time.",
+                    "Lectures were really excellent, Prof. Razborov is wonderful. And the homework was a lot of fun, sort of math–competition–y.",
+                    "Problems helped me understand the material. Edstem was useful for questions and discussion.",
+                    "Razbarov is a really good lecturer, possibly one of the best I have had here. Assignments are challenging, and if you put in the time, they will teach you a lot. If you don't put in the time, however, the course will not be worth taking.",
+                    "Assignments challenged conceptually",
+                    "I thought the lectures and homework assignments both contributed greatly to my learning of the material.",
+                    "Lectures were decent and went over important problems and theorems. Homeworks were generally fun.",
+                    "The psets were useful as well as the lectures.",
+                    "Lectures were interesting if sometimes hard to follow, but made better by the class notes on his website. Assignments had a small number of problems, but each required thinking. I think I learned the most from the assignments, as opposed to tests. The tests were not weighted heavily in grades, but they were very computational—unlike the rest of the class—and thus were hard to prepare for.",
+                    "has good but not too long, lectures good",
+                    "Lectures and homeworks are very helpful.",
+                    "Lectures were very engaging and helpful. Prof Razborov is a great lecturer. Homework assignments were challenging and very fun; TA Cameron & Prof. Razborov clearly put a lot of thoughts in crafting great problem sets.",
+                    "Lectures were delivered conceptually and at a high level, problem sets were helpful to learn applications of what was taught in class",
+                    "Lectures taught a lot of the material and homework tested your understanding of that material.",
+                    "The Edstem forum platform is employed and the Professor and the TAs offer timely and thoughtful responses to questions students have."
+                ],
+                "Additional comments about the course:": [
+                    "I do not think the prerequisites listed are accurate to the level of mathematical maturity needed to succeed in this course. Many of the \"digressions\" were overly complicated and it makes understanding the material difficult if you wish to understand all of the material.",
+                    "I really enjoyed this class and the material. However, I do have two major issues with this class:1. The psets are 60% of your grade. The result of this is that I spend a large amount of my time proofreading and editing my psets so that they're perfect because they are such a huge portion of the grade. This is really tedious and annoying, and a bit of a shame because the problems are so interesting. I really enjoy solving the problems, but I can't stand the tedious proofreading every week. If psets were, say, 10% of the grade, I would just write up my answers and turn them in, which would be a lot of fun.2. The midterm was extremely computational. There was only like one proof, and even that was just a straightforward induction. Given that this is an honors math course, I didn't like this; math is about proofs, not computation. And it was also open note, which I disagreed with.",
+                    "difficult but rewarding",
+                    "Discrete Math is a beautiful mathematical topic, and one of my favorites. That is why I find it genuinely impressive how sufficiently Professor Razbarov has killed it. He wildly misunderstands the experience and familiarity of his students with the content he seeks to teach. He skims or skips critical topics that are unfamiliar and that really would be helped by more depth, and spends far too much time on topics that are either only tangentially relevant to the course, or far outside its scope (often both). He is wildly unhelpful in providing assistance to students, his homeworks are completely unpredictable in their difficulty and on occasion have assumed knowledge not found in this class or any of its prerequisites. In order to ask for help in this class, three people must publicly ask for a hint on a specific question, to which he will provide a \"hint\" that is either an outright solution, or actively unhelpful – aside from this, he is very unwilling to help his students. In fact, in making the course competitive, setting up this hint policy, and not providing much assistance in general, he is actively discouraging collaboration.As a final comment: you will not fail this class. His curve is rather generous, although it is competitive. But if you are interested in a first exposure to discrete math topics, or are curious about different creative ways to approach problems utilizing new techniques, this class is not that.",
+                    "Don't take this course if you just want to fulfill a requirement. Unless you are passionately interested in the topic, and you will know you are not if you just want to take an honors class since your pride doesn't let you take the regular one, the course is just a burden. If you ARE interested, however, amazing course!",
+                    "I would recommend this course to anyone who has some experience with math proofs and wants to learn about some interesting math topics.",
+                    "This course was pretty good but I will say that with a competition math background I did not really learn as much as I was expecting from the course.",
+                    "The organization of the course (with respect to material) was quite poor, and the discontinuity between the homework and tests was challenging. Still, I enjoyed the class despite those faults, which I attribute partially to my prior interest.",
+                    "With all the counting problems, I get deja vu from math competitions.",
+                    "Homeworks account for most of your grade.",
+                    "I’m a thrid–year Math major and am honestly finding myself overqualified for the course materials. Each topic is discussed for about one week and not developed to enough depth to be interesting to a Math major. Still, the course can be interesting to any person without so much Math background."
+                ],
+                "Thinking about your time in the class, what aspect of the instructor's teaching contributed most to your learning?": [
+                    "Professor Razborov frequently fields questions from students during class, which is helpful at certain points (after long proofs or difficult concepts for instance) but sometimes unnecessary.",
+                    "The lectures and the amazing pset questions",
+                    "I think Prof. Razborov was very patient and understanding with his students. He was extremely nice which made the class a lot more welcoming, which helped a lot overall",
+                    "The lectures were good and also the office hours were goodProfessor is great",
+                    "He was really good at drawing connections between seemingly disparate fields of math to paint a bigger picture",
+                    "I liked the assignments. They required creativity and thought",
+                    "Professor Razbarov was willing to answer lots of questions in class.",
+                    "How does a mathematician make tea?",
+                    "He was ready to answer any kind of question.",
+                    "His mastery and passion for the subject!",
+                    "Razborov was very good at explaining things and helping you picture the solutions in your head, especially for the lectures on combinatorics. He also gave lots of opportunities for asking questions. Overall I thought this class was significantly slower–paced than other 200–level math courses like analysis, which benefitted my learning.",
+                    "The proofs for the theorems were helpful although sometimes they went a little bit slow.",
+                    "The lectures were generallly pretty coherent and not only taught what's needed for the psets etc. but also showcased some interesting math resulsts.",
+                    "Professor Razborov's lectures were very good at explaining material, at least for someone (me) who had a passing familiarity with — and significant interest in — the material before class. The EdStem discussion board was also excellent, providing a convenient way to get questions (including anonymously) answered while serving as a resource for the whole class.",
+                    "the instructor was clear and challenged you intellectually",
+                    "Quick responses on edstem.",
+                    "We state a lot of theorems without proof, which helps keep the focus on the actual skills we are meant to develop.",
+                    "Prof. Razborov was an amazing lecturer. Topics were explained very clearly and precisely, and he was very thoughtful of the entire class. Pacing was a little bit slow but explanations were very detailed.",
+                    "Lectures were useful, but quite messy and hard to follow at times. However instructor does post notes that were useful to go through. Razborov was great at answering questions during office hours though.",
+                    "The professor is kind and is glad to answer questions."
+                ],
+                "What could the instructor modify to help you learn more?": [
+                    "The organization was very lack luster. Concepts would be halfway introduced and proofs would be unmotivated and unclear. It felt as if we were being introduced to interesting topics without being given an intuition of how to work with these topics nor how to do proofs with these topics.",
+                    "Make the psets less than 60% of the grade",
+                    "It felt like we covered a lot of different topics but without going too much into depth on any of them. This could be seen as a good or bad thing",
+                    "Don't lecture algebra and discrete probability; everyone learns that elsewhere and I think the time could be better spent on more combinatorics/graph theory or a new topic",
+                    "I found the lectures really hard to follow. It felt like not enough information was given during them so I found them confusing",
+                    "There were clearly certain topics (ring theory, graph theory) that he desperately wanted to explore, with no regard for the students' comfort. We covered graph theory in extensive, excruciating detail, to an extent that should in my opinion be saved for a course dedicated to the topic. On the other hand, some topics, such as counting and probability, went sorely underexplored, which is a disservice to both the class and the students within. There is no reason we should have spent significantly more time on graph theory than on either counting or probability, especially when the time we did spend on counting and probability was very poorly spent – we touched on a single example of a random variable, very few explorations of different probability distributions, and almost no exploration of how these topics can be approached, explored, and utilized to greater mathematical understanding.",
+                    "It was really good.",
+                    "Prof. was great!!!",
+                    "Nothing really, Razborov was a great professor.",
+                    "I think it would have been helpful if Razborov spent a little more time explaining the big idea to the proofs rather than spending time in the details of every single proof.",
+                    "N/a",
+                    "I would appreciate if better materials could be made available to help practice for tests, such as practice tests or previous versions of exams, as they were hard to prepare for. I enjoyed (and feel like I learned most from) the homework assignments, and feeling unprepared for the tests was demoralizing.",
+                    "nothing",
+                    "This class felt too easy and the pacing was a little too slow. The syllabus promised some more interesting topics under the condition that we had enough time to cover them but we unfortunately did not.",
+                    "More clear when lecturing",
+                    "The writings on the blackboard can be more organized sometimes. Currently deductions and remarks are scattered over the board and it can be hard to tell which equation belongs to which theorem."
+                ],
+                "Please comment on the level of difficulty of the course relative to your background and experience.": [
+                    "I have taken Honors Calculus and Linear Algebra here at UChicago, which are the prerequisites for this course, and it did not feel like I was prepared in the slightest.",
+                    "I'm a math major who's not the best with discrete math, and this course felt aptly challenging but suitably manageable.",
+                    "This is a reasonably hard course. Challenging, but not crazy. It's a good course; I'd recommend it. Even if you know most of the material, the pset questions are soooo good that you'll still have fun.",
+                    "I think with a bit of collaboration and/or office hours in addition to hint requests, the psets are pretty manageable. The midterm was much, much easier than the psets. I think prior experience with this class would probably be helpful, but not necessary at all",
+                    "Midterm is pretty easy, homeworks can range from easy to very hard. Homework constitutes most of the grade",
+                    "I'm a math major taking honors analysis concurrently—it was a hard but not too hard",
+                    "Good difficulty level",
+                    "As a student who has taken courses on several discrete math topics in the past, this class was still very difficult at times in ways that felt outside my control, due to the inaccessibility of help from the professor and unfair expectations on the homeworks.",
+                    "It is challenging for those who may have not seen these topics, but with some mathematical maturity that can be developed throughout the course, students can acquire and apply these techniques well.",
+                    "Took CMSC 16100, 16200, 15400, 25300 and MATH 15910 before taking this course. This was the most challenging course I took here, and if I were to be meticulous with my assignments, I would have to spend 15 to 20 hours per week for this course. If I were to go back in time, I would have taken more math classes (say, analysis, algebra and/or linear algebra) before taking this class.",
+                    "I took the accelerated analysis sequence and this course was definitely easier. Problem sets were 5 problems and usually there would be around 1 that I would need a suggestion or help from someone else to solve or prove. I thought the problems are challenging but reasonable and fun.",
+                    "With a competition math background, I thought the course was pretty easy and honestly never spent more than about 2 hours on most of the psets.",
+                    "This course was of medium difficulty for someone reasonably familiar with a lot of the concepts (in general) before taking the class.",
+                    "challenging but not brutal",
+                    "As a CS student with minimal math background, the difficulty is acceptable. Though you may not be able to understand everything the professor says during the lecture, you can always continue to try to figure it out after class.",
+                    "Math/CS, finished analysis, easier than other math classes.",
+                    "This class felt way too easy, especially as an honors class. The instructor could very well increase the difficulties or Introduce more advanced topics.",
+                    "Somewhat easy for a Math major sophomore"
+                ]
+            }
+        },
+        "8": {
+            "course_section": "CMSC 27130 1",
+            "title": "Honors Discrete Mathematics",
+            "instructors": [
+                "Alexander Razborov"
+            ],
+            "semester": "Autumn 2023",
+            "link": "https://uchicago.bluera.com/uchicago/rpvf-eng.aspx?lang=eng&redi=1&SelectedIDforPrint=be2541455871616462d3f6186956b4a235a3084659ad82753d13339253e027458cecf1f8c9ee2560ec805acc4c57052e&ReportType=2&regl=en-US",
+            "comments": {
+                "What are the most important things that you learned in this course? Please reflect on the knowledge and skills you gained.": [
+                    "transfinite induction; ordinal arithmetic; fta, gcd and other elementary number theory concepts, twelvefold way,  random variables and distributions",
+                    "I learned some basic number theory and became more comfortable with probability and counting. I also learned a bit of graph theory.",
+                    "Combinatorics",
+                    "Course covered a variety of important but often overlooked math topics rigorously. The course helped me feel more confident working with these topics when I encounter them in other contexts and introduced me to a number of new topics which I will consider for future study.",
+                    "Graph theory, probability, combinatorics, induction",
+                    "Ordering, Number Theory, Counting, Probability, Graph Theory",
+                    "Proof by induction, linear orderings, modular arithmetic, counting, probability, and graphs",
+                    "number theory, counting, probability, graph theory",
+                    "Math is beautiful, especially discrete. Also a lot of different subjects, see his website for the list.",
+                    "Induction(All sorts of), enumeration, some probability theory and ring theory, graph theory",
+                    "1. counting methods2. basic of graph theory",
+                    "Thinking combinatorially",
+                    "number theory, combinatorics, discrete probability, graph theory",
+                    "Counting, probability, graph theory",
+                    "I learned different material across several related fields of mathematics, like combinatorics, graph theory, set theory, ad probability.",
+                    "Honestly everything. This course was great. Graph Theory, combinatorics, number theory, induction, probability theory",
+                    "I learned a lot about number theory, probability theory, and combinatorics.",
+                    "Counting, Discrete Probability, Introduction to Graphs. All of these things were supported by proofs."
+                ],
+                "Describe how aspects of this course (lectures, discussions, labs, assignments, etc.) contributed to your learning.": [
+                    "prof. razborov gives good and comprehensive lectures. his assignments are relatively short (5 questions per week), but each problem is challenging and helps you understand the concept deeply. exams are open book, open notes, and are pretty relaxed.",
+                    "Razborov's lectures are excellent, but as with any math course, the problems are where you really learn.",
+                    "Reading textbooks",
+                    "Lectures are well–organized, clear, and move at a satisfactory pace. They are the only way to learn the subject matter, since the instructor assembles it himself from a variety of sources, and although the sources are posted online, often what is covered in class is heavily modified from them.",
+                    "Lectures were most helpful for my learning",
+                    "Lecture notes and Professor Razborov's website were helpful to follow the class. Ed Discussion was helpful as well.",
+                    "Lectures were the source of most of the material. The readings were helpful in clarifying points of confusion. The homework had interesting problems that helped solidify understanding of the concepts",
+                    "Homework was the most important part of the course and I thought the problems were really interesting to think about.",
+                    "Lectures are superb.",
+                    "The homework questions are interesting",
+                    "Lectures presented a dazzling variety of concepts and ingenious proofs in relation/order theory, number theory, combinatorics, discrete probability, and graph theory.Homework exercises connected new concepts in intricate and inventive ways, and were an adventure for the mind.",
+                    "lectures were good, class notes were good supplement when material was more confusing",
+                    "The lectures were difficult to follow, but the homework assignments were great. They were well made, interesting, and challenging.",
+                    "Problem sets were extremely fun and engaging!",
+                    "The lectures were well paced and informative, and the assignments were interesting to solve.",
+                    "All lectures introduced topics that were built upon in homeworks."
+                ],
+                "Additional comments about the course:": [
+                    "Razborov is an excellent teacher and is always willing to take questions. While the subjects in this course are not too deep, Razborov's incredibly deep expertise means that if you are interested in learning more, there is more to learn.",
+                    "The course is not particularly difficult if you already have some background in the topics that will be covered, but it is worthwhile nonetheless because it gives these topics a much more rigorous treatment than students probably have had.",
+                    "I found it more difficult to follow the lectures after we got to probability and especially graph theory. I think it would have been helpful to go slower for these topics.",
+                    "I made some of my greatest friends at UChicago so far through collaboration and office hours for this course.",
+                    "The difficulty definitely could have been increased. Part of the problem is there's a lot of ground to cover and not a lot of time, but even still, it wasn't a very challenging course."
+                ],
+                "Thinking about your time in the class, what aspect of the instructor's teaching contributed most to your learning?": [
+                    "his explanations of concepts are intuitive and he encourages asking questions and participation",
+                    "lecture's could be hard to follow at times, but he was very helpful on Ed",
+                    "Lectures helped introduce concepts.",
+                    "Instructor's lectures were generally clear and moved at a steady but not sluggish pace. He was always available and eager to answer questions.",
+                    "Homeworks were helpful in reviewing content",
+                    "The lecture notes was wonderful and PSets were interesting. I also like how active the Ed Discussion was.",
+                    "I think that Professor Razborov was extremely passionate and knowledgeable and presented extremely interesting material",
+                    "Incredible problem sets, great teaching style.",
+                    "Office hours and Ed discussion",
+                    "Ed discussion is helpful.",
+                    "During lecture, Dr. Razborov interprets mathematical facts from an elevated perspective that illuminates the overarching themes and theoretical character of each subfield. Students must be well–prepared on their own beforehand to fully appreciate the elegance of such interpretation. During his office hours, Dr. Razborov condenses his profound knowledge to provide concise but crucial clarifications, which serve as the needle–threading assist to scoring the goal on problems.",
+                    "explained proofs very well, not too rigorously that you can't understand it",
+                    "Razborov is a good lecturer",
+                    "The instructors insistence on teach us interesting and challenging material without having us worry about our grade by making it overly difficult.",
+                    "Razborov had amazing lectures. Very clear and would make some quite tricky proofs appear trivial",
+                    "He would ask questions to answer in lectures which was good to keep me engaged in the content.",
+                    "Professor Razborov's lectures were closely aligned with the class notes which made it incredibly easy to prepare for the lectures and review the content afterward."
+                ],
+                "What could the instructor modify to help you learn more?": [
+                    "N/A",
+                    "Very occasionally, the instructor would hand–wave an argument or definition. I often found this more confusing than helpful, especially since the instructor was drawing on a variety of sources and I often couldn't just consult a book to fill in this gap. Similarly, the instructor would occasionally forget to write out the givens for a proof, which made the argument a little difficult to follow.",
+                    "The professor's accent was sometimes hard to understand. His blackboard writing was sometimes unorganized and all over the place. Beside these, the Professor was great, the homework was interesting and challenging, and the exam was ok.",
+                    "It was sometimes difficult to follow the logic of the material as  I was not always sure what was important or how different concepts connected.",
+                    "Not one thing.",
+                    "1. problem set and exam solutions may help us to get some feedback. 2. complete lecture notes that can help preview and review.3. Disconnect between lectures, problem sets, and exams.",
+                    "It can be challenging to follow both Prof. Razborov's board writing and his accompanying spoken comments, which can result in gaps in notes.",
+                    "graph theory was the hardest section, probably most people would agree, so maybe spend more time giving concrete examples of specific graphs or explain things a little more",
+                    "Perhaps making the lectures more digestible would helpful.",
+                    "Nothing I can think of"
+                ],
+                "Please comment on the level of difficulty of the course relative to your background and experience.": [
+                    "i took analysis before this so I have the sufficient proof background. However, a lot of concepts are new to me so I learn a lot",
+                    "Very difficult",
+                    "pretty difficult but should be fine for a math major",
+                    "The class is not difficult if you do the exercises with limited collaboration and ensure understanding of the concepts",
+                    "I took IBL calculus first year and IBL analysis last year. I had some background with a number of the topics from other sources. Since I had a strong background in proofs and some familiarity with the ideas presented, the course was not difficult. This does not mean that the course was trivially easy. The homework problems were often challenging and many required clever applications of the ideas covered in class. The lectures covered such a variety of topics that even if each topic was in itself not too difficult, maintaining confidence with all the topics required regular review.",
+                    "Not too difficult generally",
+                    "About right.",
+                    "The content was challenging but manageable as a CAAM major",
+                    "Difficult but not too difficult as a CS major who hasn't taken analysis.",
+                    "Not too difficult, you get out what you put in.",
+                    "I feel the materials not so hard, but it is weird that I still mess it up. Group study will help a lot in the class.",
+                    "I am majoring in linguistics and CS and have taken no more math except for finishing regular Calculus III. I did not consider myself to be particularly mathematical: though aware that rigorous mathematical reasoning benefits computer scientific and even linguistic analysis, I turned away upon seeing math notation outside of class. The very first problem set for this course was properly intimidating: searching for clothes in the dark one morning after it was assigned, I felt I was likewise searching for solutions in the dark. Eventually, with all options to swap or drop behind me, I resolved that I must brave this course. I attended office hours whenever possible, and used every opportunity to consult and collaborate with classmates majoring in math or physics. Week after week, p–set after p–set, I discovered that I could bring proof structures and combinatorial models more and more readily to mind. I began suggesting my own alternate solutions to my classmates, with whom I have become close friends. Looking back at problems I solved or understood after discussion, they appeared more and more intuitive.The lectures and exercises in this course were comparable to rockclimbing in a pouring rain of discrete mathematical concepts and facts: there was no good chance to relax one's grip, especially for those majoring outside math. Yet to anyone with a mind open to learn, to discuss, and to think mathematically, the peak is certainly reachable one step at a time. I still do not consider primarily pursuing math, but this course has substantially increased my confidence in my mathematical capabilities, and for this reason it is particularly inspiring.",
+                    "the class is pretty much taught as if you don't have experience in math proofs, so if you do have any, you'll be fine. the topics are also way less abstract than other math classes here, so it's not too difficult if you have a math background.",
+                    "Perfect. It is likely a bit too challenging for those with little experience in proof based math however",
+                    "Having taken Honors Graph Theory, a lot of the same ground was covered, and the course was not very difficult.",
+                    "This class wasn't too difficult. I recommend for anyone comfortable with proofs."
+                ]
+            }
+        },
+        "9": {
+            "course_section": "CMSC 38405 1",
+            "title": "Arithmetic Combinatorics",
+            "instructors": [
+                "Alexander Razborov"
+            ],
+            "semester": "Spring 2024",
+            "link": "https://uchicago.bluera.com/uchicago/rpvf-eng.aspx?lang=eng&redi=1&SelectedIDforPrint=ba37907ca42fd790d1623e1a1373d1a50a77e57848e27874b39d2f526060fe716be4f59596019b3c4699c4753c2c6aac&ReportType=2&regl=en-US",
+            "comments": {
+                "Please review and evaluate your work in this course overall.": [
+                    "Visited existing relevant and recent research progress in the field of arithmetic combinatorics, on: Sumset estimates, Freiman–Rusza conjecture (proof), Bourgain–Katz–Tao Theorem,  Szemeredi's Theorem, Regularity Lemmas, Removal Lemmas, Quasirandomness, Graph Limits, and more.",
+                    "I wrote a paper that I worked very hard on and learned a lot about a niche area that I would like to study in graduate school, so that was great and I'm really glad I took this course.",
+                    "No psets, grade based on essay, pas",
+                    "Excellent course—topical, modern, and touching on a number of interesting topics",
+                    "Grade consisted of a single final paper."
+                ],
+                "What aspects of the instructor’s teaching contributed most and least to your learning? ": [
+                    "Organized lecture style and interaction in Ed forum were particularly helpful.",
+                    "Lectures were excellent and his website was very helpful for organizing the course material",
+                    "passionate",
+                    "Professor Razborov did an excellent job of discussing the history and significance of different results and their connections to other areas of math. Sometimes he skipped details that would have been helpful for understanding, but he also gave opportunities for the class to ask questions at those moments so that may be on us.",
+                    "Professor Razborov’s depth of knowledge in this area provided for a unique learning opportunity. He also conveyed the main ideas behind the proof effectively.One thing I would appreciate is if the professor could include more “metadata” when writing up proofs on the blackboard, e.g.,  WTS “statement” instead of just “statement”, things like that."
+                ],
+                "Please suggest any changes that could improve this course (e.g., class material, class structure, assignments, inclusive pedagogy).": [
+                    "Talk a bit slow sometimes (accent can be hard to understand)",
+                    "I do think one assignment or two in addition to the final paper would have been welcome."
+                ],
+                "Please comment on how respected, valued, and included you felt as a participant in the course.": [
+                    "Yes, to each of respected valued and included.",
+                    "lame question",
+                    "I felt very respected as an undergraduate in a graduate course.",
+                    "Felt very included, lots of interesting discourse"
+                ]
+            }
+        },
+        "10": {
+            "course_section": "CMSC 38410 1",
+            "title": "Quantum Computing",
+            "instructors": [
+                "Alexander Razborov"
+            ],
+            "semester": "Winter 2022",
+            "link": "https://uchicago.bluera.com/uchicago/rpvf-eng.aspx?lang=eng&redi=1&SelectedIDforPrint=20102fe7c246315f4d0d1e7042ca77e3af390d466f712ca569108277aace2d74e428698e134e38f7bf3269cdc2cf057c&ReportType=2&regl=en-US",
+            "comments": {
+                "Please review and evaluate your work in this course overall.": [
+                    "This class is difficult, but rewarding. I underestimated how much pure math this class would be and required me to put more work then I first anticipated",
+                    "I have learned the theoretical foundations of Quantum Computation, some relevant results in the field regarding universality of basis, quantum algorithms such as Grover's search and Shor's factoring algorithm. I have also learned in this course several inequalities between quantum and classical complexity measures.",
+                    "I attended lectures and worked out homework problems.",
+                    "I like the professor and this course.",
+                    "Learned a lot, but homework wasn't too overbearing.",
+                    "I've got a comprehensive picture of the mathematical foundation of quantum computation. The classical–quantum algorithms, complexity theories taught in the classes have been inspiring and caught my interest. I participate in the class discussion actively and would love to continue further study in the field.",
+                    "This was a great course for laying strong mathematical foundations of quantum computing. Overall, the course was challenging but intellectually stimulating and I would recommend it to anyone interested in the growing field of quantum computing."
+                ],
+                "Please elaborate on any of your responses above.": [
+                    "The course outline was clear, and the concepts used were clearly stated early on in the course.",
+                    "Cool Prof.",
+                    "In general, the course is organized well and has been inspiring for me. The challenges encountered during the course have been constructive and helped enhance my understanding and skills in this domain. The course consists of several aspects of quantum computation including algorithms, communications, and complexity theory. One possible improvement for this course might be connecting each part with more discussion either from the development history of the domain or more concrete connections. I believe these potential changes could make the course more cohesive."
+                ],
+                "What aspects of the instructor’s teaching contributed most and least to your learning? ": [
+                    "The professor encouraged discussion on ed and would answer any question that someone asked. If he didn't know the answer he would let us know that he didn't know but would look into it.",
+                    "Aspects that contributed the most to my learning: the instructor was actively asking for questions from students, encouraging conversations both in person and in the online forum, providing many many useful resources to read, etc.",
+                    "Prof. Razborov answers questions very propmptly and in a detailed fashion.",
+                    "+ His clear explanations.+ Homework is reasonable but challenging + HW is graded fairly quickly– Definitions: Yes, it is trivial and sometimes verbose. But we cannot comprehend theorems if we don't even know what bs(F) even is–",
+                    "The personalized responses to the homework were great. The homeworks themselves were frequent and challenging enough to be stimulating, but not overbearing. Students questions were answered, and very interesting topics were discussed.",
+                    "There are two aspects I'm grateful about the teaching. One is that the professor illustrate the essential ideas with illustrative examples and visualization, which helped a lot for my understanding. The other one is that the professor offers helpful references in the domain and detailed course notes from the past which are both very instructive.",
+                    "Prof. Razborov's knowledge of the topic is truly remarkable and I always felt privileged for being able to learn from him in the class."
+                ],
+                "Please suggest any changes that could improve this course (e.g., class material, class structure, assignments, inclusive pedagogy).": [
+                    "This is a graduate math course on quantum computing. It is difficult, but I feel that is part of the nature of the material. I feel this class is appropriate in the material taught and the timeline it is given in.",
+                    "It would be great if more time could be allocated in lectures to explain proofs or methods in full detail, and prioritizing this over referencing big results. I understand that this point is not necessarily feasible in full extent because there are always time constraints in a class. I also agree that teaching style as of now works for other students, but I advocate for my method of learning: I value depth over breadth.",
+                    "Write down definitions clearly.",
+                    "I think submitting homework through Canvas or Gradescope might be an improvement, but I feel that this is knit–picking. Not much to say here.",
+                    "As discussed in the previous slot, one possible improvement for this course might be connecting each part with more discussion either from the development history of the domain or more concrete connections. I believe these potential changes could make the course more cohesive.",
+                    "errata of notes"
+                ],
+                "Please comment on how respected, valued, and included you felt as a participant in the course.": [
+                    "Every question or comment I made was accepted and well regarded no matter how small.",
+                    "I always felt respected and valued, specially when trying to contribute to the class with questions or similar input.",
+                    "Yes, I felt super respected. By the way: Whi is a question about \"respected/valued/included\" even in the survey. Are we toddlers?",
+                    "Very much so",
+                    "I feel like the classes are inclusive and the professor has been constantly encouraging the engagement. I really appreciate this encouragement.",
+                    "I felt highly respected, valued, and included in this course."
+                ]
+            }
+        },
+        "11": {
+            "course_section": "CMSC 38420 1",
+            "title": "Mathematics of Quantum Computing",
+            "instructors": [
+                "Alexander Razborov"
+            ],
+            "semester": "Winter 2023",
+            "link": "https://uchicago.bluera.com/uchicago/rpvf-eng.aspx?lang=eng&redi=1&SelectedIDforPrint=cc08b6514fddd0684d50041255f30fa23456ff57aed4df2e62176a016829fe3fb7f91fce9b9827ad4a865d625b18f048&ReportType=2&regl=en-US",
+            "comments": {
+                "Please review and evaluate your work in this course overall.": [
+                    "This course challenged me with material that I had no prior exposure to.  I thought the workload was appropriate for a student new to this area and served as a good introduction to the theory behind quantum computing.",
+                    "n.a",
+                    "This was a very challenging course for me as an undergraduate but I think I put in the effort to understand as much of the content as I could within the confines of a busy quarter system.",
+                    "It was alright."
+                ],
+                "Please elaborate on any of your responses above.": [
+                    "As a beginner in this area, I thought some of the lecture material and mathematics moved quickly. Others in the class with previous exposure seemed to find the pace reasonable though.",
+                    "I really liked the wealth of resources he put on the course webpage.  Although I could not get through all of them, it was useful nonetheless.",
+                    "I think that while Professor Razbarov is clearly very passionate about the field, his lectures can come off as hard to follow with limited signposting in proofs and the disconnect with students is felt when extremely hard concepts are explained with the same depth as very simple ones.",
+                    "There should be better lecture substitutes for this 9:30a course. Problem sets are often written in a confusing way."
+                ],
+                "What aspects of the instructor’s teaching contributed most and least to your learning? ": [
+                    "Prof. Razborov's vast knowledge on the subject allowed him to discuss recent results and gave me exposure to the field that would not be possible with a different instructor.  I was new to most of the mathematics discussed in the course so it would have been nice to provide more examples.",
+                    "Great teacher, good about answering and encouraging questions.",
+                    "lectures",
+                    "He structured the overall syllabus well and the notes on his website were very useful."
+                ],
+                "Please suggest any changes that could improve this course (e.g., class material, class structure, assignments, inclusive pedagogy).": [
+                    "More basic practice examples. Not necessarily HW assignments, but just basic practice with the mathematics to get familiar with the syntax and ideas behind it.",
+                    "N/A.",
+                    "none",
+                    "We should have office hours where we can discuss the homework more with him because it sometimes feels very overwhelming to figure out some hard problems individually.",
+                    "A TA would be nice."
+                ],
+                "Please comment on how respected, valued, and included you felt as a participant in the course.": [
+                    "Very respected. I felt comfortable asking questions in the class.",
+                    "Very much.",
+                    "good",
+                    "I was respected and valued."
+                ]
+            }
+        },
+        "12": {
+            "course_section": "CMSC 38420 1",
+            "title": "Mathematics of Quantum Computing",
+            "instructors": [
+                "Alexander Razborov"
+            ],
+            "semester": "Winter 2024",
+            "link": "https://uchicago.bluera.com/uchicago/rpvf-eng.aspx?lang=eng&redi=1&SelectedIDforPrint=9239d3f9faf47ab555e4b0c2b52d0cea40104f408fa1562e782d6b700ff357c8e75927bde080387fa95526d44ea0af36&ReportType=2&regl=en-US",
+            "comments": {
+                "Please review and evaluate your work in this course overall.": [
+                    "Nice class. Great for first mathematical introduction to this class.",
+                    "Audited.",
+                    "i survived. i wish i was smarter though so i could understand and absorb more of the material. still, great class",
+                    "I took the class P/F so mainly attended lectures."
+                ],
+                "Please elaborate on any of your responses above.": [
+                    "Greatly enjoyed the explanations and insights offered by Razborov. Also his humor is great."
+                ],
+                "What aspects of the instructor’s teaching contributed most and least to your learning? ": [
+                    "He is insightful and his proofs are straightforward."
+                ],
+                "Please suggest any changes that could improve this course (e.g., class material, class structure, assignments, inclusive pedagogy).": [
+                    "Sometimes the notation becomes overloaded."
+                ],
+                "Please comment on how respected, valued, and included you felt as a participant in the course.": [
+                    "Quite valued. He always seemed to care that all of us were learning."
+                ]
+            }
+        },
+        "13": {
+            "course_section": "CMSC 38800 1",
+            "title": "Complexity Theory",
+            "instructors": [
+                "Alexander Razborov"
+            ],
+            "semester": "Spring 2023",
+            "link": "https://uchicago.bluera.com/uchicago/rpvf-eng.aspx?lang=eng&redi=1&SelectedIDforPrint=d5c61c17355a7c87700b26a41ab3f6a29af84e02d1e991b318ab8180e1270cd84f7c06749b244dced5fd00bab8a63614&ReportType=2&regl=en-US",
+            "comments": {
+                "Please review and evaluate your work in this course overall.": [
+                    "I enjoyed this course very much, as I really like learning from Professor Razborov, and I am interested in the subject.",
+                    "This was a truly great course, covering all of complexity  theory from its beginnings with Kolmogorov, Turing, and Goedel through Cook Karp Levin and up to the present day, where Razborov himself is a big figure. covered uniform complexity, nonuniform (boolean circuit) complexity, interactive proofs, communication complexity, algebrization, and proof complexity. learned a whole lot.",
+                    "I took this course as a seminar credit which consisted of attending the lectures, asking questions, and completing reading assignments. I learned several interesting concepts and gained exposure to an area of mathematics/computer science that I have long been interested in, but never studied in depth. I thoroughly enjoyed my time in this course.",
+                    "The work I did was very interesting, and I think I put in a reasonable amount of time.",
+                    "I enjoyed this course a lot. The content is very interesting and we managed to cover many different topics in complexity theory. The professor teaches very well, provides interesting insights about the field (even some philosophy), and is incredibly helpful outside of class.",
+                    "The course is really important for TCS! And, the class really covers primary topics in the area, and tests understanding in the homeworks."
+                ],
+                "Please elaborate on any of your responses above.": [
+                    "Prof. Razborov uses every minute of class constructively –– not a second wasted!"
+                ],
+                "What aspects of the instructor’s teaching contributed most and least to your learning? ": [
+                    "Lectures were engaging and we got a good survey of the key results in the field",
+                    "great lectures, always favoring intuition over proof details. this upset people in his undergraduate course in the fall, but at this level, I imagine everyone recognized how much better this set up is.as usual in math classes, the problem sets are the only way one learns, and as usual with Razborov, the psets were difficult and required exploration that ultimately led to deeper understanding.",
+                    "Prof. Razborov's clear instruction and expertise led to a learning environment where we could ask any questions and receive a thoughtful and correct answer which I found most helpful. Since almost all of the content was new to me, I found that some of the lectures moved a bit fast, but other students with more mathematical experience seemed to find the pace reasonable. Overall, I learned a lot and at many points found the pace suited to my train of thought.",
+                    "Prof. Razborov has excellent lectures and well–designed homeworks.",
+                    "Professor Razborov is both very available and willing to discuss and explain course topics, and he maintains an incredibly useful course website with references for the topics discussed in class.",
+                    "I feel the professor gave great feedback on the assignments."
+                ],
+                "Please suggest any changes that could improve this course (e.g., class material, class structure, assignments, inclusive pedagogy).": [
+                    "N/a",
+                    "Though it's near and dear to razborov's heart, I would like to see a bit less of the circuit complexity and more of the modern (sans barriers!) subfields of complexity theory, though I suppose I could always satisfy this by taking topics courses in the future.",
+                    "I would have loved to spend more time on Natural Proofs and Proof complexity to better understand these ideas. For me, it would have been interesting to include more \"softer\" reading assignments which discuss the philosophy and insights extracted from the rigorous mathematics.",
+                    "n/a",
+                    "None."
+                ],
+                "Please comment on how respected, valued, and included you felt as a participant in the course.": [
+                    "I felt respected in this course.",
+                    "very respected, razborov is always great about taking questions, even when they are quite stupid, as mine often were",
+                    "Prof. Razborov builds an environment of mutual respect and engagement within the classroom. I felt very respected and valued as a student in his class.",
+                    "I felt very respected!",
+                    "The participation was respectful in class."
+                ]
+            }
+        },
+        "14": {
+            "course_section": "CMSC 39600 2",
+            "title": "Topics in Theoretical Computer Science, CMSC 39600 2, MATH 39600 2",
+            "instructors": [
+                "Alexander Razborov"
+            ],
+            "semester": "Spring 2022",
+            "link": "https://uchicago.bluera.com/uchicago/rpvf-eng.aspx?lang=eng&redi=1&SelectedIDforPrint=cea51f59fcf24eedca386c087ef7dfcfef3da0056f8c07450ccb11960ed445a9f3b4fa6f5721825fe683941f9fabd99a&ReportType=2&regl=en-US",
+            "comments": {
+                "Please review and evaluate your work in this course overall.": [
+                    "Excellent course.",
+                    "I did not present anything in this class, so pretty much all of the work went into understanding the field and tools of Proof Complexity, which I found productive."
+                ],
+                "Please elaborate on any of your responses above.": [
+                    "I don't recall any moment where I would have needed the professor to be available/responsive, so I marked \"neutral\" above, even though a \"N/A\" would have been better."
+                ],
+                "What aspects of the instructor’s teaching contributed most and least to your learning? ": [
+                    "Since this is a topics course, I liked that the professor made sure to talk several times about how he perceived the field and which are the difficult problems. He labelled that \"philosophy\" (as opposed to \"mathematics\"), which I found very memorable."
+                ],
+                "Please suggest any changes that could improve this course (e.g., class material, class structure, assignments, inclusive pedagogy).": [
+                    "The course is good as it is. Perhaps changing the order of the subjects a bit, to have some concrete results first, before talking about his vision of the field?"
+                ],
+                "Please comment on how respected, valued, and included you felt as a participant in the course.": [
+                    "My participation in the course was mostly through in–class questions, and I always felt welcomed to ask them, both from the professor and from my classmates."
+                ]
+            }
+        }
+    }
+}

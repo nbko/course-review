@@ -221,53 +221,256 @@ export const majors = [
 ];
 
 export const instructors = [
-	{ label: "Aaron Elmore", id: 1 },
-	{ label: "Aaron Potechin", id: 2 },
-	{ label: "Adam Shaw", id: 3 },
-	{ label: "Alex Kale", id: 4 },
-	{ label: "Alexander Razborov", id: 5 },
-	{ label: "Aloni Cohen", id: 6 },
-	{ label: "Anne Rogers", id: 7 },
-	{ label: "Ari Holtzman", id: 8 },
-	{ label: "Ben Zhao", id: 9 },
-	{ label: "Blase Ur", id: 10 },
-	{ label: "Borja Sotomayor", id: 11 },
-	{ label: "Chenhao Tan", id: 12 },
-	{ label: "David Cash", id: 13 },
-	{ label: "Frederic Chong", id: 14 },
-	{ label: "Gordon Kindlmann", id: 15 },
-	{ label: "Grant Ho", id: 16 },
-	{ label: "Haifeng Xu", id: 17 },
-	{ label: "Hannah Morgan", id: 18 },
-	{ label: "Haotian Jiang", id: 19 },
-	{ label: "Haryadi Gunawi", id: 20 },
-	{ label: "Heather Zheng", id: 21 },
-	{ label: "Janos Simon", id: 22 },
-	{ label: "John Reppy", id: 23 },
-	{ label: "Junchen Jiang", id: 24 },
-	{ label: "Ken Nakagaki", id: 25 },
-	{ label: "Kexin Pei", id: 26 },
-	{ label: "Laszlo Babai", id: 27 },
-	{ label: "Lorenzo Orecchia", id: 28 },
-	{ label: "Marshini Chetty", id: 29 },
-	{ label: "Matthew Wachs", id: 30 },
-	{ label: "Michael Maire", id: 31 },
-	{ label: "Mina Lee", id: 32 },
-	{ label: "Mohammed Suhail Rehman", id: 33 },
-	{ label: "Nick Feamster", id: 34 },
-	{ label: "Pedro Lopes", id: 35 },
-	{ label: "Rana Hanocka", id: 36 },
-	{ label: "Raul Castro Fernandez", id: 37 },
-	{ label: "Ravi Chugh", id: 38 },
-	{ label: "Rebecca Willett", id: 39 },
-	{ label: "Risi Kondor", id: 40 },
-	{ label: "Robert Rand", id: 41 },
-	{ label: "Sarah Sebo", id: 42 },
-	{ label: "Tian Li", id: 43 },
-	{ label: "Timothy Ng", id: 44 },
-	{ label: "William Fefferman", id: 45 },
-	{ label: "William Hoza", id: 46 },
-	{ label: "Yali Amit", id: 47 },
-	{ label: "Yanjing Li", id: 48 },
-	{ label: "Yuxin Chen", id: 49 },
+	{
+		label: "Aaron Elmore",
+		id: 1,
+	},
+	{
+		label: "Aaron Potechin",
+		id: 2,
+	},
+	{
+		label: "Adam Shaw",
+		id: 3,
+	},
+	{
+		label: "Alexander Kale",
+		id: 4,
+	},
+	{
+		label: "Alexander Razborov",
+		id: 5,
+	},
+	{
+		label: "Aloni Cohen",
+		id: 6,
+	},
+	{
+		label: "Anand Bhattad",
+		id: 7,
+	},
+	{
+		label: "Andrew Chien",
+		id: 8,
+	},
+	{
+		label: "Anne Rogers",
+		id: 9,
+	},
+	{
+		label: "Avrim Blum",
+		id: 10,
+	},
+	{
+		label: "Ben Zhao",
+		id: 11,
+	},
+	{
+		label: "Blase Ur",
+		id: 12,
+	},
+	{
+		label: "Bo Li",
+		id: 13,
+	},
+	{
+		label: "Borja Sotomayor Basilio",
+		id: 14,
+	},
+	{
+		label: "Chenhao Tan",
+		id: 15,
+	},
+	{
+		label: "Charles David Cash",
+		id: 16,
+	},
+	{
+		label: "David Mcallester",
+		id: 17,
+	},
+	{
+		label: "Denis Hirschfeldt",
+		id: 18,
+	},
+	{
+		label: "Diana Franklin",
+		id: 19,
+	},
+	{
+		label: "Gordon Kindlmann",
+		id: 20,
+	},
+	{
+		label: "Grant Ho",
+		id: 21,
+	},
+	{
+		label: "Haifeng Xu",
+		id: 22,
+	},
+	{
+		label: "Hannah Morgan",
+		id: 23,
+	},
+	{
+		label: "Haryadi Gunawi",
+		id: 24,
+	},
+	{
+		label: "Heather Zheng",
+		id: 25,
+	},
+	{
+		label: "Ian Foster",
+		id: 26,
+	},
+	{
+		label: "Janos Simon",
+		id: 27,
+	},
+	{
+		label: "Jinbo Xu",
+		id: 28,
+	},
+	{
+		label: "John Reppy",
+		id: 29,
+	},
+	{
+		label: "Julia Chuzhoy",
+		id: 30,
+	},
+	{
+		label: "Junchen Jiang",
+		id: 31,
+	},
+	{
+		label: "Ken Nakagaki",
+		id: 32,
+	},
+	{
+		label: "Ketan Mulmuley",
+		id: 33,
+	},
+	{
+		label: "Laszlo Babai",
+		id: 34,
+	},
+	{
+		label: "Lorenzo Orecchia",
+		id: 35,
+	},
+	{
+		label: "Madhur Tulsiani",
+		id: 36,
+	},
+	{
+		label: "Marshini Chetty",
+		id: 37,
+	},
+	{
+		label: "Matthew Wachs",
+		id: 38,
+	},
+	{
+		label: "Matthew Walter",
+		id: 39,
+	},
+	{
+		label: "Michael Maire",
+		id: 40,
+	},
+	{
+		label: "Mohammed Suhail Rehman",
+		id: 41,
+	},
+	{
+		label: "Nathan Srebro",
+		id: 42,
+	},
+	{
+		label: "Nick Feamster",
+		id: 43,
+	},
+	{
+		label: "Pedro Lopes",
+		id: 44,
+	},
+	{
+		label: "Rana Hanocka",
+		id: 45,
+	},
+	{
+		label: "Raul Castro Fernandez",
+		id: 46,
+	},
+	{
+		label: "Ravi Chugh",
+		id: 47,
+	},
+	{
+		label: "Rebecca Willett",
+		id: 48,
+	},
+	{
+		label: "Rick L Stevens",
+		id: 49,
+	},
+	{
+		label: "Risi Kondor",
+		id: 50,
+	},
+	{
+		label: "Robert Grossman",
+		id: 51,
+	},
+	{
+		label: "Robert Rand",
+		id: 52,
+	},
+	{
+		label: "Sanjay Krishnan",
+		id: 53,
+	},
+	{
+		label: "Sarah Sebo",
+		id: 54,
+	},
+	{
+		label: "Stuart A Kurtz",
+		id: 55,
+	},
+	{
+		label: "Timothy Ng",
+		id: 56,
+	},
+	{
+		label: "William Fefferman",
+		id: 57,
+	},
+	{
+		label: "William Hoza",
+		id: 58,
+	},
+	{
+		label: "Yali Amit",
+		id: 59,
+	},
+	{
+		label: "Yanjing Li",
+		id: 60,
+	},
+	{
+		label: "Yury Makarychev",
+		id: 61,
+	},
+	{
+		label: "Yuxin Chen",
+		id: 62,
+	},
+	{
+		label: "Zhiyuan Li",
+		id: 63,
+	},
 ];

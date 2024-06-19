@@ -59,30 +59,33 @@ export type Database = {
           created_at: string | null
           deleted_at: string | null
           id: number
-          instructors: string | null
+          instructors: string[] | null
           link: string | null
           major: string | null
           semester: string | null
+          title: string
         }
         Insert: {
           course_section?: string | null
           created_at?: string | null
           deleted_at?: string | null
           id?: number
-          instructors?: string | null
+          instructors?: string[] | null
           link?: string | null
           major?: string | null
           semester?: string | null
+          title: string
         }
         Update: {
           course_section?: string | null
           created_at?: string | null
           deleted_at?: string | null
           id?: number
-          instructors?: string | null
+          instructors?: string[] | null
           link?: string | null
           major?: string | null
           semester?: string | null
+          title?: string
         }
         Relationships: []
       }
@@ -183,7 +186,19 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      get_courses_by_instructor: {
+        Args: {
+          instructor_name: string
+        }
+        Returns: {
+          id: number
+          major: string
+          course_section: string
+          instructors: string[]
+          semester: string
+          link: string
+        }[]
+      }
     }
     Enums: {
       [_ in never]: never
