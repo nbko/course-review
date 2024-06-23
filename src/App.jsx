@@ -24,7 +24,19 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import { Padding } from "@mui/icons-material";
 import Link from "@mui/material/Link";
+import Root from "./routes/root";
 import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import CourseDetail from "./CourseDetail";
+// const navigate = useNavigate();
+
+// const openUserDetails = () => {
+// 	navigate("/course");
+// };
+
+function Move(courseSection) {
+	return <Navigate to={`/course/${courseSection}`} />;
+}
 
 function App() {
 	const [courseInfo, setCourseInfo] = useState([]);
@@ -36,12 +48,20 @@ function App() {
 	const [instructor, setInstructor] = useState(null);
 	const [alertMsg, setAlertMsg] = useState("");
 
+	const [redirectSite, setRedirectSite] = useState("");
+	const navigate = useNavigate();
+
 	const columns = [
 		{
 			field: "course_section",
 			headerName: "Course Number",
 			flex: 0.5,
 			type: "string",
+			// renderCell: (courseInfo) => (
+			// 	<Link href={`courses/${courseInfo.value}`}>
+			// 		{courseInfo.value.toString()}
+			// 	</Link>
+			// ),
 		},
 		{ field: "title", headerName: "Course Title", flex: 1, type: "string" },
 		{
@@ -187,7 +207,9 @@ function App() {
 	const handleRowClick = (courseInfo) => {
 		const courseSection = courseInfo.row.course_section;
 		console.log("navigating to...", courseSection);
+		//return redirect(`/course/${courseSection}`);
 		//<Navigate to={`/course/course`} />;
+		navigate(`/courses/${courseSection}`);
 	};
 
 	return (

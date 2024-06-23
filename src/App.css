@@ -81,7 +81,8 @@ body,
 	}
 }
 
-.MuiDataGrid-root.MuiDataGrid-root--densityStandard.MuiDataGrid-withBorderColor.css-rnyzj2-MuiDataGrid-root {
+.MuiDataGrid-root.MuiDataGrid-root--densityStandard.MuiDataGrid-withBorderColor.css-rnyzj2-MuiDataGrid-root,
+.MuiDataGrid-cell:focus {
 	border: none;
 }
 
