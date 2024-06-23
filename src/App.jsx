@@ -22,6 +22,9 @@ import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
+import { Padding } from "@mui/icons-material";
+import Link from "@mui/material/Link";
+import { Navigate } from "react-router-dom";
 
 function App() {
 	const [courseInfo, setCourseInfo] = useState([]);
@@ -34,13 +37,18 @@ function App() {
 	const [alertMsg, setAlertMsg] = useState("");
 
 	const columns = [
-		{ field: "course_section", headerName: "Course Number", width: 180 },
-		{ field: "title", headerName: "Course Title", width: 400 },
+		{
+			field: "course_section",
+			headerName: "Course Number",
+			flex: 0.5,
+			type: "string",
+		},
+		{ field: "title", headerName: "Course Title", flex: 1, type: "string" },
 		{
 			field: "count",
 			headerName: "Reviews",
 			type: "number",
-			width: "180",
+			flex: 0.5,
 		},
 	];
 
@@ -103,27 +111,7 @@ function App() {
 		// 	);
 		// }
 		// });
-		// 		// for (const instructor in json) {
-		// 		// 	for (const review in json[instructor]) {
-		// 		// 		console.log(json[instructor][review]);
-		// 		// 	}
-		// 		// }
-		// 	});
-		// insertReviews("sec1", "aaron", "cmsc", "winter 2022", "https://", {
-		// 	"What could the instructor modify to help you learn more?": [
-		// 		"I was satisfied with how the course went.",
-		// 		"His approaches often weren't obvious at the start, also some of the more complicated proofs which deserved more time were given less and more trivial things took a lot of time.",
-		// 		"the content was very interesting but the instructor could be more lively",
-		// 		"Keep track of time better so we didn't have to rush through material past the end of class time.",
-		// 		"N/A",
-		// 	],
-		// 	"Please comment on the level of difficulty of the course relative to your background and experience.":
-		// 		[
-		// 			"I felt it was difficult",
-		// 			"Somewhat easy.",
-		// 			"i had previous algorithms experience and it was still interesting",
-		// 		],
-		// });
+
 		async function fetchReviews() {
 			if (isClicked && major && instructor) {
 				const currMajor = major.label.split("-")[0].trim();
@@ -132,31 +120,36 @@ function App() {
 
 				const reviews = await getReviewsByInstructor(currMajor, currInstructor);
 
-				const courseCountMap = new Map();
+				const courseMap = new Map();
 
 				reviews.forEach((course) => {
-					course["course_section"] = course["course_section"]
+					const courseSection = course["course_section"]
 						.split(" ")
 						.splice(0, 2)
 						.join(" ");
-					const courseKey = JSON.stringify(course);
+					const currCourseName = course["title"];
 
-					if (courseCountMap.has(courseKey)) {
-						courseCountMap.set(courseKey, courseCountMap.get(courseKey) + 1);
+					if (courseMap.has(courseSection)) {
+						const existingCourse = courseMap.get(courseSection);
+						existingCourse["title"] =
+							currCourseName.length > existingCourse["title"].length
+								? currCourseName
+								: existingCourse["title"];
+
+						existingCourse["count"] += 1;
 					} else {
-						courseCountMap.set(courseKey, 1);
+						courseMap.set(courseSection, {
+							...course,
+							course_section: courseSection,
+							count: 1,
+						});
 					}
 				});
 
-				let uniqueCoursesWithCount = Array.from(courseCountMap.entries()).map(
-					([key, count]) => {
-						const course = JSON.parse(key);
-						return { ...course, count };
-					}
-				);
+				let uniqueCoursesWithCount = Array.from(courseMap.values());
+				uniqueCoursesWithCount.forEach((course, i) => (course["id"] = i));
 
-				uniqueCoursesWithCount.map((course, i) => (course["id"] = i));
-				console.log(uniqueCoursesWithCount);
+				console.log("courses:", uniqueCoursesWithCount);
 
 				setCourseInfo(uniqueCoursesWithCount);
 				setIsClicked(false);
@@ -191,6 +184,12 @@ function App() {
 		}
 	};
 
+	const handleRowClick = (courseInfo) => {
+		const courseSection = courseInfo.row.course_section;
+		console.log("navigating to...", courseSection);
+		//<Navigate to={`/course/course`} />;
+	};
+
 	return (
 		<ThemeProvider theme={themeOptions}>
 			<Container maxWidth="md">
@@ -223,7 +222,7 @@ function App() {
 						<Alert severity="warning">{alertMsg}</Alert>
 					)}
 					{/* {progress && <Progress />} */}
-					<Paper>
+					<Paper style={{ padding: "0.5rem 1rem" }}>
 						{courseInfo && (
 							<div style={{ height: 400, width: "100%" }}>
 								<DataGrid
@@ -235,6 +234,17 @@ function App() {
 										},
 									}}
 									pageSizeOptions={[5, 10]}
+									disableColumnMenu
+									sx={{
+										".MuiDataGrid-columnSeparator": {
+											display: "none",
+										},
+										"& .MuiDataGrid-cell:focus": {
+											outline: "none",
+										},
+										cursor: "pointer",
+									}}
+									onRowClick={handleRowClick}
 								/>
 							</div>
 						)}

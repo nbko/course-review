@@ -80,3 +80,11 @@ body,
 		}
 	}
 }
+
+.MuiDataGrid-root.MuiDataGrid-root--densityStandard.MuiDataGrid-withBorderColor.css-rnyzj2-MuiDataGrid-root {
+	border: none;
+}
+
+.css-rnyzj2-MuiDataGrid-root.MuiDataGrid-row.Mui-selected {
+	background-color: none;
+}
