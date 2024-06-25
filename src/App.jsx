@@ -1,3 +1,11 @@
+import { useState, useEffect } from "react";
+import {
+	BrowserRouter as Router,
+	Routes,
+	Route,
+	useNavigate,
+	Navigate,
+} from "react-router-dom";
 import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import { SearchInput, QuarterTags } from "./SearchInput";
@@ -6,37 +14,13 @@ import Progress from "./Progress";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import Alert from "@mui/material/Alert";
 import Paper from "@mui/material/Paper";
-
 import { majors, instructors } from "./data";
-import { useState, useEffect } from "react";
-import "./App.css";
-
 import { insertReviews } from "./services/insertReviews";
-
 import { getReviewsByInstructor } from "./services/getReviews";
 import { instructorsList } from "../data/instructors_list";
 import { DataGrid } from "@mui/x-data-grid";
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableCell from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TableRow from "@mui/material/TableRow";
-import { Padding } from "@mui/icons-material";
-import Link from "@mui/material/Link";
-import Root from "./routes/root";
-import { Navigate } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 import CourseDetail from "./CourseDetail";
-// const navigate = useNavigate();
-
-// const openUserDetails = () => {
-// 	navigate("/course");
-// };
-
-function Move(courseSection) {
-	return <Navigate to={`/course/${courseSection}`} />;
-}
+import "./App.css";
 
 function App() {
 	const [courseInfo, setCourseInfo] = useState([]);
@@ -47,8 +31,6 @@ function App() {
 	const [major, setMajor] = useState(null);
 	const [instructor, setInstructor] = useState(null);
 	const [alertMsg, setAlertMsg] = useState("");
-
-	const [redirectSite, setRedirectSite] = useState("");
 	const navigate = useNavigate();
 
 	const columns = [
@@ -133,6 +115,7 @@ function App() {
 		// });
 
 		async function fetchReviews() {
+			// if the major, instructor is selected and the search button is clicked
 			if (isClicked && major && instructor) {
 				const currMajor = major.label.split("-")[0].trim();
 				const currInstructor = instructor.label;
@@ -205,7 +188,7 @@ function App() {
 	};
 
 	const handleRowClick = (courseInfo) => {
-		const courseSection = courseInfo.row.course_section;
+		const courseSection = courseInfo.row.course_section.split(" ").join("");
 		console.log("navigating to...", courseSection);
 		//return redirect(`/course/${courseSection}`);
 		//<Navigate to={`/course/course`} />;
@@ -394,4 +377,15 @@ function App() {
 	);
 }
 
-export default App;
+function Main() {
+	return (
+		<Router>
+			<Routes>
+				<Route path="/" element={<App />} />
+				<Route path="/courses/:courseSection" element={<CourseDetail />} />
+			</Routes>
+		</Router>
+	);
+}
+
+export default Main;
