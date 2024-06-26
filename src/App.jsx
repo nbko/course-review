@@ -20,6 +20,8 @@ import { getReviewsByInstructor } from "./services/getReviews";
 import { instructorsList } from "../data/instructors_list";
 import { DataGrid } from "@mui/x-data-grid";
 import CourseDetail from "./CourseDetail";
+import { useAtom, useSetAtom } from "jotai";
+import * as post from "./state/post";
 import "./App.css";
 
 function App() {
@@ -27,9 +29,9 @@ function App() {
 	const [progress, setProgress] = useState(false);
 	const [search, setSearch] = useState(false);
 	const [isClicked, setIsClicked] = useState(false);
-	const [reviewList, setReviewList] = useState([]);
 	const [major, setMajor] = useState(null);
-	const [instructor, setInstructor] = useState(null);
+	const [instructor, setInstructor] = useAtom(post.instructor);
+	const setCourseSection = useSetAtom(post.courseSection);
 	const [alertMsg, setAlertMsg] = useState("");
 	const navigate = useNavigate();
 
@@ -39,11 +41,6 @@ function App() {
 			headerName: "Course Number",
 			flex: 0.5,
 			type: "string",
-			// renderCell: (courseInfo) => (
-			// 	<Link href={`courses/${courseInfo.value}`}>
-			// 		{courseInfo.value.toString()}
-			// 	</Link>
-			// ),
 		},
 		{ field: "title", headerName: "Course Title", flex: 1, type: "string" },
 		{
@@ -117,11 +114,10 @@ function App() {
 		async function fetchReviews() {
 			// if the major, instructor is selected and the search button is clicked
 			if (isClicked && major && instructor) {
-				const currMajor = major.label.split("-")[0].trim();
-				const currInstructor = instructor.label;
+				const currMajor = major.split("-")[0].trim();
 				console.log({ isClicked, major, instructor });
 
-				const reviews = await getReviewsByInstructor(currMajor, currInstructor);
+				const reviews = await getReviewsByInstructor(currMajor, instructor);
 
 				const courseMap = new Map();
 
@@ -188,10 +184,11 @@ function App() {
 	};
 
 	const handleRowClick = (courseInfo) => {
-		const courseSection = courseInfo.row.course_section.split(" ").join("");
+		let courseSection = courseInfo.row.course_section;
+		setCourseSection(courseSection);
+		courseSection = courseSection.split(" ").join("");
+
 		console.log("navigating to...", courseSection);
-		//return redirect(`/course/${courseSection}`);
-		//<Navigate to={`/course/course`} />;
 		navigate(`/courses/${courseSection}`);
 	};
 

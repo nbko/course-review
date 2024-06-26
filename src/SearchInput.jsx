@@ -14,7 +14,7 @@ export function SearchInput({ inputType, options, setSelectedMajor }) {
 				sx={{ width: 1 }}
 				renderInput={(params) => <TextField {...params} label={inputType} />}
 				onChange={(event, newValue) => {
-					setSelectedMajor(newValue);
+					setSelectedMajor(newValue.label);
 				}}
 			/>
 		</div>

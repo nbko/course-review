@@ -89,3 +89,9 @@ body,
 .css-rnyzj2-MuiDataGrid-root.MuiDataGrid-row.Mui-selected {
 	background-color: none;
 }
+
+.course-info {
+	margin-bottom: 1rem;
+	padding: 1rem 0;
+	border-bottom: 0.25px rgb(158, 158, 158) solid;
+}

@@ -62,11 +62,15 @@ export const getReviewsByInstructor = async (
 	}
 };
 
-export const getReviewsByCourseSection = async (course_section: string) => {
+export const getReviewsByCourseSection = async (
+	instructor: string,
+	course_section: string
+) => {
 	const { data, error } = await supabase()
 		.from("courses")
 		.select("id, instructors, semester, title")
 		.ilike("course_section", `%${course_section}%`)
+		.contains("instructors", [instructor])
 		.order("course_section", { ascending: false });
 	// .limit(500);
 	if (error) {
