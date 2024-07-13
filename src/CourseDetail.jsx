@@ -4,10 +4,12 @@ import {
 	getRawCourseReviews,
 	getReviewsByCourseSection,
 } from "./services/getReviews";
+import { getGPT } from "./services/gpt";
 import Paper from "@mui/material/Paper";
 import { useAtomValue } from "jotai";
 import * as post from "./state/post";
 
+// 수업 디테일 불러오는 함수
 function CourseDetail() {
 	const courseSection = useAtomValue(post.courseSection);
 	const instructor = useAtomValue(post.instructor);
@@ -15,6 +17,10 @@ function CourseDetail() {
 	const [courseReviews, setCourseReviews] = useState([]);
 
 	useEffect(() => {
+		// get reviews by course section 하고 get raw course section을 여기서 해야 할까
+		// 아니면 get reviews.ts에서 처리하는게 더 나을까? 어차피 걍 가저오는건 똑같은거 같긴 흠...
+		// 일단 get reviews쪽에서 해결해보자
+
 		async function fetchCourseData() {
 			// if the major, instructor is selected and the search button is clicked
 			// const match = courseSection.match(/([a-zA-Z]+)(\d+)/);
@@ -42,6 +48,7 @@ function CourseDetail() {
 		async function fetchCourseReviews() {
 			console.log("fetching course reviews for", courseData);
 			for (const course of courseData) {
+				// 일단 여기서는 raw한 course review밖에 없다는 것을 전제로 하고 있어
 				const reviews = await getRawCourseReviews(course.id);
 
 				const courseWithReviews = {
@@ -60,13 +67,18 @@ function CourseDetail() {
 
 		fetchCourseReviews();
 
-		console.log("fetched raw reviews:", courseReviews);
+		// console.log("fetched raw reviews:", courseReviews);
 	}, [courseData]);
+
+	// const handleClickAPI = async () => {
+	// 	await getGPT();
+	// };
 
 	return (
 		<div style={{ margin: "2rem" }}>
 			<h2>Course Detail</h2>
 			<p>Course Section: {courseSection}</p>
+			{/* <button onClick={handleClickAPI}>calling GPT</button> */}
 			<Paper style={{ padding: "1rem", background: "#f7f7f7" }}>
 				{courseReviews &&
 					courseReviews.map((course, i) => (
@@ -81,6 +93,7 @@ function CourseDetail() {
 							<h4 className="course-info">
 								Professor {course.instructors.join(", ")} / {course.semester}
 							</h4>
+							{console.log(course.reviews)}
 							{course.reviews.map((review, index) => (
 								<div key={index} style={{ marginBottom: "1rem" }}>
 									{Object.entries(review).map(([key, value]) => (
@@ -88,7 +101,13 @@ function CourseDetail() {
 											{key === "raw_data" ? (
 												<>
 													<strong>Review:</strong>
-													<div>{JSON.stringify(value)}</div>
+													{Object.entries(value).map(([ques, ans]) => (
+														<div key={ques}>
+															{" "}
+															<strong>{ques}</strong>
+															<div>{JSON.stringify(ans)}</div>
+														</div>
+													))}
 												</>
 											) : null}
 											{/* {key === "raw_data" && typeof value === "object"
