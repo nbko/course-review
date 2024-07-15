@@ -15,35 +15,42 @@ export type Database = {
           comments_course: string | null
           comments_professor: string | null
           course_content: string | null
+          course_id: number
           created_at: string
           deleted_at: string | null
           id: number
           raw_course_review_id: number
-          semester: string | null
         }
         Insert: {
           advice?: string | null
           comments_course?: string | null
           comments_professor?: string | null
           course_content?: string | null
+          course_id: number
           created_at?: string
           deleted_at?: string | null
           id?: number
           raw_course_review_id: number
-          semester?: string | null
         }
         Update: {
           advice?: string | null
           comments_course?: string | null
           comments_professor?: string | null
           course_content?: string | null
+          course_id?: number
           created_at?: string
           deleted_at?: string | null
           id?: number
           raw_course_review_id?: number
-          semester?: string | null
         }
         Relationships: [
+          {
+            foreignKeyName: "course_reviews_course_id_fkey"
+            columns: ["course_id"]
+            isOneToOne: true
+            referencedRelation: "courses"
+            referencedColumns: ["id"]
+          },
           {
             foreignKeyName: "course_reviews_raw_course_review_id_fkey"
             columns: ["raw_course_review_id"]
@@ -60,6 +67,7 @@ export type Database = {
           deleted_at: string | null
           id: number
           instructors: string[] | null
+          is_summarized: boolean
           link: string | null
           major: string | null
           semester: string | null
@@ -71,6 +79,7 @@ export type Database = {
           deleted_at?: string | null
           id?: number
           instructors?: string[] | null
+          is_summarized?: boolean
           link?: string | null
           major?: string | null
           semester?: string | null
@@ -82,6 +91,7 @@ export type Database = {
           deleted_at?: string | null
           id?: number
           instructors?: string[] | null
+          is_summarized?: boolean
           link?: string | null
           major?: string | null
           semester?: string | null
@@ -152,7 +162,6 @@ export type Database = {
           created_at: string
           deleted_at: string | null
           id: number
-          is_summarized: boolean | null
           raw_data: Json | null
         }
         Insert: {
@@ -160,7 +169,6 @@ export type Database = {
           created_at?: string
           deleted_at?: string | null
           id?: number
-          is_summarized?: boolean | null
           raw_data?: Json | null
         }
         Update: {
@@ -168,7 +176,6 @@ export type Database = {
           created_at?: string
           deleted_at?: string | null
           id?: number
-          is_summarized?: boolean | null
           raw_data?: Json | null
         }
         Relationships: [

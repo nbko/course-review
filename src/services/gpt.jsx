@@ -1,6 +1,6 @@
 import { resolveModuleName } from "typescript";
 
-export const getGPT = async () => {
+export const getGPT = async (courseReviews) => {
 	console.log(">>calling gpt....");
 
 	const res = await fetch("https://api.openai.com/v1/chat/completions", {
@@ -12,9 +12,24 @@ export const getGPT = async () => {
 		body: JSON.stringify({
 			model: "gpt-3.5-turbo",
 			messages: [
+                {role: "system", content: '''Summarize the provided JSON dictionary into four categories: `comments_course`, 'course_content', 'comments_professor', and 'advice'. Each summary should be under 4-5 sentences and include only essential information from the provided text. Use the following format in json:
+                {
+                'comments_course': 'summarized comments on the course',
+                'course_content': "summarized content of the course",
+                "comments_professor": "summarized comments on the professor(s)",
+                "advice": "summarized advice"
+                }
+
+
+                ### Guidelines:
+
+                1. **comments_course**: Summarize student feedback on exams, homework, grading, and feedback quality.
+                2. **course_content**: Summarize the knowledge and skills taught and what students learned.
+                3. **comments_professor**: Summarize what students found helpful or challenging about the instructor.
+                4. **advice**: Summarize any advice for future students."},
 				{
 					role: "user",
-					content: "초급 사용자를 위한 영어단어 3개 알려줘. 간단하게",
+					content: `${courseReviews}`,
 				},
 			],
 			temperature: 0.5,
