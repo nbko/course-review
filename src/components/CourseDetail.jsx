@@ -1,9 +1,5 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import {
-	getRawCourseReviews,
-	getReviewsByCourseSection,
-} from "../services/getReviews";
 import { getSummarizedReview } from "../services/dataService.ts";
 import Paper from "@mui/material/Paper";
 import { useAtomValue } from "jotai";

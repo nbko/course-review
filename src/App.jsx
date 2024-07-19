@@ -14,7 +14,7 @@ import { DataGrid } from "@mui/x-data-grid";
 import { majors, instructors } from "./data";
 import CourseDetail from "./components/CourseDetail";
 import { SearchInput, QuarterTags } from "./components/SearchInput";
-import { getReviewsByInstructor } from "./services/getReviews";
+import { getReviewsByInstructor } from "./api/fetchCourseData";
 import * as post from "./state/atoms.js";
 import "./App.css";
 

@@ -13,7 +13,7 @@ export const summarizeData = async (rawData) => {
 				messages: [
 					{
 						role: "system",
-						content: `Summarize the provided JSON dictionary into four categories: "comments_course", "course_content", "comments_professor", and "advice". Each summary should be concise, under 4-5 sentences, and include only the essential information from the provided text. 
+						content: `Summarize the provided JSON dictionary into four categories: "comments_course", "course_content", "comments_professor", and "advice". Each summary should be detailed and descriptive, but please keep it under 5 sentences for each category. 
 
 						Please respond in a friendly, conversational tone as if you are a fellow student sharing information about the course with your classmates.
 
@@ -26,11 +26,10 @@ export const summarizeData = async (rawData) => {
 						}
 			
 						### Guidelines:
-			
-						1. **comments_course**: Summarize student feedback on exams, homework, grading, and feedback quality.
-						2. **course_content**: Summarize the knowledge and skills taught and what students learned.
-						3. **comments_professor**: Summarize what students found helpful or challenging about the instructor.
-						4. **advice**: Summarize any advice for future students.`,
+							**comments_course**: Provide a detailed summary of student feedback on exams, homework, grading, and feedback quality. Highlight both positive and negative aspects if available.
+							**course_content**: Provide a detailed summary of the knowledge and skills taught, including specific topics covered and what students learned.
+							**comments_professor**: Provide a detailed summary of what students found helpful or challenging about the instructor, including teaching style, accessibility, and supportiveness.
+							**advice**: Provide a detailed summary of any advice for future students, including study tips, course preparation, and class participation strategies.`,
 					},
 					{
 						role: "user",
