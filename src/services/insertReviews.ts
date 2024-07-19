@@ -1,5 +1,5 @@
 import { supabase } from "../lib/helper/supabaseClient";
-import { Json } from "../types/supabase";
+import { Json } from "../db/supabase";
 
 // get instructor if exists
 const getInstructor = async (name: string) => {
@@ -20,6 +20,7 @@ export const getOrInsertInstructor = async (name: string) => {
 	// check if the instructor exists in the instructor table
 	// if the instructor isn't in the table, add the instructor to the table
 	// and return the id of the instructor
+	console.log("given name:", name);
 
 	const { data: newInstructorData, error } = await supabase()
 		.from("instructors")

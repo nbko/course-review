@@ -4,29 +4,22 @@ import {
 	Routes,
 	Route,
 	useNavigate,
-	Navigate,
 } from "react-router-dom";
-import Button from "@mui/material/Button";
-import Container from "@mui/material/Container";
-import { SearchInput, QuarterTags } from "./SearchInput";
-import DisabledAccordion from "./CourseReviews";
-import Progress from "./Progress";
+import { useAtom, useSetAtom } from "jotai";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
+import Button from "@mui/material/Button";
 import Alert from "@mui/material/Alert";
 import Paper from "@mui/material/Paper";
-import { majors, instructors } from "./data";
-import { insertReviews } from "./services/insertReviews";
-import { getReviewsByInstructor } from "./services/getReviews";
-import { instructorsList } from "../data/instructors_list";
 import { DataGrid } from "@mui/x-data-grid";
-import CourseDetail from "./CourseDetail";
-import { useAtom, useSetAtom } from "jotai";
-import * as post from "./state/post";
+import { majors, instructors } from "./data";
+import CourseDetail from "./components/CourseDetail";
+import { SearchInput, QuarterTags } from "./components/SearchInput";
+import { getReviewsByInstructor } from "./services/getReviews";
+import * as post from "./state/atoms.js";
 import "./App.css";
 
 function App() {
 	const [courseInfo, setCourseInfo] = useState([]);
-	const [progress, setProgress] = useState(false);
 	const [search, setSearch] = useState(false);
 	const [isClicked, setIsClicked] = useState(false);
 	const [major, setMajor] = useState(null);
@@ -52,65 +45,6 @@ function App() {
 	];
 
 	useEffect(() => {
-		// fetch("../course_review_data.json")
-		// 	.then((response) => response.json())
-		// 	.then((json) => {
-		// 		//const firstInstructor = Object.keys(json)[0];
-		// 		for (const instructor in json) {
-		// 			for (const review in json[instructor]) {
-		// 				// check if the instructor has any reviews
-		// 				// dont insert any data for the instructor if they dont have any reviews
-		// 				if ("error" in json[instructor][review]) {
-		// 					continue;
-		// 				} else {
-		// 					let {
-		// 						course_section,
-		// 						title,
-		// 						instructors,
-		// 						semester,
-		// 						link,
-		// 						comments,
-		// 					} = json[instructor][review];
-		// 					// quarter = quarter.replace(/\([^)]*\)/g, "");
-		// 					// instructors = instructors.split(",");
-		// 					insertReviews(
-		// 						"CMSC",
-		// 						course_section,
-		// 						title,
-		// 						instructors,
-		// 						semester,
-		// 						link,
-		// 						comments
-		// 					);
-		// 					// let instructorList = instructors.split(",");
-		// 					// for (const instructor of instructorList) {
-		// 					// 	getOrInsertInstructor(instructor);
-		// 				}
-		// 			}
-		// 		}
-		// 	});
-		// deleteReviews(10);
-		// hardDeleteReviews(8);
-		// instructorsList.map((instructor) => {
-		// 	createInstructors(instructor);
-		// // });
-		// for (const review in json[firstInstructor]) {
-		// 	// const courseSection = json[firstInstructor][review]["course-section"];
-		// 	let { course_section, instructors, quarter, link, comments } =
-		// 		json[firstInstructor][review];
-		// 	quarter = quarter.replace(/\([^)]*\)/g, "");
-		// 	// console.log({ course_section, instructors, quarter, link, comments });
-		// 	insertReviews(
-		// 		"CMSC",
-		// 		course_section,
-		// 		instructors,
-		// 		quarter,
-		// 		link,
-		// 		comments
-		// 	);
-		// }
-		// });
-
 		async function fetchReviews() {
 			// if the major, instructor is selected and the search button is clicked
 			if (isClicked && major && instructor) {
@@ -178,7 +112,7 @@ function App() {
 		} else {
 			if (major && instructor) {
 				setSearch(true);
-				setProgress(true);
+				//setProgress(true);
 			}
 		}
 	};
@@ -186,7 +120,7 @@ function App() {
 	const handleRowClick = (courseInfo) => {
 		let courseSection = courseInfo.row.course_section;
 		setCourseSection(courseSection);
-		courseSection = courseSection.split(" ").join("");
+		courseSection = courseSection.split(" ").join("-");
 
 		console.log("navigating to...", courseSection);
 		navigate(`/courses/${courseSection}`);
@@ -194,9 +128,9 @@ function App() {
 
 	return (
 		<ThemeProvider theme={themeOptions}>
-			<Container maxWidth="md">
+			<div className="wrapper">
 				<Button variant="outlined">Course Feedback</Button>
-				<div className="about">
+				<div className="c-heading title">
 					<h2>UChicago Course Reviews</h2>
 					<div>University of Chicago</div>
 				</div>
@@ -214,18 +148,13 @@ function App() {
 					<Button variant="contained" onClick={handleSearch}>
 						Search
 					</Button>
-					{/* <div>
-						Selected Major: {major ? major.label.split("-")[0].trim() : "None"}
-					</div>
-					<div>
-						Selected Instructor: {instructor ? instructor.label : "None"}
-					</div> */}
+				</div>
+				<div className="search-result">
 					{isClicked && (!major || !instructor) && (
 						<Alert severity="warning">{alertMsg}</Alert>
 					)}
-					{/* {progress && <Progress />} */}
-					<Paper style={{ padding: "0.5rem 1rem" }}>
-						{courseInfo && (
+					{courseInfo && (
+						<Paper style={{ padding: "0.5rem 1rem" }}>
 							<div style={{ height: 400, width: "100%" }}>
 								<DataGrid
 									rows={courseInfo}
@@ -249,127 +178,10 @@ function App() {
 									onRowClick={handleRowClick}
 								/>
 							</div>
-						)}
-						{/* {courseInfo && (
-							<TableContainer component={Paper}>
-								<Table sx={{ minWidth: 400 }} aria-label="simple table">
-									<TableHead>
-										<TableRow>
-											<TableCell>Course Number</TableCell>
-											<TableCell>Course Title</TableCell>
-											<TableCell align="right">Reviews</TableCell>
-										</TableRow>
-									</TableHead>
-									<TableBody>
-										{courseInfo.map((courseInfo, i) => (
-											<TableRow
-												key={courseInfo.id}
-												sx={{
-													"&:last-child td, &:last-child th": { border: 0 },
-												}}
-											>
-												<TableCell component="th" scope="row">
-													{courseInfo.course_section}
-												</TableCell>
-												<TableCell>{courseInfo.title}</TableCell>
-												<TableCell align="right">{courseInfo.count}</TableCell>
-												<a
-													key={i}
-													href={`/course/${courseInfo.course_section}`}
-												>
-													<div
-														className={`course ${courseInfo.course_section}`}
-													>
-														<p className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-gutterBottom">
-															{courseInfo.course_section}
-														</p>
-														<p className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorPrimary MuiTypography-gutterBottom">
-															{courseInfo.title}
-														</p>
-													</div>
-												</a>
-											</TableRow>
-										))}
-									</TableBody>
-								</Table>
-							</TableContainer>
-						)} */}
-					</Paper>
-					{/* {courseInfo &&
-							courseInfo.map((course, i) => {
-								const course_section = course["course_section"]
-									.split(" ")
-									.slice(0, 2)
-									.join(" ");
-								const course_title = course["title"];
-								return (
-									<a key={i} href={`/course/${course_section}`}>
-										<div className={`course ${course_section}`}>
-											<p className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-gutterBottom">
-												{course_section}
-											</p>
-											<p className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorPrimary MuiTypography-gutterBottom">
-												{course_title}
-											</p>
-										</div>
-									</a>
-								);
-							})} */}
-					{/* <a href="/course/cmsc14100">
-							<div className="course cmsc14100">
-								<p className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-gutterBottom">
-									CMSC 14100
-								</p>
-								<p className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorPrimary MuiTypography-gutterBottom">
-									Analytic Geometry and Calculus 3
-								</p>
-							</div>
-						</a>
-						<a href="/course/cmsc14200">
-							<div className="course coursecmsc14200">
-								<p className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-gutterBottom">
-									CMSC 14100
-								</p>
-								<p className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorPrimary MuiTypography-gutterBottom">
-									Analytic Geometry and Calculus 3
-								</p>
-							</div>
-						</a>
-						<a href="/course/cmsc14400">
-							<div className="course cmsc14400">
-								<p className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-gutterBottom">
-									CMSC 14200
-								</p>
-								<p className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorPrimary MuiTypography-gutterBottom">
-									Analytic Geometry and Calculus 3
-								</p>
-							</div>
-						</a>
-						<a href="/course/cmsc14400">
-							<div className="course cmsc14400">
-								<p className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-gutterBottom">
-									CMSC 14200
-								</p>
-								<p className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorPrimary MuiTypography-gutterBottom">
-									Analytic Geometry and Calculus 3
-								</p>
-							</div>
-						</a>
-						<a href="/course/cmsc14500">
-							<div className="course cmsc14500">
-								<p className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-gutterBottom">
-									CMSC 14300
-								</p>
-								<p className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorPrimary MuiTypography-gutterBottom">
-									Analytic Geometry and Calculus 3
-								</p>
-							</div>
-						</a> */}
-					{/* <DisabledAccordion /> */}
-					{/* <QuarterTags />
-				<SearchInput inputType="course section" /> */}
+						</Paper>
+					)}
 				</div>
-			</Container>
+			</div>
 		</ThemeProvider>
 	);
 }
