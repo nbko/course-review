@@ -1,9 +1,14 @@
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import PropTypes from "prop-types";
+import { useSetAtom } from "jotai";
+import * as post from "../state/atoms.js";
+import { useEffect } from "react";
 
-export function SearchInput({ inputType, options, setSelectedMajor }) {
-	// const [optionLabels, setOptionLabels] = useState(inputType);
+export function SearchInput({ inputType, options }) {
+	// const [optionLabels, setOptionLabels] = useState(
+	// inputType);
+	const setValue = useSetAtom(post.instructor);
 
 	return (
 		<div className={`search ${inputType}`}>
@@ -13,8 +18,8 @@ export function SearchInput({ inputType, options, setSelectedMajor }) {
 				options={options}
 				sx={{ width: 1 }}
 				renderInput={(params) => <TextField {...params} label={inputType} />}
-				onChange={(event, instructor) => {
-					setSelectedMajor(instructor.label);
+				onChange={(event, newValue) => {
+					setValue(newValue.label);
 				}}
 			/>
 		</div>
@@ -24,7 +29,6 @@ export function SearchInput({ inputType, options, setSelectedMajor }) {
 SearchInput.propTypes = {
 	inputType: PropTypes.string.isRequired,
 	options: PropTypes.array.isRequired,
-	setSelectedMajor: PropTypes.func.isRequired,
 };
 
 export function QuarterTags() {

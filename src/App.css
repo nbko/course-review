@@ -4,36 +4,125 @@ body,
 	padding: 0;
 }
 
-/* body {
-	background-color: #f8f4e1;
-} */
-
-#root {
-	width: 100%;
-	margin: auto;
-	padding: 1rem;
-}
-
 .wrapper {
-	padding: 5rem;
+	display: flex;
+	justify-content: center;
+	font-family: "Open Sans", sans-serif;
+	height: 100vh;
 }
 
-.c-heading.title {
-	text-align: center;
+.c-heading {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 
-	div {
-		margin: 1rem;
+	.c-heading.title_wrapper {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+	}
+
+	.c-heading.title_logo {
+		background-color: #800000;
+		width: 3rem;
+		height: 3rem;
+		margin-right: 1rem;
+		border-radius: 0.25rem;
+	}
+
+	.c-heading.title {
+		font-size: 2.5rem;
 	}
 }
 
 .search-content {
-	margin: 2rem 0;
-
+	width: 100%;
 	.search {
 		margin: 1rem 0;
 		display: flex;
 		justify-content: center;
-		text-transform: capitalize;
+	}
+}
+
+.professor-overview {
+	padding: 2rem 0;
+
+	.content-row {
+		padding: 0 3rem;
+		display: flex;
+		justify-content: center;
+		font-family: sans-serif;
+		height: 3rem;
+	}
+
+	.prof-nav__bar {
+		display: flex;
+		flex: 1;
+		height: 100%;
+		align-items: center;
+		justify-content: center;
+		background-color: #d9d9d9;
+		border-radius: 0.25rem;
+		color: black;
+		margin-right: 1rem;
+	}
+
+	.prof-nav__bar:hover {
+		cursor: pointer;
+	}
+
+	.search-bar {
+		flex-grow: 3;
+		justify-self: unset;
+	}
+
+	.sign-up {
+		margin-right: 0;
+	}
+
+	.profile-header {
+		display: flex;
+		align-items: center;
+		margin: 3rem 0;
+		padding: 0 3rem;
+		font-family: "Open Sans";
+		background-color: #d9d9d9;
+		height: 11rem;
+
+		.header-img {
+			width: 7rem;
+			height: 7rem;
+			background-color: #900000;
+			margin-right: 3rem;
+		}
+
+		.prof-info {
+			font-size: 1rem;
+			color: #900000;
+
+			.badge-info {
+				background-color: white;
+				padding: 0.25rem;
+				width: 5rem;
+				display: flex;
+				justify-content: center;
+				border-radius: 0.25rem;
+			}
+
+			.prof-name {
+				font-weight: 600;
+				text-transform: capitalize;
+				margin-top: 0.5rem;
+				font-size: 1.3rem;
+			}
+		}
+	}
+
+	.course-list__container {
+		padding: 0 3rem;
 	}
 }
 
