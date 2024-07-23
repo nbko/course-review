@@ -2,12 +2,12 @@ body,
 * {
 	margin: 0;
 	padding: 0;
+	font-family: "Open Sans", sans-serif;
 }
 
 .wrapper {
 	display: flex;
 	justify-content: center;
-	font-family: "Open Sans", sans-serif;
 	height: 100vh;
 }
 
@@ -47,16 +47,11 @@ body,
 	}
 }
 
-.professor-overview {
-	padding: 2rem 0;
-
-	.content-row {
-		padding: 0 3rem;
-		display: flex;
-		justify-content: center;
-		font-family: sans-serif;
-		height: 3rem;
-	}
+.content-row {
+	padding: 0 3rem;
+	display: flex;
+	justify-content: center;
+	height: 3rem;
 
 	.prof-nav__bar {
 		display: flex;
@@ -64,9 +59,9 @@ body,
 		height: 100%;
 		align-items: center;
 		justify-content: center;
-		background-color: #d9d9d9;
+		border: 0.02rem solid #d9d9d9;
 		border-radius: 0.25rem;
-		color: black;
+		color: #900000;
 		margin-right: 1rem;
 	}
 
@@ -82,44 +77,80 @@ body,
 	.sign-up {
 		margin-right: 0;
 	}
+}
 
-	.profile-header {
-		display: flex;
-		align-items: center;
-		margin: 3rem 0;
-		padding: 0 3rem;
-		font-family: "Open Sans";
+.profile-header {
+	display: flex;
+	align-items: center;
+	margin: 3rem 0;
+	padding: 2rem 3rem;
+	background-color: #900000;
+
+	.header-img {
+		width: 6rem;
+		height: 6rem;
 		background-color: #d9d9d9;
-		height: 11rem;
+		border-radius: 50%;
+		margin-right: 3rem;
+	}
 
-		.header-img {
-			width: 7rem;
-			height: 7rem;
-			background-color: #900000;
-			margin-right: 3rem;
+	.header-img.false {
+		width: 0;
+		height: 0;
+		margin-right: 0;
+	}
+
+	.prof-info {
+		font-size: 1rem;
+		color: white;
+		font-weight: 600;
+
+		.badge-info {
+			background-color: white;
+			color: #900000;
+			padding: 0.4rem;
+			width: fit-content;
+			display: flex;
+			justify-content: center;
+			border-radius: 0.25rem;
 		}
 
-		.prof-info {
-			font-size: 1rem;
-			color: #900000;
-
-			.badge-info {
-				background-color: white;
-				padding: 0.25rem;
-				width: 5rem;
-				display: flex;
-				justify-content: center;
-				border-radius: 0.25rem;
-			}
-
-			.prof-name {
-				font-weight: 600;
-				text-transform: capitalize;
-				margin-top: 0.5rem;
-				font-size: 1.3rem;
-			}
+		.prof-name {
+			text-transform: capitalize;
+			margin-top: 0.5rem;
+			font-size: 1.3rem;
 		}
 	}
+}
+
+.profile-header.false {
+	margin-top: 0;
+	background-color: white;
+	padding: 0 3rem;
+
+	.header-img {
+		border-radius: 50%;
+		width: 5rem;
+		height: 5rem;
+		margin-right: 2rem;
+		background-color: #d9d9d9;
+	}
+
+	.prof-info {
+		color: black;
+		.prof-name {
+			font-size: 1.1rem;
+		}
+
+		.badge-info {
+			background-color: #900000;
+			color: white;
+		}
+	}
+}
+
+.professor-overview {
+	padding: 2rem 0;
 
 	.course-list__container {
 		padding: 0 3rem;
@@ -182,7 +213,68 @@ a:nth-child(5) {
 }
 
 .course-info {
-	margin-bottom: 1rem;
-	padding: 1rem 0;
-	border-bottom: 0.25px rgb(158, 158, 158) solid;
+	padding: 1.5rem 0;
+	padding-bottom: 0.5rem;
+}
+
+.course-review__container {
+	padding: 3rem 0;
+	.reviews__wrapper {
+		padding: 3rem;
+	}
+
+	.reviews-filter {
+		display: flex;
+	}
+
+	.course-review__box {
+		display: flex;
+
+		.reviews_conatiner {
+			flex: 2.5;
+
+			.reviews-filter {
+				margin-bottom: 1rem;
+				font-size: 1rem;
+				line-height: 1.5rem;
+				font-weight: 600;
+
+				.reviews-title {
+					flex: 2;
+					text-transform: uppercase;
+				}
+
+				.filter-right {
+					flex: 2;
+					display: flex;
+					align-content: center;
+					justify-content: flex-end;
+					gap: 1.5rem;
+				}
+			}
+		}
+
+		.course-info {
+			display: flex;
+			justify-content: space-between;
+			font-size: 1rem;
+			line-height: 1.6;
+		}
+
+		.professor-name {
+			flex: 2;
+		}
+
+		.quarter {
+			flex: 4;
+		}
+
+		.course-reviews {
+			.comments {
+				margin-top: 1rem;
+				font-size: 0.9rem;
+				line-height: 1.6;
+			}
+		}
+	}
 }

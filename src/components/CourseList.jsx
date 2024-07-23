@@ -10,6 +10,7 @@ import * as post from "./state/atoms.js";
 import Alert from "@mui/material/Alert";
 import Paper from "@mui/material/Paper";
 import { DataGrid } from "@mui/x-data-grid";
+import { getReviewsByInstructor } from "../api/fetchCourseData";
 
 const CourseList = () => {
 	const setCourseSection = useSetAtom(post.courseSection);

@@ -1,3 +1,5 @@
+import Navbar from "./Navbar.jsx";
+import { HeaderBadge, ProfProfile } from "./HeaderBadge.jsx";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getSummarizedReview } from "../services/dataService.ts";
@@ -7,9 +9,12 @@ import * as post from "../state/atoms.js";
 
 // 수업 디테일 불러오는 함수
 function CourseDetail() {
-	const courseSection = useAtomValue(post.courseSection);
+	//const courseSection = useAtomValue(post.courseSection);
+	let { professorName, courseSection } = useParams();
+	courseSection = courseSection.split("-").join(" ");
+	professorName = professorName.split("-").join(" ");
+
 	const instructor = useAtomValue(post.instructor);
-	// const [courseData, setCourseData] = useState([]);
 	const [courseReviews, setCourseReviews] = useState([]);
 
 	useEffect(() => {
@@ -19,56 +24,106 @@ function CourseDetail() {
 			setCourseReviews(summary);
 		}
 		fetchCourseData();
-	}, [instructor, courseSection]);
-
-	// const handleClickAPI = async () => {
-	// 	await getGPT();
-	// };
+	}, []);
 
 	return (
-		<div style={{ margin: "2rem" }}>
-			<h2>Course Detail</h2>
-			<p>Course Section: {courseSection}</p>
-			{/* <button onClick={handleClickAPI}>calling GPT</button> */}
-			<Paper style={{ padding: "1rem", background: "#f7f7f7" }}>
-				{console.log("course reviews:", courseReviews)}
-				{courseReviews &&
-					courseReviews.map((course, i) => (
-						<Paper
-							key={i}
+		<>
+			<div className="course-review__container">
+				<Navbar />
+				{courseReviews.length > 0 && (
+					<HeaderBadge
+						badgeLabel={courseSection}
+						title={courseReviews[0].title}
+						isHeaderImg={false}
+					/>
+				)}
+				<ProfProfile badgeLabel={"Instructor"} instructorName={professorName} />
+
+				<div className="reviews__wrapper" style={{ padding: "0 3rem" }}>
+					{console.log("course reviews:", courseReviews)}
+					<div className="course-review__box">
+						{courseReviews &&
+							courseReviews.map((course, i) => (
+								<div className="reviews_conatiner" key={i}>
+									<div className="reviews-filter">
+										<div className="reviews-title">
+											Reviews
+											<span className="reviews-count">
+												{" "}
+												({courseReviews.length})
+											</span>
+										</div>
+										<div className="filter-right">
+											<div className="sorting-dropdown">Overall</div>
+											<div className="paginator">{"< 1 of 1>"}</div>
+										</div>
+									</div>
+									<Paper
+										style={{
+											padding: "1rem 2rem",
+											flex: 2,
+											border: "0.01rem solid #d9d9d9",
+											boxShadow: "none",
+										}}
+									>
+										<h4 className="course-info">
+											<div className="professor-name">
+												Professor {course.instructors.join(", ")}
+											</div>
+											<div className="quarter">Quarter: {course.semester}</div>
+										</h4>
+										<div className="course-reviews">
+											<p className="comments course">
+												<strong>{"Course Comments: "}</strong>
+												{course.comments_course}
+											</p>
+											<p className="comments professor">
+												<strong>{"Professor Comments: "}</strong>
+												{course.comments_professor}
+											</p>
+											<p className="comments course-content">
+												<strong>{"Course Content: "}</strong>
+												{course.course_content}
+											</p>
+											<p className="comments advice-section">
+												<strong>{"Advice: "}</strong>
+												{course.advice}
+											</p>
+										</div>
+									</Paper>
+								</div>
+							))}
+						<div
+							className="all-ratings"
 							style={{
-								padding: "1rem",
-								marginTop: "1rem",
+								display: "flex",
+								flexDirection: "column",
+								marginLeft: "2rem",
+								flex: 1,
 							}}
 						>
-							{console.log("reading course reviews.... course:", course)}
-							<h3>{course.title}</h3>
-							<h4 className="course-info">
-								Professor {course.instructors.join(", ")} / {course.semester}
-							</h4>
-							<div className="course-reviews">
-								<strong>Review:</strong>
-								<div className="comments_course">
-									<strong>Course Comments:</strong>
-									{course.comments_course}
-								</div>
-								<div className="comments_professor">
-									<strong>Professor Comments:</strong>
-									{course.comments_professor}
-								</div>
-								<div className="course_content">
-									<strong>Course Content:</strong>
-									{course.course_content}
-								</div>
-								<div className="advice_section">
-									<strong>Advice:</strong>
-									{course.advice}
-								</div>
-							</div>
-						</Paper>
-					))}
-			</Paper>
-		</div>
+							<Paper
+								style={{
+									padding: "2rem",
+									height: "45%",
+									border: "0.01rem solid #d9d9d9",
+									boxShadow: "none",
+								}}
+							></Paper>
+							<Paper
+								style={{
+									padding: "2rem",
+									height: "50%",
+									border: "0.01rem solid #d9d9d9",
+									marginTop: "2rem",
+									boxShadow: "none",
+								}}
+							></Paper>
+						</div>
+					</div>
+				</div>
+			</div>
+		</>
 	);
 }
 

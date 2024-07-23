@@ -1,9 +1,10 @@
 import { useAtomValue, useSetAtom } from "jotai";
 import * as post from "../state/atoms.js";
+import Navbar from "./Navbar.jsx";
+import { HeaderBadge } from "./HeaderBadge.jsx";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getReviewsByInstructor } from "../api/fetchCourseData";
-import Paper from "@mui/material/Paper";
 import { DataGrid } from "@mui/x-data-grid";
 import { useNavigate } from "react-router-dom";
 
@@ -14,46 +15,9 @@ const ProfessorOverview = () => {
 	return (
 		<>
 			<div className="professor-overview">
-				<Navbar professorName={professorName} />
-				<ProfessorProfile professorName={professorName} />
+				<Navbar />
+				<HeaderBadge badgeLabel={"Instructor"} title={professorName} />
 				<CourseList professorName={professorName} />
-			</div>
-		</>
-	);
-};
-
-const Navbar = ({ professorName }) => {
-	return (
-		<nav className="content-row">
-			<a
-				href={`/professors/${professorName}`}
-				label="logo"
-				className="prof-nav__bar logo"
-			>
-				Maroon Review
-			</a>
-			<div className="prof-nav__bar search-bar">Search Bar</div>
-			<div className="prof-nav__bar login">Login</div>
-			<div className="prof-nav__bar sign-up">Sign Up</div>
-		</nav>
-	);
-};
-
-const ProfessorProfile = ({ professorName }) => {
-	// const instructorName = useAtomValue(post.instructor);
-	// console.log("instructor name;", instructorName);
-	// if i try to fetch instructor name from atom, and then refresh the page, then the instructor name becomes null
-
-	const instructor = professorName.split("-").join(" ");
-
-	return (
-		<>
-			<div className="profile-header">
-				<div className="header-img"></div>
-				<div className="prof-info">
-					<div className="badge-info">Instructor</div>
-					<div className="prof-name">{instructor}</div>
-				</div>
 			</div>
 		</>
 	);
@@ -137,31 +101,31 @@ const CourseList = ({ professorName }) => {
 			<div className="course-list__container">
 				<div className="course-list__table">
 					{courseInfo.length !== 0 && (
-						<Paper style={{ padding: "0.5rem 1rem" }}>
-							<div style={{ height: 400, width: "100%" }}>
-								<DataGrid
-									rows={courseInfo}
-									columns={columns}
-									initialState={{
-										pagination: {
-											paginationModel: { page: 0, pageSize: 5 },
-										},
-									}}
-									pageSizeOptions={[5, 10]}
-									disableColumnMenu
-									sx={{
-										".MuiDataGrid-columnSeparator": {
-											display: "none",
-										},
-										"& .MuiDataGrid-cell:focus": {
-											outline: "none",
-										},
-										cursor: "pointer",
-									}}
-									onRowClick={handleRowClick}
-								/>
-							</div>
-						</Paper>
+						<div style={{ width: "100%" }}>
+							<DataGrid
+								rows={courseInfo}
+								columns={columns}
+								initialState={{
+									pagination: {
+										paginationModel: { page: 0, pageSize: 5 },
+									},
+								}}
+								pageSizeOptions={[5, 10]}
+								disableColumnMenu
+								sx={{
+									border: "none",
+									"MuiDataGrid-columnHeader:focus-within": {},
+									".MuiDataGrid-columnSeparator": {
+										display: "none",
+									},
+									"& .MuiDataGrid-cell:focus": {
+										outline: "none",
+									},
+									cursor: "pointer",
+								}}
+								onRowClick={handleRowClick}
+							/>
+						</div>
 					)}
 				</div>
 			</div>

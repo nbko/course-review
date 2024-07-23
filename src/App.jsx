@@ -19,6 +19,7 @@ function App() {
 	const [instructor, setInstructor] = useAtom(post.instructor);
 	const [alertMsg, setAlertMsg] = useState("");
 	const navigate = useNavigate();
+	let formatInstructorName;
 
 	const themeOptions = createTheme({
 		palette: {
@@ -34,7 +35,7 @@ function App() {
 	useEffect(() => {
 		if (instructor) {
 			// let formatInstructorName = instructor.toLowerCase().split(" ").join("-");
-			let formatInstructorName = instructor.split(" ").join("-");
+			formatInstructorName = instructor.split(" ").join("-");
 			console.log(`navigating to professor ${formatInstructorName}'s page`);
 			navigate(`/professors/${formatInstructorName}`);
 		}
@@ -50,7 +51,7 @@ function App() {
 						<h3 className="c-heading title">UChicago Course Review</h3>
 					</div>
 					<div className="search-content">
-						<SearchInput inputType="instructor name" options={instructors} />
+						<SearchInput inputType="Instructor Name" options={instructors} />
 					</div>
 				</div>
 			</div>
