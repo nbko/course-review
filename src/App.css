@@ -125,6 +125,7 @@ body,
 
 .profile-header.false {
 	margin-top: 0;
+	margin-bottom: 1rem;
 	background-color: white;
 	padding: 0 3rem;
 
@@ -150,8 +151,6 @@ body,
 }
 
 .professor-overview {
-	padding: 2rem 0;
-
 	.course-list__container {
 		padding: 0 3rem;
 	}
@@ -218,38 +217,40 @@ a:nth-child(5) {
 }
 
 .course-review__container {
-	padding: 3rem 0;
 	.reviews__wrapper {
-		padding: 3rem;
+		padding: 0 3rem;
+		display: flex;
+		margin-bottom: 3rem;
 	}
 
 	.reviews-filter {
+		padding: 0.7rem 0;
 		display: flex;
+		justify-content: space-between;
+		align-items: center;
 	}
 
 	.course-review__box {
-		display: flex;
+		flex: 2;
 
-		.reviews_conatiner {
-			flex: 2.5;
+		.reviews-filter {
+			font-size: 1rem;
+			line-height: 1.5rem;
+			font-weight: 600;
 
-			.reviews-filter {
-				margin-bottom: 1rem;
-				font-size: 1rem;
-				line-height: 1.5rem;
-				font-weight: 600;
+			.reviews-title {
+				font-size: 1.1rem;
+				font-weight: 700;
+				text-transform: uppercase;
+			}
 
-				.reviews-title {
-					flex: 2;
-					text-transform: uppercase;
-				}
+			.filter-right {
+				font-size: 0.9rem;
+				display: flex;
+				align-items: center;
 
-				.filter-right {
-					flex: 2;
-					display: flex;
-					align-content: center;
-					justify-content: flex-end;
-					gap: 1.5rem;
+				.paginator {
+					margin-left: 2rem;
 				}
 			}
 		}
@@ -276,5 +277,10 @@ a:nth-child(5) {
 				line-height: 1.6;
 			}
 		}
+	}
+
+	.all-ratings {
+		flex: 1;
+		max-height: 50rem;
 	}
 }
