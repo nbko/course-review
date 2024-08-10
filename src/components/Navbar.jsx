@@ -1,14 +1,22 @@
-import { styled, alpha } from "@mui/material/styles";
+import { styled } from "@mui/material/styles";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
-import InputBase from "@mui/material/InputBase";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
+import Autocomplete from "@mui/material/Autocomplete";
+import TextField from "@mui/material/TextField";
 import SearchIcon from "@mui/icons-material/Search";
+import { instructors } from "../data";
+import * as post from "../state/atoms.js";
+import { useEffect } from "react";
+import { useSetAtom, useAtom } from "jotai";
+import { useNavigate } from "react-router-dom";
 
-const Search = styled("div")(({ theme }) => ({
+const SearchContainer = styled("div")(({ theme }) => ({
+	display: "flex",
+	alignItems: "center",
 	position: "relative",
 	borderRadius: theme.shape.borderRadius,
 	backgroundColor: "#90000015",
@@ -22,36 +30,62 @@ const Search = styled("div")(({ theme }) => ({
 		marginLeft: theme.spacing(3),
 		width: "auto",
 	},
-	padding: "0.25rem",
-	display: "flex",
-	alignItems: "center",
 }));
 
 const SearchIconWrapper = styled("div")(({ theme }) => ({
 	padding: theme.spacing(0, 2),
-	height: "100%",
-	position: "absolute",
-	pointerEvents: "none",
 	display: "flex",
 	alignItems: "center",
 	justifyContent: "center",
+	width: "4rem",
 }));
 
-const StyledInputBase = styled(InputBase)(({ theme }) => ({
-	color: "inherit",
+const StyledTextField = styled(TextField)(({ theme }) => ({
+	width: "30rem",
+	flex: 1,
 	"& .MuiInputBase-input": {
 		padding: theme.spacing(1, 1, 1, 0),
-		// vertical padding + font size from searchIcon
 		paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+		border: "none",
+		boxShadow: "none",
+		"&:focus": {
+			outline: "none",
+		},
+		"&:active": {
+			outline: "none",
+		},
 		transition: theme.transitions.create("width"),
 		width: "100%",
 		[theme.breakpoints.up("md")]: {
 			width: "50ch",
 		},
 	},
+	"& .MuiOutlinedInput-root": {
+		border: "none",
+	},
 }));
 
 const Navbar = () => {
+	const setInstructor = useSetAtom(post.instructor);
+	const [instructorValue] = useAtom(post.instructor); // Read the atom value
+	const navigate = useNavigate();
+
+	const handleChange = (event, newValue) => {
+		if (newValue) {
+			setInstructor(newValue.label);
+			console.log("New instructor: ", post.instructor);
+			console.log("New instructor: ", newValue.label);
+		}
+	};
+
+	useEffect(() => {
+		if (instructorValue) {
+			const formattedName = instructorValue.split(" ").join("-");
+			navigate(`/professors/${formattedName}`);
+			console.log("Navigating to:", `/professors/${formattedName}`);
+		}
+	}, [instructorValue]);
+
 	return (
 		<AppBar
 			position="static"
@@ -59,11 +93,7 @@ const Navbar = () => {
 		>
 			<Container
 				maxWidth="xl"
-				sx={{
-					display: "flex",
-					alignItems: "center",
-					justifyContent: "center",
-				}}
+				sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
 			>
 				<Toolbar disableGutters>
 					<Typography
@@ -82,15 +112,27 @@ const Navbar = () => {
 					>
 						Maroon Reviews
 					</Typography>
-					<Search>
+					<SearchContainer>
 						<SearchIconWrapper>
 							<SearchIcon />
 						</SearchIconWrapper>
-						<StyledInputBase
-							placeholder="Search…"
-							inputProps={{ "aria-label": "search" }}
+						<Autocomplete
+							freeSolo
+							id="search-autocomplete"
+							options={instructors}
+							getOptionLabel={(option) => option.label || ""}
+							renderInput={(params) => (
+								<StyledTextField
+									{...params}
+									placeholder="Search for a professor"
+									InputProps={{
+										...params.InputProps,
+									}}
+								/>
+							)}
+							onChange={handleChange}
 						/>
-					</Search>
+					</SearchContainer>
 					<Box
 						sx={{
 							flexGrow: 1,

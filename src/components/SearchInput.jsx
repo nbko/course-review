@@ -6,8 +6,6 @@ import * as post from "../state/atoms.js";
 import { useEffect } from "react";
 
 export function SearchInput({ inputType, options }) {
-	// const [optionLabels, setOptionLabels] = useState(
-	// inputType);
 	const setValue = useSetAtom(post.instructor);
 
 	return (

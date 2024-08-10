@@ -15,9 +15,7 @@ import * as post from "./state/atoms.js";
 import "./App.css";
 
 function App() {
-	const [major, setMajor] = useState(null);
 	const [instructor, setInstructor] = useAtom(post.instructor);
-	const [alertMsg, setAlertMsg] = useState("");
 	const navigate = useNavigate();
 	let formatInstructorName;
 
