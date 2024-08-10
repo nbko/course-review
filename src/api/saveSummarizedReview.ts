@@ -1,5 +1,6 @@
 import { supabase } from "./supabaseClient";
 
+// 요약한 수업 후기를 db에 저장해줌
 export const saveSummarizedReview = async (
 	raw_course_review_id: number,
 	comments_course: string,

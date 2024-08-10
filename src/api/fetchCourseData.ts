@@ -6,6 +6,7 @@ const handleError = (context: string, error: any) => {
 };
 
 // get reviews for the given instructor and major
+// 전공과 교수님 이름을 받고 데이터베이스에서 summarize해서 리뷰를 꺼내주는 함수
 export const getReviewsByInstructor = async (
 	major: string,
 	instructor: string

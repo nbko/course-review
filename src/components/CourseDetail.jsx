@@ -59,6 +59,8 @@ const StyledMenu = styled((props) => (
 	},
 }));
 
+// 아직 기능이 작동하지는 않음
+// 수업 후기들을 필터링할 수 있게 하는 버튼 (e.g. 가장 최근, least 최근, overall)
 function ReviewFilter() {
 	const [anchorEl, setAnchorEl] = useState(null);
 	const open = Boolean(anchorEl);
@@ -113,17 +115,17 @@ function ReviewFilter() {
 	);
 }
 
-// 수업 디테일 불러오는 함수
+// 교수님이 선택된 상태에서 특정 수업에 대한 수업 후기들을 렌더링해주는 함수
 function CourseDetail() {
-	//const courseSection = useAtomValue(post.courseSection);
+	// url에서 교수님 이름이랑 수업 섹션 정보 가져오기
 	let { professorName, courseSection } = useParams();
 	courseSection = courseSection.split("-").join(" ");
 	professorName = professorName.split("-").join(" ");
 
-	const instructor = useAtomValue(post.instructor);
 	const [courseReviews, setCourseReviews] = useState([]);
 
 	useEffect(() => {
+		// 교수님 이름과 수업 섹션 정보를 받아 db에서 요약된 수업 후기 불러오기
 		async function fetchCourseData() {
 			console.log(
 				`fetching course data for prof ${professorName} for course ${courseSection}`

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import {
 	BrowserRouter as Router,
 	Routes,
@@ -19,6 +19,7 @@ function App() {
 	const navigate = useNavigate();
 	let formatInstructorName;
 
+	// 홈화면 그려주는 함수
 	const themeOptions = createTheme({
 		palette: {
 			primary: {
@@ -32,7 +33,6 @@ function App() {
 
 	useEffect(() => {
 		if (instructor) {
-			// let formatInstructorName = instructor.toLowerCase().split(" ").join("-");
 			formatInstructorName = instructor.split(" ").join("-");
 			console.log(`navigating to professor ${formatInstructorName}'s page`);
 			navigate(`/professors/${formatInstructorName}`);
@@ -42,12 +42,12 @@ function App() {
 	return (
 		<ThemeProvider theme={themeOptions}>
 			<div className="wrapper">
-				{/* <Button variant="outlined">Course Feedback</Button> */}
 				<div className="c-heading">
 					<div className="c-heading title_wrapper">
 						<div className="c-heading title_logo"></div>
 						<h3 className="c-heading title">UChicago Course Review</h3>
 					</div>
+					{/* 교수님 이름을 클릭하면 알아서 그 다음페이지로 넘어감 */}
 					<div className="search-content">
 						<SearchInput inputType="Instructor Name" options={instructors} />
 					</div>

@@ -5,6 +5,10 @@ import { summarizeData } from "../api/summarizeData.js";
 import { saveSummarizedReview } from "../api/saveSummarizedReview";
 import { supabase } from "../api/supabaseClient.js";
 
+// 교수님의 성함과 수업 넘버를 입력받으면
+// 일단 수업의 정보들을 불러와서 수업 후기가 요약되어 있는지 확인한 다음
+// 요약이 되어있지 않다면 gpt api를 사용해 요약을 시키고
+// 요약한 수업 후기를 db에 저장한 다음 요약한 후기를 불러오는 함수
 // check for summaries, fetch raw data, summarize, save, and return
 export const getSummarizedReview = async (
 	instructor: string,

@@ -1,6 +1,9 @@
 import { supabase } from "../lib/helper/supabaseClient";
 import { Json } from "../db/supabase";
 
+// selenium이랑 beautifulsoup을 사용해서
+// 데이터를 학교 사이트에서 긁어오면 db에 교수님 이름, 수업 정보, 수어 후기 등을 저장해주는 함수들
+
 // get instructor if exists
 const getInstructor = async (name: string) => {
 	const { data: instructorData, error: instructorError } = await supabase()

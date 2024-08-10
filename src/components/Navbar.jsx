@@ -67,15 +67,14 @@ const StyledTextField = styled(TextField)(({ theme }) => ({
 
 const Navbar = () => {
 	const setInstructor = useSetAtom(post.instructor);
-	const [instructorValue] = useAtom(post.instructor); // Read the atom value
 	const navigate = useNavigate();
 
-	const handleChange = (event, newValue) => {
+	const handleChange = (event, newInstructor) => {
 		// 새로운 instructor가 선택되었을때 navigate을 시키지 않고 use Effect로 instructor value가 바뀌었을때 navigate를 하라고 하면 리스트에 있는 수업을 클릭할때 수업 리뷰로 넘어갔다가 다시 instructor 리스트업 페이지로 넘어옴 (instructor가 업데이트 되었다고 뜸)
-		if (newValue) {
-			setInstructor(newValue.label);
-			console.log("New instructor: ", newValue.label);
-			const formattedName = instructorValue.split(" ").join("-");
+		if (newInstructor) {
+			setInstructor(newInstructor.label);
+			console.log("New instructor: ", newInstructor.label);
+			const formattedName = newInstructor.label.split(" ").join("-");
 			navigate(`/professors/${formattedName}`);
 			console.log("Navigating to:", `/professors/${formattedName}`);
 		}

@@ -1,3 +1,4 @@
+// 수업의 배너 (수업 이름, 수업 번호)를 그려주는 컴포넌트
 const HeaderBadge = ({ badgeLabel, title, isHeaderImg }) => {
 	// const instructorName = useAtomValue(post.instructor);
 	// console.log("instructor name;", instructorName);
@@ -18,6 +19,7 @@ const HeaderBadge = ({ badgeLabel, title, isHeaderImg }) => {
 	);
 };
 
+// 교수님 프로필 (사진, instructor 라벨, 성함을 그려주는 컴포넌트)
 const ProfProfile = ({ badgeLabel, instructorName }) => {
 	let instructor = instructorName.split("-").join(" ");
 	return (
