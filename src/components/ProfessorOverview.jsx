@@ -48,6 +48,7 @@ const CourseList = ({ professorName }) => {
 	];
 
 	const handleRowClick = (courseInfo) => {
+		console.log("inside professor overview...");
 		let courseSection = courseInfo.row.course_section;
 		setCourseSection(courseSection);
 		courseSection = courseSection.split(" ").join("-");
