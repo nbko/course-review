@@ -1,3 +1,5 @@
+# 초창기에 getProfs.py랑 login.py가 일부 제대로 작동하나 test용으로 만들었던 파일. 이제는 이런 포멧으로 받지는 않는듯.
+
 list1 = { "title": [
     "Professor Elmore's lectures were very engaging and informative. Discussion sections helped learn how to look at code in the manner that we'd be doing on exams.",
     "the discussion sections",

@@ -1,3 +1,4 @@
+// gpt api를 사용해서 해당 수업에 대한 학생들의 수업 후기를 요약해줌
 export const summarizeData = async (rawData) => {
 	console.log(">>calling gpt....");
 

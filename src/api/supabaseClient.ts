@@ -1,3 +1,4 @@
+// 수퍼베이스 세팅
 import { createClient } from "@supabase/supabase-js";
 import { Database } from "../db/supabase";
 

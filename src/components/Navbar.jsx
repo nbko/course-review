@@ -14,6 +14,7 @@ import { useEffect } from "react";
 import { useSetAtom, useAtom } from "jotai";
 import { useNavigate } from "react-router-dom";
 
+// 네브바 검색창 컨테이너 스타일
 const SearchContainer = styled("div")(({ theme }) => ({
 	display: "flex",
 	alignItems: "center",
@@ -70,7 +71,13 @@ const Navbar = () => {
 	const navigate = useNavigate();
 
 	const handleChange = (event, newInstructor) => {
-		// 새로운 instructor가 선택되었을때 navigate을 시키지 않고 use Effect로 instructor value가 바뀌었을때 navigate를 하라고 하면 리스트에 있는 수업을 클릭할때 수업 리뷰로 넘어갔다가 다시 instructor 리스트업 페이지로 넘어옴 (instructor가 업데이트 되었다고 뜸)
+		// 새로운 instructor가 선택되었을때 navigate을 시키지 않고
+		// useEffect로 instructor 이름이 바뀌었을때 navigate를 하라고 하면
+		// 교수님을 선택하고 아무 수업을 클릭할때 수업 후기를 보여주는 화면으로 아주 잠깐 넘어갔다가
+		// 다시 교수님의 수업 리스트 페이지로 넘어옴 (instructor가 업데이트 되었다고 뜸)
+		// 그래서 일단은 네브바에서 새로운 교수님을 클릭하면, jotai state를 업데이트 하고
+		// 이땐만 navigate하게 함
+		// jotai가 필요없어지는듯...?
 		if (newInstructor) {
 			setInstructor(newInstructor.label);
 			console.log("New instructor: ", newInstructor.label);

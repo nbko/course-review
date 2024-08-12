@@ -5,6 +5,7 @@ import { useSetAtom } from "jotai";
 import * as post from "../state/atoms.js";
 import { useEffect } from "react";
 
+// 홈화면 검색창
 export function SearchInput({ inputType, options }) {
 	const setValue = useSetAtom(post.instructor);
 
@@ -29,6 +30,7 @@ SearchInput.propTypes = {
 	options: PropTypes.array.isRequired,
 };
 
+// 원래는 학기별로도 검색 가능하게 하려고 했는데 너무 지저분해보여서 일단 제외시킴
 export function QuarterTags() {
 	return (
 		<div className={`search quarter`}>
