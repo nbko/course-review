@@ -1,20 +1,11 @@
-import Navbar from "./Navbar.jsx";
-import { HeaderBadge, ProfProfile } from "./HeaderBadge.jsx";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getSummarizedReview } from "../services/dataService.ts";
-import Paper from "@mui/material/Paper";
-import { useAtomValue } from "jotai";
-import * as post from "../state/atoms.js";
-
 import { styled, alpha } from "@mui/material/styles";
-import Button from "@mui/material/Button";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
+import { Container, Box, Paper, Button, Menu, MenuItem } from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
-import Container from "@mui/material/Container";
-import Box from "@mui/material/Box";
+import { HeaderBadge, ProfProfile } from "./HeaderBadge.jsx";
+import { getSummarizedReview } from "../services/dataService.ts";
 
 const StyledMenu = styled((props) => (
 	<Menu
@@ -64,6 +55,7 @@ const StyledMenu = styled((props) => (
 function ReviewFilter() {
 	const [anchorEl, setAnchorEl] = useState(null);
 	const open = Boolean(anchorEl);
+
 	const handleClick = (event) => {
 		setAnchorEl(event.currentTarget);
 	};
@@ -145,7 +137,6 @@ function CourseDetail() {
 				maxWidth={false}
 				disableGutters
 			>
-				<Navbar />
 				{courseReviews.length > 0 && (
 					<HeaderBadge
 						badgeLabel={courseSection}

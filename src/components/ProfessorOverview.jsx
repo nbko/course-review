@@ -1,26 +1,28 @@
-import { useAtomValue, useSetAtom } from "jotai";
+import { useSetAtom, useAtomValue } from "jotai";
 import * as post from "../state/atoms.js";
-import Navbar from "./Navbar.jsx";
 import { HeaderBadge } from "./HeaderBadge.jsx";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getReviewsByInstructor } from "../api/fetchCourseData";
 import { DataGrid } from "@mui/x-data-grid";
+import { Box, Container } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 // 교수님에 대해 검색하면 교수님이 가르치셨던 수업 이름, 수업 번호, 해당 수업에 대한 수업 후기의 갯수를
 // 표로 그려줌
 const ProfessorOverview = () => {
 	const { professorName } = useParams();
-	console.log("instructor:", professorName);
 
 	return (
 		<>
-			<div className="professor-overview">
-				<Navbar />
-				<HeaderBadge badgeLabel={"Instructor"} title={professorName} />
+			<Box className="professor-overview">
+				<HeaderBadge
+					badgeLabel={"instructor name"}
+					title={professorName}
+					isHeaderImg={true}
+				/>
 				<CourseList professorName={professorName} />
-			</div>
+			</Box>
 		</>
 	);
 };
@@ -29,8 +31,10 @@ const ProfessorOverview = () => {
 const CourseList = ({ professorName }) => {
 	const [courseInfo, setCourseInfo] = useState([]);
 	const setCourseSection = useSetAtom(post.courseSection);
-	const instructor = professorName.split("-").join(" ");
-	const currMajor = "CMSC";
+	const instructor = useAtomValue(post.instructor);
+
+	const currInstructor = professorName.split("-").join(" ");
+	const currMajor = "CMSC"; //일단은 CMSC교수님들 데이터만 뽑아왔기 때문에 CMSC로 픽스
 	const navigate = useNavigate();
 
 	// 테이블 형식으로 수업 번호, 수업 이름, 리뷰 개수를 보여줌
@@ -50,9 +54,8 @@ const CourseList = ({ professorName }) => {
 		},
 	];
 
-	// 하나의 row를 누르면 해당 수업의 수업 후기들을 불러와줌
+	// 하나의 row를 누르면 해당 수업의 요약된 수업 후기를 모아놓은 페이지로 이동
 	const handleRowClick = (courseInfo) => {
-		console.log("inside professor overview...");
 		let courseSection = courseInfo.row.course_section;
 		setCourseSection(courseSection);
 		courseSection = courseSection.split(" ").join("-");
@@ -63,8 +66,10 @@ const CourseList = ({ professorName }) => {
 
 	useEffect(() => {
 		// 찾고자 하는 교수님의 수업들을 db에서 가져올때 수업 이름이랑 타이틀을 같은것끼리 묶어주는 함수
+
 		async function fetchReviews() {
-			const reviews = await getReviewsByInstructor(currMajor, instructor);
+			const reviews = await getReviewsByInstructor(currMajor, currInstructor);
+			console.log("수업 후기를 수업 별로 필터링:", reviews);
 
 			const courseMap = new Map();
 
@@ -75,6 +80,9 @@ const CourseList = ({ professorName }) => {
 					.join(" ");
 				const currCourseName = course["title"];
 
+				// 	간혹 수업 코드는 똑같은데 수업 이름이 조금씩 다를 수 있음
+				// e.g. Intro to CS 1, Introduction to Computer Science 1
+				// 그럴때는 더 긴 이름 aka 수업 풀네임으로 바꿔서 저장
 				if (courseMap.has(courseSection)) {
 					const existingCourse = courseMap.get(courseSection);
 					existingCourse["title"] =
@@ -82,6 +90,7 @@ const CourseList = ({ professorName }) => {
 							? currCourseName
 							: existingCourse["title"];
 
+					// 수업 후기 카운트
 					existingCourse["count"] += 1;
 				} else {
 					courseMap.set(courseSection, {
@@ -95,19 +104,20 @@ const CourseList = ({ professorName }) => {
 			let uniqueCoursesWithCount = Array.from(courseMap.values());
 			uniqueCoursesWithCount.forEach((course, i) => (course["id"] = i));
 
-			console.log("courses:", uniqueCoursesWithCount);
+			// 수업 후기를 수업 넘버별로 필터링해서 저장
+			console.log("Processed course info:", uniqueCoursesWithCount);
 			setCourseInfo(uniqueCoursesWithCount);
 		}
 
 		fetchReviews();
-	}, [instructor, currMajor]);
+	}, [currInstructor, currMajor]);
 
 	return (
 		<>
-			<div className="course-list__container">
-				<div className="course-list__table">
+			<Container maxWidth="xl">
+				<Box>
 					{courseInfo.length !== 0 && (
-						<div style={{ width: "100%" }}>
+						<Box style={{ width: "100%" }}>
 							<DataGrid
 								rows={courseInfo}
 								columns={columns}
@@ -120,7 +130,12 @@ const CourseList = ({ professorName }) => {
 								disableColumnMenu
 								sx={{
 									border: "none",
-									"MuiDataGrid-columnHeader:focus-within": {},
+									".MuiDataGrid-cell:focus": {
+										outline: "none",
+									},
+									".MuiDataGrid-columnHeader:focus": {
+										outline: "none",
+									},
 									".MuiDataGrid-columnSeparator": {
 										display: "none",
 									},
@@ -131,10 +146,10 @@ const CourseList = ({ professorName }) => {
 								}}
 								onRowClick={handleRowClick}
 							/>
-						</div>
+						</Box>
 					)}
-				</div>
-			</div>
+				</Box>
+			</Container>
 		</>
 	);
 };

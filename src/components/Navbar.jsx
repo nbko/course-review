@@ -1,31 +1,29 @@
-import { styled } from "@mui/material/styles";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
-import Button from "@mui/material/Button";
-import Autocomplete from "@mui/material/Autocomplete";
-import TextField from "@mui/material/TextField";
-import SearchIcon from "@mui/icons-material/Search";
-import { instructors } from "../data";
-import * as post from "../state/atoms.js";
 import { useEffect } from "react";
-import { useSetAtom, useAtom } from "jotai";
-import { useNavigate } from "react-router-dom";
+import {
+	styled,
+	AppBar,
+	Box,
+	Toolbar,
+	Typography,
+	Container,
+	Button,
+} from "@mui/material";
+import { SearchInput } from "./SearchInput.jsx";
+import { instructors } from "../data";
 
 // 네브바 검색창 컨테이너 스타일
 const SearchContainer = styled("div")(({ theme }) => ({
+	flex: 3.5,
 	display: "flex",
+	justifyContent: "center",
 	alignItems: "center",
-	position: "relative",
+	padding: ".5rem 1rem",
 	borderRadius: theme.shape.borderRadius,
 	backgroundColor: "#90000015",
 	"&:hover": {
 		backgroundColor: "#90000025",
 	},
 	marginRight: theme.spacing(2),
-	marginLeft: 0,
 	width: "100%",
 	[theme.breakpoints.up("sm")]: {
 		marginLeft: theme.spacing(3),
@@ -33,69 +31,7 @@ const SearchContainer = styled("div")(({ theme }) => ({
 	},
 }));
 
-const SearchIconWrapper = styled("div")(({ theme }) => ({
-	padding: theme.spacing(0, 2),
-	display: "flex",
-	alignItems: "center",
-	justifyContent: "center",
-	width: "4rem",
-}));
-
-const StyledTextField = styled(TextField)(({ theme }) => ({
-	width: "30rem",
-	flex: 1,
-	"& .MuiInputBase-input": {
-		padding: theme.spacing(1, 1, 1, 0),
-		paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-		border: "none",
-		boxShadow: "none",
-		"&:focus": {
-			outline: "none",
-		},
-		"&:active": {
-			outline: "none",
-		},
-		transition: theme.transitions.create("width"),
-		width: "100%",
-		[theme.breakpoints.up("md")]: {
-			width: "50ch",
-		},
-	},
-	"& .MuiOutlinedInput-root": {
-		border: "none",
-	},
-}));
-
 const Navbar = () => {
-	const setInstructor = useSetAtom(post.instructor);
-	const navigate = useNavigate();
-
-	const handleChange = (event, newInstructor) => {
-		// 새로운 instructor가 선택되었을때 navigate을 시키지 않고
-		// useEffect로 instructor 이름이 바뀌었을때 navigate를 하라고 하면
-		// 교수님을 선택하고 아무 수업을 클릭할때 수업 후기를 보여주는 화면으로 아주 잠깐 넘어갔다가
-		// 다시 교수님의 수업 리스트 페이지로 넘어옴 (instructor가 업데이트 되었다고 뜸)
-		// 그래서 일단은 네브바에서 새로운 교수님을 클릭하면, jotai state를 업데이트 하고
-		// 이땐만 navigate하게 함
-		// jotai가 필요없어지는듯...?
-		if (newInstructor) {
-			setInstructor(newInstructor.label);
-			console.log("New instructor: ", newInstructor.label);
-			const formattedName = newInstructor.label.split(" ").join("-");
-			navigate(`/professors/${formattedName}`);
-			console.log("Navigating to:", `/professors/${formattedName}`);
-		}
-	};
-
-	// useEffect(() => {
-	// 	if (instructorValue) {
-	// 		console.log("Instructor Value Changed:", instructorValue);
-	// 		const formattedName = instructorValue.split(" ").join("-");
-	// 		navigate(`/professors/${formattedName}`);
-	// 		console.log("Navigating to:", `/professors/${formattedName}`);
-	// 	}
-	// }, [instructorValue]);
-
 	return (
 		<AppBar
 			position="static"
@@ -105,15 +41,17 @@ const Navbar = () => {
 				maxWidth="xl"
 				sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
 			>
-				<Toolbar disableGutters>
+				<Toolbar disableGutters sx={{ width: "100%" }}>
 					<Typography
 						variant="h6"
 						noWrap
 						component="a"
 						href="/"
 						sx={{
+							flex: 2,
 							ml: 3,
 							display: { xs: "none", md: "flex" },
+							justifyContent: "center",
 							fontWeight: 700,
 							color: "inherit",
 							textDecoration: "none",
@@ -123,30 +61,14 @@ const Navbar = () => {
 						Maroon Reviews
 					</Typography>
 					<SearchContainer>
-						<SearchIconWrapper>
-							<SearchIcon />
-						</SearchIconWrapper>
-						<Autocomplete
-							freeSolo
-							id="search-autocomplete"
-							options={instructors}
-							getOptionLabel={(option) => option.label || ""}
-							renderInput={(params) => (
-								<StyledTextField
-									{...params}
-									placeholder="Search for a professor"
-									InputProps={{
-										...params.InputProps,
-									}}
-								/>
-							)}
-							onChange={handleChange}
-						/>
+						<SearchInput inputType="Instructor Name" options={instructors} />
 					</SearchContainer>
+					{/* 아래 로그인, 회원가입 기능은 필요할까? */}
 					<Box
 						sx={{
 							flexGrow: 1,
-							display: { xs: "none", md: "flex" },
+							display: { xs: "none", md: "flex", flex: "3" },
+							justifyContent: "center",
 						}}
 					>
 						<Button

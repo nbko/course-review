@@ -1,20 +1,53 @@
+import { Box, Container, Typography } from "@mui/material";
+import AccountCircleRoundedIcon from "@mui/icons-material/AccountCircleRounded";
+
 // 수업의 배너 (수업 이름, 수업 번호)를 그려주는 컴포넌트
 const HeaderBadge = ({ badgeLabel, title, isHeaderImg }) => {
-	// const instructorName = useAtomValue(post.instructor);
-	// console.log("instructor name;", instructorName);
-	// if i try to fetch instructor name from atom, and then refresh the page, then the instructor name becomes null
-
 	const formattedTitle = title.split("-").join(" ");
 
 	return (
 		<>
-			<div className="profile-header">
-				<div className={`header-img ${isHeaderImg}`}></div>
-				<div className="prof-info">
-					<div className="badge-info">{badgeLabel}</div>
-					<div className="prof-name">{formattedTitle}</div>
-				</div>
-			</div>
+			<Box
+				sx={{
+					display: "flex",
+					alignItems: "center",
+					mb: "3rem",
+					p: "2rem 3rem",
+					background: "#900000",
+				}}
+			>
+				{isHeaderImg && (
+					<AccountCircleRoundedIcon
+						sx={{ width: "5rem", height: "auto", color: "white" }}
+					/>
+				)}
+				<Container
+					maxWidth="lg"
+					sx={{ fontSize: "1rem", color: "white", fontWeight: "600" }}
+				>
+					<Box
+						sx={{
+							background: "white",
+							color: "#900000",
+							p: ".4rem",
+							width: "fit-content",
+							display: "flex",
+							justifyContent: "center",
+							borderRadius: ".25rem",
+							mb: "1rem",
+							textTransform: "capitalize",
+						}}
+					>
+						{badgeLabel}
+					</Box>
+					<Typography
+						variant="h3"
+						sx={{ fontSize: "1.3rem", fontWeight: "600" }}
+					>
+						{formattedTitle}
+					</Typography>
+				</Container>
+			</Box>
 		</>
 	);
 };
@@ -24,13 +57,40 @@ const ProfProfile = ({ badgeLabel, instructorName }) => {
 	let instructor = instructorName.split("-").join(" ");
 	return (
 		<>
-			<div className="profile-header false">
-				<div className={"header-img"}></div>
-				<div className="prof-info">
-					<div className="badge-info">{badgeLabel}</div>
-					<div className="prof-name">{instructor}</div>
-				</div>
-			</div>
+			<Box className="profile-header false">
+				<Container
+					maxWidth="lg"
+					sx={{
+						fontSize: "1rem",
+						color: "black",
+						fontWeight: "600",
+						display: "flex",
+						alignItems: "center",
+						gap: "3rem",
+					}}
+				>
+					<AccountCircleRoundedIcon sx={{ width: "5rem", height: "auto" }} />
+					<Box>
+						<Box
+							sx={{
+								background: "#900000",
+								color: "white",
+								p: ".4rem",
+								width: "fit-content",
+								display: "flex",
+								justifyContent: "center",
+								borderRadius: ".25rem",
+								mb: "1rem",
+							}}
+						>
+							{badgeLabel}
+						</Box>
+						<Typography sx={{ fontSize: "1.2rem", fontWeight: "600" }}>
+							{instructor}
+						</Typography>
+					</Box>
+				</Container>
+			</Box>
 		</>
 	);
 };

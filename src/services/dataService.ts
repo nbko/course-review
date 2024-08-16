@@ -89,7 +89,7 @@ export const getSummarizedReview = async (
 					...summary,
 				};
 
-				console.log("course with reviews:", courseWithReviews);
+				// console.log("course with reviews:", courseWithReviews);
 
 				updatedCourseReviews.push(courseWithReviews);
 			}

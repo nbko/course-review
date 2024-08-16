@@ -1,24 +1,19 @@
-import { useEffect } from "react";
 import {
 	BrowserRouter as Router,
-	Routes,
 	Route,
-	useNavigate,
+	Routes,
+	useLocation,
 } from "react-router-dom";
-import { useAtom, useAtomValue } from "jotai";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { Container, Box, Typography } from "@mui/material";
 import { instructors } from "./data";
 import CourseDetail from "./components/CourseDetail";
 import ProfessorOverview from "./components/ProfessorOverview.jsx";
 import { SearchInput } from "./components/SearchInput";
-import * as post from "./state/atoms.js";
+import Navbar from "./components/Navbar.jsx";
 import "./App.css";
 
 function App() {
-	const [instructor, setInstructor] = useAtom(post.instructor);
-	const navigate = useNavigate();
-	let formatInstructorName;
-
 	// 홈화면 그려주는 함수
 	const themeOptions = createTheme({
 		palette: {
@@ -31,28 +26,47 @@ function App() {
 		},
 	});
 
-	useEffect(() => {
-		if (instructor) {
-			formatInstructorName = instructor.split(" ").join("-");
-			console.log(`navigating to professor ${formatInstructorName}'s page`);
-			navigate(`/professors/${formatInstructorName}`);
-		}
-	}, [instructor]);
-
 	return (
 		<ThemeProvider theme={themeOptions}>
-			<div className="wrapper">
-				<div className="c-heading">
-					<div className="c-heading title_wrapper">
-						<div className="c-heading title_logo"></div>
-						<h3 className="c-heading title">UChicago Course Review</h3>
-					</div>
-					{/* 교수님 이름을 클릭하면 알아서 그 다음페이지로 넘어감 */}
-					<div className="search-content">
+			<Container
+				maxWidth="md"
+				sx={{
+					display: "flex",
+					flexDirection: "column",
+					justifyContent: "center",
+					height: "100vh",
+				}}
+			>
+				<Box
+					sx={{
+						display: "flex",
+						justifyContent: "center",
+						alignItems: "center",
+						mb: 2,
+						minWidth: "500px",
+					}}
+				>
+					<Box className="title_logo"></Box>
+					<Typography variant="h4">UChicago Course Review</Typography>
+				</Box>
+
+				{/* 교수님 이름을 클릭하면 알아서 그 다음페이지로 넘어감 */}
+				<Box sx={{ display: "flex", justifyContent: "center" }}>
+					<Box
+						component="form"
+						sx={{
+							p: ".5rem 1.2rem",
+							display: "flex",
+							alignItems: "center",
+							width: 420,
+							borderRadius: ".75rem",
+							border: "#800000 solid 0.1rem",
+						}}
+					>
 						<SearchInput inputType="Instructor Name" options={instructors} />
-					</div>
-				</div>
-			</div>
+					</Box>
+				</Box>
+			</Container>
 		</ThemeProvider>
 	);
 }
@@ -60,6 +74,18 @@ function App() {
 function Main() {
 	return (
 		<Router>
+			<Layout />
+		</Router>
+	);
+}
+
+function Layout() {
+	const location = useLocation();
+	const isHomePage = location.pathname === "/";
+
+	return (
+		<>
+			{!isHomePage && <Navbar />}
 			<Routes>
 				<Route path="/" element={<App />} />
 				<Route
@@ -71,7 +97,7 @@ function Main() {
 					element={<CourseDetail />}
 				/>
 			</Routes>
-		</Router>
+		</>
 	);
 }
 
