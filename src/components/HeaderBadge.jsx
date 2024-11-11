@@ -1,7 +1,7 @@
 import { Box, Container, Typography } from "@mui/material";
 import AccountCircleRoundedIcon from "@mui/icons-material/AccountCircleRounded";
 
-// 수업의 배너 (수업 이름, 수업 번호)를 그려주는 컴포넌트
+// Displays the course banner with the course name and course number
 const HeaderBadge = ({ badgeLabel, title, isHeaderImg }) => {
 	const formattedTitle = title.split("-").join(" ");
 
@@ -52,7 +52,7 @@ const HeaderBadge = ({ badgeLabel, title, isHeaderImg }) => {
 	);
 };
 
-// 교수님 프로필 (사진, instructor 라벨, 성함을 그려주는 컴포넌트)
+// Displays the professor's profile, including their photo, "Instructor" label, and name
 const ProfProfile = ({ badgeLabel, instructorName }) => {
 	let instructor = instructorName.split("-").join(" ");
 	return (

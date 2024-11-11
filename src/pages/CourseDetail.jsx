@@ -4,7 +4,7 @@ import { styled, alpha } from "@mui/material/styles";
 import { Container, Box, Paper, Button, Menu, MenuItem } from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
-import { HeaderBadge, ProfProfile } from "./HeaderBadge.jsx";
+import { HeaderBadge, ProfProfile } from "../components/HeaderBadge.jsx";
 import { getSummarizedReview } from "../services/dataService.ts";
 
 const StyledMenu = styled((props) => (
@@ -50,8 +50,6 @@ const StyledMenu = styled((props) => (
 	},
 }));
 
-// 아직 기능이 작동하지는 않음
-// 수업 후기들을 필터링할 수 있게 하는 버튼 (e.g. 가장 최근, least 최근, overall)
 function ReviewFilter() {
 	const [anchorEl, setAnchorEl] = useState(null);
 	const open = Boolean(anchorEl);
@@ -146,7 +144,7 @@ function CourseDetail() {
 				)}
 				<ProfProfile badgeLabel={"Instructor"} instructorName={professorName} />
 
-				<Container className="reviews__wrapper" maxWidth="xl">
+				<Container className="reviews__wrapper" maxWidth="md">
 					{console.log("course reviews:", courseReviews)}
 					<Box className="course-review__box">
 						{courseReviews && (
@@ -177,12 +175,12 @@ function CourseDetail() {
 										mb: "2rem",
 									}}
 								>
-									<h4 className="course-info">
+									<div className="course-info">
 										<div className="professor-name">
 											Professor {course.instructors.join(", ")}
 										</div>
 										<div className="quarter">Quarter: {course.semester}</div>
-									</h4>
+									</div>
 									<div className="course-reviews">
 										<p className="comments course">
 											<strong>{"Course Comments: "}</strong>
@@ -203,33 +201,6 @@ function CourseDetail() {
 									</div>
 								</Paper>
 							))}
-					</Box>
-					<Box
-						className="all-ratings"
-						style={{
-							display: "flex",
-							flexDirection: "column",
-							marginLeft: "2rem",
-							flex: 1,
-						}}
-					>
-						<Paper
-							style={{
-								padding: "2rem",
-								height: "45%",
-								border: "0.01rem solid #d9d9d9",
-								boxShadow: "none",
-							}}
-						></Paper>
-						<Paper
-							style={{
-								padding: "2rem",
-								height: "50%",
-								border: "0.01rem solid #d9d9d9",
-								marginTop: "2rem",
-								boxShadow: "none",
-							}}
-						></Paper>
 					</Box>
 				</Container>
 			</Container>

@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { useEffect } from "react";
 import { useAtom } from "jotai";
 import * as post from "../state/atoms.js";
-import { Autocomplete, InputBase } from "@mui/material";
+import { Autocomplete, InputBase, TextField, Stack, Box } from "@mui/material";
 import Search from "@mui/icons-material/Search.js";
 import { useNavigate } from "react-router-dom";
 
@@ -15,7 +15,6 @@ export function SearchInput({ options }) {
 	// 리스트업하는 페이지로 넘어감
 	useEffect(() => {
 		if (instructor) {
-			console.log("Instructor changed in SearchInput:", instructor);
 			let formatInstructorName = instructor.split(" ").join("-");
 			console.log(`Navigating to professor ${formatInstructorName}'s page`);
 			navigate(`/professors/${formatInstructorName}`);
@@ -23,21 +22,23 @@ export function SearchInput({ options }) {
 	}, [instructor, navigate]);
 
 	return (
-		<>
-			<Search sx={{ color: "#800000", p: ".5rem 0" }} />
+		<Box sx={{ width: 450, display: "flex", alignItems: "center" }}>
+			<Search sx={{ color: "#800000", p: "0 1rem" }} />
 			<Autocomplete
+				sx={{ flex: 3 }}
 				disablePortal
 				id="search-instructor"
 				options={options}
 				getOptionLabel={(option) => option.label}
 				renderInput={(params) => {
-					const { InputLabelProps, InputProps, ...rest } = params;
+					// const { InputLabelProps, InputProps, ...rest } = params;
 					return (
-						<InputBase
-							sx={{ fontSize: "1.2rem" }}
-							{...params.InputProps}
-							{...rest}
-						/>
+						// <InputBase
+						// 	sx={{ fontSize: "1.2rem" }}
+						// 	{...params.InputProps}
+						// 	{...rest}
+						// />
+						<TextField {...params} label="Instructor Name" />
 					);
 				}}
 				onChange={(event, newValue) => {
@@ -48,9 +49,8 @@ export function SearchInput({ options }) {
 						setInstructor(newValue.label);
 					}
 				}}
-				sx={{ width: "100%", ml: "1rem" }}
 			/>
-		</>
+		</Box>
 	);
 }
 

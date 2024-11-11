@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import {
 	styled,
 	AppBar,
@@ -11,7 +10,6 @@ import {
 import { SearchInput } from "./SearchInput.jsx";
 import { instructors } from "../data";
 
-// 네브바 검색창 컨테이너 스타일
 const SearchContainer = styled("div")(({ theme }) => ({
 	flex: 3.5,
 	display: "flex",
@@ -19,10 +17,10 @@ const SearchContainer = styled("div")(({ theme }) => ({
 	alignItems: "center",
 	padding: ".5rem 1rem",
 	borderRadius: theme.shape.borderRadius,
-	backgroundColor: "#90000015",
-	"&:hover": {
-		backgroundColor: "#90000025",
-	},
+	// backgroundColor: "#90000015",
+	// "&:hover": {
+	// 	backgroundColor: "#90000025",
+	// },
 	marginRight: theme.spacing(2),
 	width: "100%",
 	[theme.breakpoints.up("sm")]: {
@@ -35,7 +33,12 @@ const Navbar = () => {
 	return (
 		<AppBar
 			position="static"
-			sx={{ background: "#fff", color: "#900000", padding: "0.3rem" }}
+			sx={{
+				background: "#fff",
+				color: "#900000",
+				padding: "0.3rem",
+				boxShadow: "none",
+			}}
 		>
 			<Container
 				maxWidth="xl"
